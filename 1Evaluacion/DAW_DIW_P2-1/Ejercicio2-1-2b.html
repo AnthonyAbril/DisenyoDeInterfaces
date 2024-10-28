@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #Header, #Footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            display: block; /* Bloques completos */
+        }
+
+        #Header {
+            background-color: darksalmon;
+        }
+
+        #Naveg {
+            background-color: burlywood;
+            padding: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        #Contenidos {
+            display: inline-block; /* Coloca los elementos en línea */
+            width: 30%;
+            background-color: aqua;
+        }
+
+        #BarraLateralIzq {
+            display: inline-block; /* Coloca los elementos en línea */
+
+            width: 20%;
+            background-color: mediumpurple;
+        }
+
+        #BarraLateralDer {
+            display: inline-block; /* Coloca los elementos en línea */
+            width: 20%;
+            background-color: mediumpurple;
+        }
+
+        #Menu {
+            display: inline-block;
+            width: 100%;          /* Asegura que ocupe todo el ancho del contenedor */
+            padding: 10px 0;      /* Ajusta el padding superior e inferior para controlar la altura */
+            background-color: lightgreen; /* Color opcional para visualizar el tamaño */
+            margin-bottom: 10px;  /* Espacio debajo de #Menu para crear el hueco */
+            text-align: center;
+        }
+
+        #Footer {
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        El primer diseño se maquetará con float exclusivamente. Se entregará toda la carpeta 
+        con la web y las subcarpetas con los estilos
+    -->
+    <div id="Header">
+        <p>Cabecera</p>
+    </div>
+
+    <div id="Naveg">
+        <p>Barra de navegación</p>
+    </div>
+
+    <div id="BarraLateralDer">
+        <div id="Menu">
+            <p>Menu</p>
+        </div>
+    </div>
+
+    <div id="Contenidos">
+        <p>Contenidos</p>
+    </div>
+    <div id="BarraLateralIzq">
+        <p>Barra Lateral</p>
+    </div>
+
+    <div id="Footer">
+        <p>Institucional</p>
+    </div>
+</body>
+</html>

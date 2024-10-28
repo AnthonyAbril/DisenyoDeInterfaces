@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #Header, #Footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            display: block; /* Bloques completos */
+        }
+
+        #Header {
+            background-color: darksalmon;
+        }
+
+        #Naveg {
+            background-color: burlywood;
+            padding: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        #MainContent {
+            text-align: center; /* Centra los elementos */
+            display: block; /* Contenedor bloque para los elementos internos */
+        }
+
+        #InfoPrincipal, #BarraLateral {
+            display: inline-block; /* Coloca los elementos en línea */
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        #InfoPrincipal {
+            width: 66%;
+            background-color: aqua;
+        }
+
+        #BarraLateral {
+            width: 33%;
+            background-color: mediumpurple;
+        }
+
+        #Footer {
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Header">
+        <p>Cabecera</p>
+    </div>
+    <div id="Naveg">
+        <p>Barra de navegación</p>
+    </div>
+
+    <div id="MainContent">
+        <div id="InfoPrincipal">
+            <p>Información principal</p>
+        </div>
+        <div id="BarraLateral">
+            <p>Barra Lateral</p>
+        </div>
+    </div>
+
+    <div id="Footer">
+        <p>Institucional</p>
+    </div>
+</body>
+</html>

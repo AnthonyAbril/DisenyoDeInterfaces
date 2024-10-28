@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación con Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+        }
+
+        /* Contenedor centrado */
+        #container {
+            width: 980px;
+            margin: 0 auto; /* Centrar el contenedor */
+            height: 100vh;
+        }
+
+        /* Estilos para cada sección */
+        #header, #footer {
+            width: 100%;
+            height: 10vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: green;
+            text-align: center;
+            padding: 10px;
+            float: left;
+        }
+
+        #barra-lateral {
+            width: 20%; /* Ancho relativo */
+            height: 85vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: rgb(112, 178, 216);
+            float: left;
+            padding: 10px;
+        }
+
+        #main {
+            width: 80%; /* Ancho relativo */
+            height: 85vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: rgb(225, 0, 255);
+            float: left;
+            padding: 10px;
+        }
+
+        #footer {
+            height: 5vh;
+            clear: both; /* Asegura que el footer quede debajo de todos los elementos flotantes */
+            background-color: lightcoral;
+        }
+
+        #primerBloque{
+
+        }
+
+        #primerBloque,#segundoBloque{
+            border: solid black 1px;
+            padding: 60px 0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p>HEADER</p>
+        </div>
+
+        <div id="barra-lateral">
+            <p>aside</p>
+        </div>
+
+        <div id="main">
+            <p>main</p>
+            <div id="primerBloque">
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+            </div>
+            <div id="segundoBloque">
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>FOOTER</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #Header, #Footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #Header {
+            background-color: darksalmon;
+        }
+
+        #Naveg {
+            background-color: burlywood;
+            padding: 5px;
+        }
+
+        #InfoPrincipal {
+            width: 66%;
+            float: left; /* Flota a la izquierda */
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        #BarraLateral {
+            width: 33%;
+            float: right; /* Flota a la derecha */
+            background-color: mediumpurple;
+            padding: 10px;
+        }
+
+        #Footer {
+            clear: both; /* Asegura que el footer quede debajo de los elementos flotantes */
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Header">
+        <p>Cabecera</p>
+    </div>
+
+    <div id="Naveg">
+        <p>Barra de navegación</p>
+    </div>
+
+    <div id="InfoPrincipal">
+        <p>Información principal</p>
+    </div>
+    <div id="BarraLateral">
+        <p>Barra Lateral</p>
+    </div>
+
+    <div id="Footer">
+        <p>Institucional</p>
+    </div>
+</body>
+</html>
