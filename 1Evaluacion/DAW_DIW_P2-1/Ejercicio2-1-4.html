@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación con Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+            font-size: 100%;
+        }
+
+        /* Contenedor centrado */
+        #container {
+            width: 100%;
+            margin: 0 auto; /* Centrar el contenedor */
+            height: 100vh;
+        }
+
+        /* Estilos para cada sección */
+        #header, #footer {
+            width: 100%;
+            height: 10vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: green;
+            text-align: center;
+            padding: 10px;
+            float: left;
+        }
+
+        #barra-lateral {
+            width: 20%; /* Ancho relativo */
+            height: 85vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: rgb(112, 178, 216);
+            float: left;
+            padding: 10px;
+        }
+
+        #main {
+            width: 80%; /* Ancho relativo */
+            height: 85vh; /* Altura relativa para ocupar el total de 100vh */
+            background-color: rgb(225, 0, 255);
+            float: left;
+            padding: 10px;
+        }
+
+        #footer {
+            height: 3vh;
+            clear: both; /* Asegura que el footer quede debajo de todos los elementos flotantes */
+            background-color: lightcoral;
+        }
+
+        #primerBloque,#segundoBloque{
+            border: solid red 2px;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        #primerBloque div{
+            border: solid blue 2px;
+            padding: 18vh 0;
+            margin: 20px 1%;
+            width: 45%;
+            display: inline-block;
+        }
+
+        #segundoBloque div{
+            border: solid blue 2px;
+            padding: 18vh 0;
+            margin: 20px 1%;
+            width: 30%;
+            display: inline-block;
+        }
+        #header div{
+            display: inline-block;
+            width: 15%;
+        }
+        #barra-lateral div{
+            display: block;
+            padding: 8vh 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div><a href="#">OPCION 1</a></div>
+            <div><a href="#">OPCION 2</a></div>
+            <div><a href="#">OPCION 3</a></div>
+            <div><a href="#">OPCION 4</a></div>
+            <div><a href="#">OPCION 5</a></div>
+        </div>
+
+        <div id="barra-lateral">
+            <div><a href="#">OPCION 1</a></div>
+            <div><a href="#">OPCION 2</a></div>
+            <div><a href="#">OPCION 3</a></div>
+            <div><a href="#">OPCION 4</a></div>
+            <div><a href="#">OPCION 5</a></div>
+        </div>
+
+        <div id="main">
+            <div id="primerBloque">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="segundoBloque">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>FOOTER</p>
+        </div>
+    </div>
+</body>
+</html>

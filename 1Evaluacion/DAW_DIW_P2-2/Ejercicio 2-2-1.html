@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        padding-top: 20;
+        align-content: center;
+        /*
+            pondremos un degradado de arriba abajo que se iniciará 
+            con el color rgb(227, 76, 38) y acabará con el color rgb(240, 101, 41). El degradado 
+            irá desde la posición 0% a la 90% y el color de finalización tendrá una opacidad del 
+            0%. Para evitar un problema que surge en algunos navegadores cuando tenemos altas 
+            resoluciones de pantalla, pondremos el color de fondo del elemento <html> a blanco. 
+        */
+        background-image: linear-gradient(rgb(227, 76, 38) 0%, rgb(240, 101, 41, 0%) 90%);
+      }
+
+      #page {
+        width: 960px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      header {
+        font-family: "Courier New", Courier, monospace;
+        color: white;
+        font-size: 1.1em;
+        border-bottom: solid black 6px;
+        background-color: #313b44;
+      }
+
+      header h1 {
+        background-image: url("imgs/logo.png");
+        background-repeat: no-repeat;
+        background-position: 25px center;
+        padding: 20px 100px;
+      }
+
+      nav {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.4em;
+        color: silver;
+        text-align: center;
+        /*
+            En la barra de navegación, pondremos un degradado de arriba abajo iniciando en el 
+            color rgb(213, 186, 50) y finalizando en el color rgb(255, 218, 62). Ahora el color de 
+            la fuente de los enlaces será blanco y cuando se pase el ratón por encima será orange.
+        */
+        background-image: linear-gradient(to bottom, rgb(213, 186, 50), rgb(255, 218, 62));
+      }
+
+      nav ul {
+        list-style-type: none;
+      }
+
+      nav li {
+        padding-top: 80px;
+        margin: 0 100px 20px 100px;
+        display: inline-block;
+        text-align: center;
+        cursor: default;
+      }
+
+      nav li a {
+        text-decoration: none;
+        color: orange;
+      }
+
+      nav li a:hover {
+        color: white;
+      }
+
+      main {
+        font-family: Verdana, sans-serif;
+        font-size: 0.8em;
+        background-image: url("imgs/lgrey008.jpg");
+        height: 502px;
+
+        align-content: center;
+        padding: 0px 25px;
+      }
+
+      article {
+        width: 240px;
+        border: 1px solid lightgray;
+        background-color: white;
+        text-align: center;
+        line-height: 1.8em;
+        padding: 5px 5px 22px 5px;
+        margin: 25px;
+        float: left;
+      }
+
+      article header {
+        border-bottom: 1px solid #999999;
+        padding: 2px;
+      }
+
+      article img {
+        width: 100%;
+        height: auto;
+      }
+
+      article h2 {
+        padding: 10px;
+        font-size: 1.2em;
+      }
+
+      footer {
+        clear: both;
+        font-size: 0.7em;
+        color: white;
+        text-align: center;
+        background-color: #313b44;
+        border-top: 6px solid black;
+        padding: 15px 0;
+      }
+
+      footer small {
+        color: white;
+      }
+
+      li[name="contenidos"] {
+        background-repeat: no-repeat;
+        background-image: url("imgs/book.png");
+      }
+
+      li[name="videos"] {
+        background-repeat: no-repeat;
+        background-image: url("imgs/film.png");
+      }
+
+      li[name="contacto"] {
+        background-repeat: no-repeat;
+        background-image: url("imgs/mail.png");
+      }
+    </style>
+  </head>
+  <body>
+    <!--<header>, <nav>, <article>, <footer>, <main>, <small> y <address>. -->
+    <div id="page">
+      <header>
+        <h1>Curso de HTML5 y CSS3</h1>
+      </header>
+      <nav>
+        <ul>
+          <li name="contenidos">Contenidos</li>
+          <li name="videos">Videos</li>
+          <li name="contacto">Contacto</li>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <header>
+            <img src="imgs/html5.png" alt="HTML5" />
+            <h2>HTML5</h2>
+          </header>
+          <p>
+            Veremos los nuevos <strong>elementos estructurales</strong>, así
+            como los nuevos elementos existentes para formularios, audio y
+            video.
+          </p>
+          <p>
+            El nuevo elemento canvas nos abre un mundo de posibilidades en el
+            <strong>desarrollo de videojuegos</strong> web.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <img src="imgs/css3.png" alt="CSS3" />
+            <h2>CSS3</h2>
+          </header>
+          <p>
+            Mejoraremos nuestros diseños web utilizando las nuevas
+            características de CSS3:
+            <strong>efectos, transformaciones, animaciones</strong>, etc.
+          </p>
+          <p>
+            Con <strong>CSS3</strong> nuestros diseños serán más simples, pero
+            no menos impactantes.
+          </p>
+        </article>
+
+        <!-- Article 3 -->
+        <article>
+          <header>
+            <img src="imgs/javascript.png" alt="Javascript" />
+            <h2>Javascript</h2>
+          </header>
+          <p>
+            Junto con HTML5 aparecen nuevas <strong>API javascript</strong> que
+            nos aportan multitud de facilidades y posibilidades en el desarrollo
+            de nuestros proyectos web.
+          </p>
+          <p>
+            Con las nuevas API javascript nuestras manos dejarán de estar
+            atadas.
+          </p>
+        </article>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <small>Javier Tárraga © 2014. Curso de HTML5 y CSS3.</small>
+      </footer>
+    </div>
+  </body>
+</html>
