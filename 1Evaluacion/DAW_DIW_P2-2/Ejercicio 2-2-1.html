@@ -33,7 +33,15 @@
         color: white;
         font-size: 1.1em;
         border-bottom: solid black 6px;
-        background-color: #313b44;
+        /*
+        En la cabecera, pondremos un degradado de arriba abajo iniciando en el 
+        color #0170B9 y finalizando en el color #27AADE. 
+        */
+        background-image: linear-gradient(to bottom, #0170B9 , #313b44);
+
+
+        /*Para el efecto de bordes redondeado que tiene la página utilizaremos un radio de 20px*/
+        border-radius: 20px 20px 0 0;
       }
 
       header h1 {
@@ -46,12 +54,10 @@
       nav {
         font-family: "Courier New", Courier, monospace;
         font-size: 1.4em;
-        color: silver;
         text-align: center;
         /*
             En la barra de navegación, pondremos un degradado de arriba abajo iniciando en el 
-            color rgb(213, 186, 50) y finalizando en el color rgb(255, 218, 62). Ahora el color de 
-            la fuente de los enlaces será blanco y cuando se pase el ratón por encima será orange.
+            color rgb(213, 186, 50) y finalizando en el color rgb(255, 218, 62).
         */
         background-image: linear-gradient(to bottom, rgb(213, 186, 50), rgb(255, 218, 62));
       }
@@ -68,12 +74,15 @@
         cursor: default;
       }
 
-      nav li a {
-        text-decoration: none;
+      nav li:hover{
+        /*
+          Ahora el color de la fuente de los enlaces será blanco y cuando se pase el ratón por encima será orange.
+        */
         color: orange;
       }
 
-      nav li a:hover {
+      nav li{
+        text-decoration: none;
         color: white;
       }
 
@@ -96,6 +105,17 @@
         padding: 5px 5px 22px 5px;
         margin: 25px;
         float: left;
+
+        /*En los elementos <article> debes conseguir el efecto que se muestra en la imagen 
+        resultado.jpg utilizando la imagen móvil.png para los bordes .Ten en cuenta que 
+        también deberás modificar los márgenes de los elementos*/
+        /* Ajuste de borde con imagen */
+        border-image-source: url("recursos/movil.png");
+        border-image-slice: 70 35 fill; /* el 'fill' permite que el borde llene el área */
+        border-image-repeat: stretch;
+        border-image-width: 27px;
+        margin: 0;
+        padding: 25px;
       }
 
       article header {
@@ -121,6 +141,12 @@
         background-color: #313b44;
         border-top: 6px solid black;
         padding: 15px 0;
+
+        /*En el pie, utilizaremos el mismo degradado, pero en este caso irá de abajo arriba.*/
+        background-image: linear-gradient(to bottom, #313b44 , #0170B9);
+
+        /*Para el efecto de bordes redondeado que tiene la página utilizaremos un radio de 20px*/
+        border-radius: 0 0 20px 20px;
       }
 
       footer small {
@@ -129,6 +155,8 @@
 
       li[name="contenidos"] {
         background-repeat: no-repeat;
+        /*En la sección de contenidos pondremos el color de fondo blanco.  */
+        background-color: white;
         background-image: url("imgs/book.png");
       }
 
