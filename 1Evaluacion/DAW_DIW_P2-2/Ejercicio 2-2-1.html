@@ -19,7 +19,10 @@
             0%. Para evitar un problema que surge en algunos navegadores cuando tenemos altas 
             resoluciones de pantalla, pondremos el color de fondo del elemento <html> a blanco. 
         */
-        background-image: linear-gradient(rgb(227, 76, 38) 0%, rgb(240, 101, 41, 0%) 90%);
+        background-image: linear-gradient(
+          rgb(227, 76, 38) 0%,
+          rgb(240, 101, 41, 0%) 90%
+        );
       }
 
       #page {
@@ -30,18 +33,20 @@
 
       header {
         font-family: "Courier New", Courier, monospace;
-        color: white;
         font-size: 1.1em;
         border-bottom: solid black 6px;
         /*
         En la cabecera, pondremos un degradado de arriba abajo iniciando en el 
         color #0170B9 y finalizando en el color #27AADE. 
         */
-        background-image: linear-gradient(to bottom, #0170B9 , #313b44);
-
 
         /*Para el efecto de bordes redondeado que tiene la página utilizaremos un radio de 20px*/
         border-radius: 20px 20px 0 0;
+      }
+
+      #page > header {
+        background-image: linear-gradient(to bottom, #0170b9, #313b44);
+        color: white;
       }
 
       header h1 {
@@ -59,7 +64,11 @@
             En la barra de navegación, pondremos un degradado de arriba abajo iniciando en el 
             color rgb(213, 186, 50) y finalizando en el color rgb(255, 218, 62).
         */
-        background-image: linear-gradient(to bottom, rgb(213, 186, 50), rgb(255, 218, 62));
+        background-image: linear-gradient(
+          to bottom,
+          rgb(213, 186, 50),
+          rgb(255, 218, 62)
+        );
       }
 
       nav ul {
@@ -74,14 +83,14 @@
         cursor: default;
       }
 
-      nav li:hover{
+      nav li:hover {
         /*
           Ahora el color de la fuente de los enlaces será blanco y cuando se pase el ratón por encima será orange.
         */
         color: orange;
       }
 
-      nav li{
+      nav li {
         text-decoration: none;
         color: white;
       }
@@ -89,11 +98,13 @@
       main {
         font-family: Verdana, sans-serif;
         font-size: 0.8em;
-        background-image: url("imgs/lgrey008.jpg");
         height: 502px;
 
         align-content: center;
-        padding: 0px 25px;
+        padding: 0px;
+
+        height: auto; /* Permite que el contenedor se ajuste según su contenido */
+        background-color: white; /*En la sección de contenidos pondremos el color de fondo blanco.  */
       }
 
       article {
@@ -103,7 +114,7 @@
         text-align: center;
         line-height: 1.8em;
         padding: 5px 5px 22px 5px;
-        margin: 25px;
+        margin: 20px;
         float: left;
 
         /*En los elementos <article> debes conseguir el efecto que se muestra en la imagen 
@@ -111,11 +122,13 @@
         también deberás modificar los márgenes de los elementos*/
         /* Ajuste de borde con imagen */
         border-image-source: url("recursos/movil.png");
-        border-image-slice: 70 35 fill; /* el 'fill' permite que el borde llene el área */
+        border-style: solid; /* Estilo del borde (necesario para border-image) */
         border-image-repeat: stretch;
-        border-image-width: 27px;
-        margin: 0;
-        padding: 25px;
+
+        border-width: 70px 20px 64px 20px; /* Ancho del borde */
+        border-image-slice: 68 20 65 20; /* Controla cómo se recorta la imagen */
+
+        padding: 0;
       }
 
       article header {
@@ -143,7 +156,7 @@
         padding: 15px 0;
 
         /*En el pie, utilizaremos el mismo degradado, pero en este caso irá de abajo arriba.*/
-        background-image: linear-gradient(to bottom, #313b44 , #0170B9);
+        background-image: linear-gradient(to bottom, #313b44, #0170b9);
 
         /*Para el efecto de bordes redondeado que tiene la página utilizaremos un radio de 20px*/
         border-radius: 0 0 20px 20px;
@@ -155,8 +168,6 @@
 
       li[name="contenidos"] {
         background-repeat: no-repeat;
-        /*En la sección de contenidos pondremos el color de fondo blanco.  */
-        background-color: white;
         background-image: url("imgs/book.png");
       }
 
