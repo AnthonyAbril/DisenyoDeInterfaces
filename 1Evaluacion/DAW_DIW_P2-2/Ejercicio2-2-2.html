@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: black;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        align-items: center;
+        height: 50px;
+        background-color: #141629;
+        padding: 10px;
+      }
+
+      header > #logo {
+        display: inline;
+        height: 50px;
+        float: left;
+      }
+
+      nav {
+        display: inline-block;
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      header > nav > ul > li {
+        display: inline;
+        margin: 10px 20px;
+      }
+
+      header > nav > ul > li > a {
+        text-decoration: none;
+        color: white;
+      }
+
+      header > #buscador {
+        display: inline;
+        float: right;
+        padding: 15px;
+      }
+
+      #barralateral {
+        float: left;
+        width: 15%;
+        background-color: #1416294d;
+        height: 85vh;
+      }
+
+      #barralateral ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      #barralateral li {
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        height: 10vh;
+      }
+
+      #barralateral li a {
+        padding-top: 20vh;
+      }
+
+      main {
+        float: left;
+        width: 68%;
+        padding: 1%;
+      }
+
+      aside {
+        float: right;
+        width: 15%;
+        height: 100%;
+        background-color: #1416294d;
+      }
+
+      aside > section {
+        padding: 15px;
+      }
+
+      aside li {
+        padding: 15px;
+      }
+
+      aside article {
+        margin-top: 10px;
+        background-color: white;
+        padding: 15px;
+      }
+
+      aside #titulo {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      aside ul {
+        list-style: disc;
+        background-color: white;
+      }
+
+      footer {
+        clear: both;
+        text-align: center; /* Centra el contenido de texto en el footer */
+        background-color: #141629;
+      }
+
+      footer > small {
+        display: inline-block; /* Hace que los <small> sean elementos en línea y bloque */
+        margin: 0 10px; /* Espacio entre los elementos <small> */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <img id="logo" src="imgs/logochulo.png" />
+
+      <!-- Otras categorias -->
+      <nav>
+        <ul>
+          <li><a href="#">Principal</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Elemento de busqueda -->
+      <div id="buscador">
+        <input id="buscar" type="search" />
+        <button name="buscar" aria-label="Buscar en el sitio">Buscar</button>
+      </div>
+    </header>
+
+    <!-- Articulos similares -->
+    <nav id="barralateral">
+      <ul>
+        <li><a href="#">Principal</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+      <!-- Articulo -->
+      <article>
+        <h1>La Importancia de la Sostenibilidad en el Comercio Moderno</h1>
+        <p>
+          En un mundo que enfrenta serios desafíos ambientales, la
+          sostenibilidad se ha convertin ofrece ventajas competitivas y
+          financieras para las empresas que la integran de manera genuina en sus
+          estrategias.
+        </p>
+
+        <h2>El Futuro de la Sostenibilidad en el Comercio</h2>
+        <p>
+          Mirando hacia el futuro, queda claro que la sostenibilidad será mucho
+          más que una tendencia pasajera; sa prepararse para los retos del siglo
+          XXI.
+        </p>
+      </article>
+    </main>
+
+    <!-- Barra lateral -->
+    <aside>
+      <!-- Share -->
+      <section id="share">
+        <a>Share</a>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </section>
+
+      <!-- Recommended -->
+      <section id="Recommended">
+        <a>Recommended</a>
+        <article>
+          <a id="titulo">Violines vs violas</a>
+          <a id="descripcion"
+            >Diferencias y similitudes, ventajas y desventajas entre ambos
+            instrumentos muy similares</a
+          >
+        </article>
+        <article>
+          <a id="titulo">La luna es falsa</a>
+          <a id="descripcion"
+            >Algunos astrologos recientemente han dado con hallazgos que podrian
+            poner en duda la veracidad de nuestro satelite</a
+          >
+        </article>
+      </section>
+    </aside>
+    <footer>
+      <small>link</small>
+      <small>link</small>
+      <small>link</small>
+      <small>link</small>
+      <small>link</small>
+    </footer>
+  </body>
+</html>
