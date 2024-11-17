@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        text-decoration: none;
+      }
+
+      body {
+        background-color: white;
+        padding: 15px 110px;
+      }
+
+      header {
+        height: 10vh;
+      }
+
+      header > a {
+        float: left;
+      }
+      header nav {
+        float: right;
+      }
+
+      header nav ul {
+        list-style: none;
+      }
+
+      header nav ul li {
+        display: inline-block;
+      }
+
+      header #botones {
+        float: right;
+      }
+
+      header #botones button {
+        border: none;
+        padding: 15px 20px;
+        margin: 5px 10px;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+
+      header #botones #iniciarSesion {
+        background-color: white;
+      }
+
+      header #botones #descargaApp {
+        background-color: #640ade;
+        color: white;
+      }
+
+      #logo {
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+
+      #quesomos {
+        float: left;
+        width: 100%;
+        height: 90vh;
+        text-align: center; /* Centra el contenido en línea dentro del contenedor */
+        margin-top: 50px;
+      }
+
+      #quesomos h2 {
+        font-size: 4em;
+        text-align: left;
+        display: block;
+        float: left;
+        padding-right: 100px;
+        margin: 0;
+      }
+
+      #quesomos article {
+        width: 50%;
+        float: left;
+      }
+
+      #quesomos > img {
+        position: absolute; /* Habilita el uso de top, left, etc. */
+        top: 70%; /* Ajusta la posición vertical */
+        left: 76%; /* Ajusta la posición horizontal */
+        transform: translate(-50%, -55%); /* Centra la imagen en ambos ejes */
+        width: 35%; /* Mantén el tamaño de la imagen */
+
+        background-color: #f5f5f5;
+        padding: 100px 250px 130px 105px;
+        z-index: -1;
+      }
+
+      #quesomos p {
+        float: left;
+        text-align: left;
+        padding-right: 180px;
+        font-size: 1.4em;
+      }
+
+      #quesomos button {
+        border: none;
+        background-color: #640ade;
+        border-radius: 8px;
+        padding: 20px 30px;
+        color: white;
+        float: left;
+        font-size: medium;
+      }
+
+      #quesomos > article > img {
+        float: left;
+        margin-right: 40%;
+        margin-top: 20px;
+      }
+
+      #quesomos a {
+        float: left;
+        padding: 5px;
+        margin-right: 5px;
+        font-size: medium;
+        color: #640ade;
+        font-size: small;
+      }
+
+      #quesomos #nuevo {
+        background-color: #640ade;
+        border-radius: 8px;
+        color: white;
+      }
+
+      #tudecides {
+        float: left;
+        width: 100%;
+        height: 100vh;
+        text-align: center; /* Centra el contenido en línea dentro del contenedor */
+        margin-top: 300px;
+      }
+
+      #tudecides img {
+        float: left;
+        margin-right: 50px;
+      }
+
+      #tudecides article {
+        width: 45%;
+        float: left;
+        padding: 40px;
+      }
+
+      #tudecides h2 {
+        float: left;
+        font-size: 4em;
+        text-align: left;
+        display: block;
+        margin: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <a id="logo">Banca Digital.</a>
+
+      <!-- Sesion -->
+      <div id="botones">
+        <button id="iniciarSesion">iniciar sesión</button>
+        <button id="descargaApp">Descarga la app</button>
+      </div>
+
+      <!-- Opciones -->
+      <nav>
+        <ul>
+          <li><a href="#">Personas</a></li>
+          <li><a href="#">Empresas</a></li>
+          <li><a href="#">Nosotros</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="quesomos">
+      <article>
+        <a id="nuevo">Nuevo</a><a>Adquiere nuestra nueva tarjeta de credito</a>
+        <h2>La mejor Banca Digital.</h2>
+        <p>
+          Dile adiós a los bancos tradicionales y disfrutra de los beneficios de
+          un banco 100% digital.
+        </p>
+        <button>Abre tu cuenta hoy</button>
+        <img src="imgs/bancaDigital/foto2.png" />
+      </article>
+      <img src="imgs/bancaDigital/foto1.png" />
+    </section>
+    <section id="tudecides">
+      <img src="imgs/bancaDigital/foto3.png" />
+      <article>
+        <h2>Haz que crezca tu dinero.</h2>
+      </article>
+    </section>
+  </body>
+</html>

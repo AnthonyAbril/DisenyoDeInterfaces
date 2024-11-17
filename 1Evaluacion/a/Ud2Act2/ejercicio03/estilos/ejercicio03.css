@@ -1,0 +1,670 @@
+/* Santiago Calderon Castaño */
+
+/* Variables generales */
+:root {
+  --color--purple: #7110f6;
+  /* Color púrpura principal */
+  --color--gray: #f5f5f5;
+  /* Color gris claro para fondos */
+  --color--white: #ffffff;
+  /* Color blanco para fondos */
+  --width--page: 1500px;
+  /* Ancho máximo de la página */
+  --height--page: 100vh;
+  /* Altura máxima de la página (100% del alto de la ventana) */
+  --margin--centrado: 0 auto;
+  /* Margen centrado horizontal */
+  --font--size--p--footer: 20px;
+  /* Tamaño de fuente para párrafos */
+}
+
+/* Reseteo del margen y padding a todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  /* Asigno a todos los elementos el color negro, luego lo cambiaré si lo requiero */
+}
+
+body {
+  width: 100%;
+  /* Color base para toda la página */
+  background-color: var(--color--white);
+}
+
+/* Estilos para los elementos especificos */
+.punto {
+  color: var(--color--purple);
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+
+.material-symbols-outlined{
+  color: var(--color--purple);
+  font-size: 20px;
+  margin-top: 30px;
+  margin: 30px 0 0 5px;
+  cursor: pointer;
+}
+
+
+/* Estilos generales para el botón abre tu cuenta hoy */
+main .abreCuenta {
+  background-color: var(--color--purple);
+  color: var(--color--white);
+  font-size: 18px;
+  font-weight: 100;
+  border-radius: 10px;
+  border: none;
+  padding: 22px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+
+/* Estilos para el header */
+header {
+  width: var(--width--page);
+  margin: var(--margin--centrado);
+  height: 10vh;
+  line-height: 10vh;
+  /* Centra verticalmente el texto */
+}
+
+header h1 {
+  background-color: var(--color--white);
+  float: left;
+  width: 40%;
+  height: 10vh;
+  /* Quiero que el h1 ocupe todo el alto del header para que los elementos no se le pongan debajo */
+}
+
+header h1 a {
+  text-decoration: none;
+}
+
+header nav {
+  /* Esta es la parte del manú de navegación */
+  background-color: var(--color--gray);
+  float: right;
+  width: 60%;
+  height: 10vh;
+}
+
+header nav ul {
+  float: right;
+  margin-right: 50px;
+  /* Separo el nav 50px de la derecha */
+}
+
+header nav ul li {
+  /* Ubica los elementos en horizontal */
+  display: inline-block;
+  /* Quito las viñetas de la lista */
+  list-style: none;
+  /* Asigno un margen de 25px a los lados */
+  margin: 0 25px;
+}
+
+header nav ul li a {
+  /* Quito el subrayado de los enlaces */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Estilos para la clase bnt-nav */
+.btn-nav {
+  /* Esto hace que parezca a un botón pero en realidad es un a (link) */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilos para el btn del nav */
+#btn-iniciarSesion {
+  background-color: var(--color--white);
+}
+
+#btn-descargarApp {
+  background-color: var(--color--purple);
+  color: white;
+}
+
+/* Estilos para la página 1 */
+#page1 {
+  width: var(--width--page);
+  height: var(--height--page);
+  margin: var(--margin--centrado);
+}
+
+
+/* Estilos para main en página 1 */
+#page1 .section1 {
+  background-color: var(--color--white);
+  float: left;
+  width: 40%;
+  height: 90vh;
+  /* Margin negativo porque se crea un pqueño margen, asi que lo quito así */
+  margin-top: -4px;
+}
+
+#page1 .section2 {
+  background-color: var(--color--gray);
+  float: right;
+  width: 60%;
+  height: 90vh;
+  /* Margen negativo porque se crea un pqueño margen, asi que lo quito así */
+  margin-top: -4px;
+}
+
+/* Estilos del articulo de la zona izquierda */
+#page1 .section1 .article1 {
+  width: 80%;
+  margin-top: 100px;
+}
+
+/* Al primer elemento p le asigno un estilo */
+#page1 .section1 .article1 p:first-child {
+  color: var(--color--purple);
+  font-size: 18px;
+}
+
+/* Al elemnto con id nuevo le doy algunos estilos especificos */
+#page1 .section1 .article1 #nuevo {
+  background-color: var(--color--purple);
+  color: var(--color--white);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Estilos para el titulo */
+#page1 .section1 .article1 h2 {
+  /* Tendrá el grosor de la letra más ancho */
+  font-size: 70px;
+  margin-top: 40px;
+}
+
+/* Estilos para el segundo elemento de tipo p */
+#page1 .section1 .article1>p:nth-of-type(2) {
+  font-size: 26px;
+  width: 90%;
+  margin-top: 40px;
+}
+
+/* Estilos para el tamaño del contenedor donde irán los iconos de tienda de aplicaciones */
+#page1 .section1 .article1 #tiendaAplicaciones {
+  width: 100%;
+  margin-top: 90px;
+  cursor: pointer;
+}
+
+/* Estilos para los iconos */
+#page1 .section1 .article1 #tiendaAplicaciones .icon {
+  background-position: center;
+  background-size: cover;
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+
+/* Cuando es una imagen meramente informativa uso la etiqueta img,
+  pero cuando debo modificarla o agregarle sientos estilos prefiero
+  usar un DIV y rellenarlo con una imagen, y asi lo manipulo más facil*/
+#appStore .icon {
+  background-image: url("../estilos/iconos/appStore.png");
+}
+
+#playStore .icon {
+  background-image: url("../estilos/iconos/playStore.png");
+}
+
+/* Estilos ara el contenedor donde irán los iconos */
+#page1 .section1 .article1 .consigueApp {
+  float: left;
+  width: 50%;
+  height: 100px;
+}
+
+/* Estilos para el texto de los iconos  */
+#page1 .section1 .article1 .consigueApp p {
+  float: left;
+  width: 110px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* Estilos del articulo de la zona derecha */
+#page1 .section2 .article2 #circulo {
+  background-image: url("../estilos/imgs/mujerCirculo.png");
+  background-position: center;
+  background-size: cover;
+  width: 620px;
+  height: 650px;
+  margin: 100px auto;
+}
+
+/* Estilos para la página 2 */
+#page2 {
+  background-color: var(--color--white);
+  width: var(--width--page);
+  height: var(--height--page);
+  margin: var(--margin--centrado);
+}
+
+/* Margen izquierdo para la imagen */
+#page2 section article #movilTuDecides {
+  margin-left: 80px;
+}
+
+/* Estilos para los contenedores de la página 2 */
+#page2 section article {
+  width: 50%;
+  float: left;
+  margin: 125px auto;
+}
+
+/* Estilos de la imagen de la página 2 */
+#page2 section article:nth-of-type(1) #movilTuDecides {
+  background-image: url("../estilos/imgs/movilTuDecides.png");
+  background-position: center;
+  background-size: cover;
+  width: 570px;
+  height: 680px;
+}
+
+/* Estilos para el titulo */
+#page2 section article h2 {
+  width: 70%;
+
+  font-size: 65px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para la lista de pasos */
+#page2 section article .count {
+  color: var(--color--purple);
+  width: 10%;
+  float: left;
+
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+/* Estilos para los subtitulos */
+#page2 section article h3 {
+  width: 90%;
+  float: left;
+
+  font-size: 25px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+/* Estlos para la zona de texto */
+#page2 section article .text {
+  float: left;
+  width: 100%;
+
+  font-size: 20px;
+  margin-top: 20px;
+  border-left: 2px solid gray;
+  /* Se me ocurrieron muchas formas de hacer la linea que está debajo de
+  los números, al final me decanté por simplemente que el texto ocupe todo
+  hasta estar debajo de un número y luego a ese texto ponerle un border */
+  padding: 5px 0 10px 60px;
+  margin-left: 15px;
+}
+
+/* Al último elemento le elimino la barra */
+#page2 section article .text:last-child {
+  border-left: none;
+}
+
+/* La forma que se me ocurrio para que el texto tenga forma de piramide fue
+poner el texto dento de un contenedor que ocupe el 100% y luego a ese texto
+le doy un medida x hasta que se produzca el salto de linea,
+y asi no se juntan todos y queda mal */
+#page2 section article #parrafo1 {
+  width: 390px;
+}
+
+#page2 section article #parrafo2 {
+  width: 470px;
+}
+
+#page2 section article #parrafo3 {
+  width: 510px;
+}
+
+
+/* Estilos para la página 3 */
+#page3 {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilos para el contenedor de la página 3 */
+#page3 section {
+  width: var(--width--page);
+  height: var(--height--page);
+  margin: var(--margin--centrado);
+}
+
+/* Estilos para el articulo de la página 3 */
+#page3 article {
+  background-color: var(--color--gray);
+  width: 95%;
+  height: 60vh;
+
+  margin: 200px auto;
+  border-radius: 50px;
+  text-align: left;
+}
+
+/* Aquí implementé lo mismo del contenedor 100% y el texto width x
+para poner hacer el salto de linea */
+#page3 article #page3Title {
+  float: left;
+  width: 50%;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+#page3 article #page3Title h2 {
+  font-size: 65px;
+  width: 80%;
+}
+
+/* Misma implementacion de contenedor y texto */
+#page3 article #page3Texto {
+  float: left;
+  width: 55%;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+#page3 article #page3Texto p {
+  font-size: 23px;
+  width: 65%;
+}
+
+#page3 article #btn-page3 {
+  float: left;
+  width: 60%;
+}
+
+/* Aquí hice un contenedor para poder manipular la imagen en el espacio */
+#page3 article #img-page3 {
+  float: right;
+  width: 25%;
+  margin-top: 100px;
+  margin-right: 55px;
+  padding-right: 45px;
+}
+
+/* Como el boton es el mismo, pero para cada página le cambio una propiedad
+ según mis necesidades */
+#page3 .abreCuenta {
+  margin-left: 100px;
+}
+
+/* Aquí inserto la imagen dentro del div y le doy formato */
+#page3 article #movilMovimientos {
+  background-image: url("../estilos/imgs/movilMovimientos.png");
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 430px;
+  float: right;
+  margin-right: 50px;
+}
+
+/* Estilos para la página 4 */
+#page4 {
+  width: 100%;
+  height: var(--height--page);
+}
+
+/* El tamaño de mi contenedor será este */
+#page4 section {
+  width: var(--width--page);
+  height: var(--height--page);
+  margin: var(--margin--centrado);
+}
+
+/* Estilos para zona del titulo de la página 4 */
+#page4 section #page4-title {
+  width: 100%;
+  padding-left: 75px;
+}
+
+#page4 section #page4-title h2 {
+  font-size: 65px;
+}
+
+#page4 section #page4-title p {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Estilos generales para los articulos */
+#page4 section article {
+  float: left;
+  width: 400px;
+
+  margin-left: 75px;
+  margin-top: 50px;
+}
+
+#page4 section article img {
+  width: 400px;
+  height: 460px;
+}
+
+/* Estilos para la zona de texto general del articulo */
+#page4 section article .texto {
+  width: 400px;
+  height: 300px;
+  font-size: 20px;
+}
+
+/* Estilos para la fecha del articulo */
+#page4 section article .fecha {
+  float: left;
+  margin-top: 20px;
+  width: 50%;
+}
+
+/* Estilos para la categoria del articulo */
+#page4 section article .categoria {
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+  width: 50%;
+}
+
+/* Estilos para el contenido de los articulos */
+#page4 section article .contenido a {
+  float: left;
+  width: 100%;
+  font-size: 25px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+/* Estilo para los elemento a */
+#page4 section article .enlace a {
+  float: left;
+  margin-top: 30px;
+  color: var(--color--purple);
+  text-decoration: none;
+}
+
+/* Estilos para la página 5 */
+#page5 {
+  width: 100%;
+  height: 40vh;
+}
+
+#page5 section {
+  width: var(--width--page);
+  height: 50vh;
+  margin: var(--margin--centrado);
+}
+
+/* Estilos para el articulo principal de la página 5 */
+#page5 section article {
+  background-color: var(--color--purple);
+  width: 1100px;
+  height: 300px;
+
+  margin: var(--margin--centrado);
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Estilos para el título */
+#page5 section article h2 {
+  color: var(--color--white);
+  font-size: 70px;
+  padding: 20px 0;
+}
+
+/* Estilo para el elemento p de la página 5 */
+#page5 section article p {
+  color: var(--color--white);
+  font-size: 24px;
+  padding: 20px 0;
+  /* Le doy un margen superior e inferior, en los laterales nada*/
+}
+
+
+/* Estilos para contenedor del input */
+#page5 section article #input {
+  background-color: var(--color--white);
+  color: var(--color--white);
+
+  width: 475px;
+  padding: 10px 10px;
+  margin: var(--margin--centrado);
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos para el input de la pagina 5 */
+#page5 section article input {
+  float: left;
+  width: 260px;
+
+  padding-left: 6px;
+  font-size: 20px;
+  margin-top: 25px;
+  border: none;
+}
+
+/* Estilos del boton abre tu cuneta hoy cerca al footer */
+#page5 .abreCuenta {
+  margin: 0px;
+}
+
+footer {
+  text-align: left;
+  width: var(--width--page);
+  margin: var(--margin--centrado);
+  clear: both;
+  /* Alineo el texto a la izquierda */
+}
+
+footer article {
+  float: left;
+  /* Le doy tamaño del 25% porque son 4 elementos, y asi me caben a la perfeccion */
+  width: 25%;
+  height: 22vh;
+}
+
+/* Estilos para los subtitulos del footer */
+footer h3 {
+  font-size: 25px;
+}
+
+/* Estilos para los parrafos del footer */
+footer p {
+  margin-top: 25px;
+  font-size: var(--font--size--p--footer);
+}
+
+footer p a {
+  text-decoration: none;
+}
+
+/* Contenedor para el articulo bancaDigital */
+footer #bancaDigital {
+  width: 25%;
+  height: 10vh;
+  float: left;
+}
+
+footer #socialMedia .iconos {
+  display: inline-block;
+  /* Ubico los iconos uno al lado del otro horizontalmente */
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  /* Estilos para el fondo de los iconos, que en este caso es una imagen */
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+footer #socialMedia #facebook {
+  background-image: url("../estilos/iconos/iconoFacebook.png");
+}
+
+footer #socialMedia #instagram {
+  background-image: url("../estilos/iconos/iconoInstagram.png");
+}
+
+footer #socialMedia #linkedin {
+  background-image: url("../estilos/iconos/iconoLinkedin.png");
+}
+
+/* Estilos para el pequeño contenedor de los iconos de redes sociales */
+footer #socialMedia {
+  width: 25%;
+  float: left;
+}
+
+/* Estilos del contenedor de texto del footer */
+footer #textoFooter {
+  float: left;
+  width: 100%;
+  /* Será de alto un 10% de toda la pantalla */
+  height: 10vh;
+  /* Barra que divide el footer */
+  border-top: 3px solid var(--color--gray);
+}
+
+/* Estilos para los textos inferiores del footer */
+footer #textoFooter #derechos {
+  float: left;
+  width: 50%;
+}
+
+footer #textoFooter #terminos {
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+
+footer #textoFooter #terminos a {
+  /* Quitamos el subrayado de los enlaces */
+  text-decoration: none;
+  margin-left: 30px;
+}

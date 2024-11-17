@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Santiago Calderon Castaño -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banca Digital</title>
+    <!-- Link a el estilo -->
+    <link rel="stylesheet" href="estilos/ejercicio03.css" />
+    <!-- Link del icono Arrow Forward -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <!-- Titulo de la página -->
+        <h1><a href="#">Banca Digital</a><span class="punto">.</span></h1>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#">Personas</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <!-- Decidí darle a link el estilo de un botón, en vez de poner uno directamente -->
+                <li>
+                    <a href="#" id="btn-iniciarSesion" class="btn-nav textBold">Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="#" id="btn-descargarApp" class="btn-nav textBold">Descarga la app</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contenedor Principal -->
+    <main>
+        <!-- Página 1 -->
+        <div id="page1">
+            <section class="section1">
+                <article class="article1">
+                    <p>
+                        <span id="nuevo">Nuevo</span> Adquiere nuestra nueva tarjeta de crédito
+                    </p>
+                    <h2 class="textBold">La mejor Banca Digital<span class="punto">.</span></h2>
+                    <p>
+                        Dile adiós a los bancos tradicionales y disfruta de los beneficios de un banco 100% digital.
+                    </p>
+                    <button type="button" class="abreCuenta" onclick="hacerAlgo()">
+                        Abre tu cuenta hoy
+                    </button>
+                    <!-- Contenedor para las aplicaciones -->
+                    <div id="tiendaAplicaciones">
+                        <div id="appStore" class="consigueApp">
+                            <div id="iconoApple" class="icon"></div>
+                            <p>Consíguela en <span class="textBold">App Store</span></p>
+                        </div>
+                        <div id="playStore" class="consigueApp">
+                            <div id="iconoGoogle" class="icon"></div>
+                            <p>Disponible en <span class="textBold">Google Play</span></p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Sección para la imagen -->
+            <section class="section2">
+                <article class="article2">
+                    <div id="circulo"></div>
+                </article>
+            </section>
+        </div>
+        <!-- Página 2 -->
+        <div id="page2">
+            <!-- Seccion para la imagen -->
+            <section>
+                <article>
+                    <div id="movilTuDecides"></div>
+                </article>
+            </section>
+            <!-- Sección para el texto -->
+            <section>
+                <article>
+                    <h2 class="textBold">Haz que crezca tu dinero<span class="punto">.</span></h2>
+                    <p class="count textBold">01</p>
+                    <h3 class="textBold">Crea tu cuenta.</h3>
+                    <div class="text">
+                        <p id="parrafo1">Es muy sencillo, solamente ingresa tu celular y listo.</p>
+                    </div>
+                    <p class="count textBold">02</p>
+                    <h3 class="textBold">Solicita tu tarjeta personalizada.</h3>
+                    <div class="text">
+                        <p id="parrafo2">
+                            Selecciona el color que más te guste para tu tarjeta; la enviaremos a tu domicilio.
+                        </p>
+                    </div>
+                    <p class="count textBold">03</p>
+                    <h3 class="textBold">Activa tu tarjeta y empieza a utilizarla.</h3>
+                    <div class="text">
+                        <p id="parrafo3">Inicia sesión en la app e ingresa el número de tarjeta.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- Página 3 -->
+        <div id="page3">
+            <section>
+                <article>
+                    <div id="page3Title">
+                        <h2>Manda y recibe pagos al instante<span class="punto">.</span></h2>
+                    </div>
+                    <!-- Contenedor para la imagen -->
+                    <div id="img-page3">
+                        <div id="movilMovimientos"></div>
+                    </div>
+                    <div id="page3Texto">
+                        <p>Tu dinero esta seguro en todo momento, puedes consultar todos los movimientos de tu cuenta
+                            directamente desde tu celular.</p>
+                    </div>
+                    <!-- Contenedor para el boton -->
+                    <div id="btn-page3">
+                        <button type="button" class="abreCuenta" onclick="hacerAlgo()">
+                            Abre tu cuenta hoy
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- Página 4 -->
+        <div id="page4">
+            <section>
+                <!-- Contenedor para el título -->
+                <div id="page4-title">
+                    <h2>Educación Financiera<span class="punto">.</span></h2>
+                    <p>Comineza a aprender con nuestros artículos</p>
+                </div>
+                <!-- Articulos de la banca -->
+                <article>
+                    <img src="../ejercicio03/estilos/imgs/mujerCajaMudanza.png"
+                        alt="Mujer usando una laptop sobre una caja de muedanza">
+                    <!-- Contenedor para el texto -->
+                    <div class="texto">
+                        <p class="fecha"><time datetime="2021-02-12">12 de febrero 2021</time></p>
+                        <p class="categoria">Créditos</p>
+                        <p class="contenido textBold"><a href="#">Que debes saber antes de tramitar un crédito
+                                hipotecario</a></p>
+                        <p class="enlace textBold"><a href="#">Leer más</a></p>
+                        <!-- Icono flecha de google font -->
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </article>
+                <article>
+                    <img src="../ejercicio03/estilos/imgs/mujerLaptopSala.png"
+                        alt="Mujer usando una laptop desde la sala de su casa">
+                    <!-- Contenedor para el texto -->
+                    <div class="texto">
+                        <p class="fecha"><time datetime="2021-02-08">8 de febrero 2021</time></p>
+                        <p class="categoria">Inversión</p>
+                        <p class="contenido textBold"><a href="#">Te damos 5 razones para invertir en la bolsa de
+                                Valores</a></p>
+                        <p class="enlace textBold"><a href="#">Leer más</a></p>
+                        <!-- Icono flecha de google font -->
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </article>
+                <article>
+                    <img src="../ejercicio03/estilos/imgs/hombreSonriendo.png"
+                        alt="Hombre sonriendo con los brazos cruzados">
+                    <!-- Contenedor para el texto -->
+                    <div class="texto">
+                        <p class="fecha"><time datetime="2021-02-02">2 de fecbrero 2021</time></p>
+                        <p class="categoria">Emprender</p>
+                        <p class="contenido textBold"><a href="#">Alcanza la libertar financiera antes de los 30</a></p>
+                        <p class="enlace textBold"><a href="#">Leer más</a></p>
+                        <!-- Icono flecha de google font -->
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- Página 5 -->
+        <div id="page5">
+            <section>
+                <article>
+                    <h2 class="textBold">Abre tu cuenta hoy</h2>
+                    <p>Es rápido y sencillo, te tomará menos de 5 minutos</p>
+                    <div id="input">
+                        <input type="text" id="email" placeholder="Ingresa tu correo electrónico">
+                        <div id="btn-page5">
+                            <button type="button" class="abreCuenta" onclick="hacerAlgo()">
+                                Abre tu cuenta hoy
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Articulos del footer -->
+        <article id="productos">
+            <h3>Productos</h3>
+            <p><a href="#">Tarjeta de débito</a></p>
+            <p><a href="#">Tarjeta de crédito</a></p>
+            <p><a href="#">Créditos hipotecarios</a></p>
+        </article>
+        <article id="empresa">
+            <h3>Empresa</h3>
+            <p><a href="#">Tarjeta de débito</a></p>
+            <p><a href="#">Tarjeta de crédito</a></p>
+            <p><a href="#">Créditos hipotecarios</a></p>
+        </article>
+        <article id="centroDeAyuda">
+            <h3>Centro de ayuda</h3>
+            <p><a href="#">Tarjeta de débito</a></p>
+            <p><a href="#">Tarjeta de crédito</a></p>
+            <p><a href="#">Créditos hipotecarios</a></p>
+        </article>
+        <article id="bancaDigital">
+            <h3>Banca digital.</h3>
+            <p><a href="#">Avenida de Paseo de la Reforma 296.</a></p>
+        </article>
+        <!-- Contenedor de redes sociales -->
+        <div id="socialMedia">
+            <div id="facebook" class="iconos"></div>
+            <div id="instagram" class="iconos"></div>
+            <div id="linkedin" class="iconos"></div>
+        </div>
+        <!-- Contenedor para el texto inferior del footer -->
+        <div id="textoFooter">
+            <p id="derechos">2021 Banco digital. Todos los derechos reservados</p>
+            <p id="terminos"><a href="#">Términos y condiciones</a> <a href="#">Aviso de privacidad</a> </p>
+        </div>
+    </footer>
+</body>
+
+</html>
