@@ -5,125 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /* Aplica color negro a todos los elementos */
       * {
         color: black;
       }
 
+      /* Establece el fondo y elimina márgenes y padding predeterminados en el body */
       body {
         margin: 0;
         padding: 0;
-        background-color: #1416294d;
+        background-color: #1416294d; /* Fondo con color semi-transparente */
       }
 
+      /* Estilos para el header */
       header {
-        align-items: center;
+        align-items: center; /* Centra los elementos dentro del header */
         height: 50px;
-        background-color: #141629;
+        background-color: #141629; /* Fondo oscuro para el header */
         padding: 10px;
       }
 
+      /* Estilo para el logo dentro del header */
       header > #logo {
-        display: inline;
+        display: inline; /* El logo se mantiene en línea con otros elementos */
         height: 50px;
-        float: left;
+        float: left; /* Hace que el logo flote hacia la izquierda */
       }
 
+      /* Estilo para la barra de navegación en el header */
       nav {
-        display: inline-block;
-        text-align: center;
+        display: inline-block; /* Permite que el nav se muestre como un bloque en línea */
+        text-align: center; /* Centra el contenido dentro del nav */
       }
 
+      /* Elimina los puntos de la lista en las listas del nav */
       ul {
         list-style: none;
       }
 
+      /* Estilo para los items de la lista en la barra de navegación */
       header > nav > ul > li {
-        display: inline;
-        margin: 10px 20px;
+        display: inline; /* Los elementos de la lista se muestran en línea */
+        margin: 10px 20px; /* Espacio entre los elementos */
       }
 
+      /* Estilo para los enlaces dentro de la barra de navegación */
       header > nav > ul > li > a {
-        text-decoration: none;
-        color: white;
+        text-decoration: none; /* Elimina el subrayado en los enlaces */
+        color: white; /* Establece el color blanco para los enlaces */
       }
 
+      /* Estilo para el campo de búsqueda */
       header > #buscador {
-        display: inline;
-        float: right;
+        display: inline; /* Hace que el buscador se muestre en línea con otros elementos */
+        float: right; /* Posiciona el buscador hacia la derecha */
         padding: 15px;
       }
 
+      /* Estilo para la barra lateral izquierda */
       #barralateral {
-        float: left;
-        width: 15%;
-        height: 85vh;
+        float: left; /* Posiciona la barra lateral a la izquierda */
+        width: 15%; /* Define el ancho de la barra lateral */
+        height: 85vh; /* Ajusta la altura de la barra lateral */
       }
 
+      /* Elimina padding y margin de las listas dentro de la barra lateral */
       #barralateral ul {
         padding: 0;
         margin: 0;
       }
 
+      /* Estilo para los items de la lista en la barra lateral */
       #barralateral li {
-        background-color: white;
+        background-color: white; /* Fondo blanco para cada item */
         padding: 35px;
-        margin: 10px;
+        margin: 10px; /* Espacio entre los items */
       }
 
+      /* Estilo para los enlaces dentro de los items de la barra lateral */
       #barralateral li a {
-        padding-top: 20vh;
-        font-size: 1.1em;
+        padding-top: 20vh; /* Añade espacio arriba del enlace */
+        font-size: 1.1em; /* Aumenta el tamaño de fuente */
       }
 
+      /* Estilo para el contenido principal */
       main {
-        background-color: white;
-        float: left;
-        width: 68%;
+        background-color: white; /* Fondo blanco para el contenido principal */
+        float: left; /* Posiciona el contenido a la izquierda */
+        width: 68%; /* Define el ancho del contenido principal */
         padding: 1%;
       }
 
+      /* Estilo para la barra lateral derecha */
       aside {
-        float: right;
-        width: 15%;
-        height: 100%;
+        float: right; /* Posiciona la barra lateral a la derecha */
+        width: 15%; /* Define el ancho de la barra lateral */
+        height: 100%; /* Ajusta la altura de la barra lateral */
       }
 
+      /* Estilo para las secciones dentro de la barra lateral derecha */
       aside > section {
         padding: 15px;
       }
 
+      /* Estilo para los items dentro de las listas en la barra lateral derecha */
       aside li {
         padding: 15px;
       }
 
+      /* Estilo para los artículos dentro de la barra lateral derecha */
       aside article {
         margin-top: 10px;
-        background-color: white;
+        background-color: white; /* Fondo blanco para los artículos */
         padding: 15px;
       }
 
+      /* Estilo para el título dentro de los artículos en la barra lateral */
       aside #titulo {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 10px;
+        font-weight: bold; /* Hace el título en negrita */
+        display: block; /* Asegura que se muestre como bloque */
+        margin-bottom: 10px; /* Añade espacio debajo del título */
       }
 
+      /* Estilo para las listas dentro de la barra lateral */
       aside ul {
-        list-style: disc;
-        background-color: white;
+        list-style: disc; /* Aplica estilo de lista con viñetas */
+        background-color: white; /* Fondo blanco para las listas */
       }
 
+      /* Estilo para el footer */
       footer {
-        clear: both;
+        clear: both; /* Limpia el flotado de los elementos anteriores */
         text-align: center; /* Centra el contenido de texto en el footer */
-        background-color: #141629;
+        background-color: #141629; /* Fondo oscuro para el footer */
         padding: 10px;
       }
 
+      /* Estilo para los elementos small dentro del footer */
       footer > small {
-        color: white;
-        display: inline-block; /* Hace que los <small> sean elementos en línea y bloque */
-        margin: 0 10px; /* Espacio entre los elementos <small> */
+        color: white; /* Establece el color blanco para los textos small */
+        display: inline-block; /* Hace que los small sean elementos en línea y bloque */
+        margin: 0 10px; /* Añade espacio entre los elementos small */
       }
     </style>
   </head>
@@ -296,6 +318,8 @@
         </article>
       </section>
     </aside>
+
+    <!-- Pie de pagina -->
     <footer>
       <small href="#">enlace</small>
       <small href="#">enlace</small>

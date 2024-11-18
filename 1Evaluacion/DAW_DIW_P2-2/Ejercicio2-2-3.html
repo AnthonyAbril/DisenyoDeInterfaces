@@ -4,442 +4,467 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- Enlace a los estilos de Font Awesome para iconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
     <style>
+      /* Estilos generales */
       * {
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        text-decoration: none;
+        color: black; /* El color de texto es negro para todo el contenido */
+        font-family: Arial, Helvetica, sans-serif; /* Se utiliza la fuente Arial, o si no está disponible, Helvetica o sans-serif */
+        font-size: 1em; /* Tamaño de fuente estándar */
+        text-decoration: none; /* Se eliminan los subrayados en los enlaces */
       }
 
+      /* Estilos para el cuerpo del documento */
       body {
-        background-color: white;
-        padding: 15px 110px;
+        background-color: white; /* Color de fondo blanco para la página */
+        padding: 15px 110px; /* Espaciado interno (margen) en el cuerpo de la página */
       }
 
+      /* Estilos específicos para los textos morados */
       .punto {
-        color: #640ade; /* Morado */
+        color: #640ade; /* Color morado para los textos con la clase 'punto' */
       }
 
+      /* Estilos para el encabezado */
       header {
-        height: 10vh;
+        height: 10vh; /* Altura del encabezado en 10% de la altura de la ventana */
       }
 
       header > a {
-        float: left;
+        float: left; /* El logo se alinea a la izquierda */
       }
+
       header nav {
-        float: right;
+        float: right; /* El menú de navegación se alinea a la derecha */
       }
 
       header nav ul {
-        list-style: none;
+        list-style: none; /* Se eliminan los puntos en la lista del menú */
       }
 
       header nav ul li {
-        display: inline-block;
-        margin-right: 12px;
+        display: inline-block; /* Los elementos del menú se alinean horizontalmente */
+        margin-right: 12px; /* Espaciado entre elementos del menú */
       }
 
+      /* Estilos de los botones del encabezado */
       header #botones {
-        float: right;
+        float: right; /* Los botones de sesión y descarga se alinean a la derecha */
       }
 
       header #botones button {
-        border: none;
-        padding: 15px 20px;
-        margin: 5px 10px;
-        border-radius: 10px;
-        font-weight: bold;
+        border: none; /* Se eliminan los bordes de los botones */
+        padding: 15px 20px; /* Se agregan márgenes internos a los botones */
+        margin: 5px 10px; /* Espaciado entre los botones */
+        border-radius: 10px; /* Bordes redondeados en los botones */
+        font-weight: bold; /* Texto en negrita */
       }
 
       header #botones #iniciarSesion {
-        background-color: white;
+        background-color: white; /* Fondo blanco para el botón de iniciar sesión */
       }
 
       header #botones #descargaApp {
-        background-color: #640ade;
-        color: white;
+        background-color: #640ade; /* Fondo morado para el botón de descargar la app */
+        color: white; /* Texto blanco para el botón */
       }
 
       #logo {
-        font-weight: bold;
-        font-size: 1.3em;
+        font-weight: bold; /* Logo en negrita */
+        font-size: 1.3em; /* Tamaño de fuente aumentado */
       }
 
+      /* Sección "¿Qué somos?" */
       #quesomos {
-        float: left;
-        width: 100%;
-        height: 90vh;
-        text-align: center; /* Centra el contenido en línea dentro del contenedor */
-        margin-top: 50px;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        height: 90vh; /* Alto de la sección al 90% de la altura de la ventana */
+        text-align: center; /* El contenido se centra horizontalmente */
+        margin-top: 50px; /* Espaciado superior */
       }
 
       #quesomos h2 {
-        font-size: 4em;
-        text-align: left;
-        display: block;
-        float: left;
-        padding-right: 100px;
-        margin: 0;
+        font-size: 4em; /* Tamaño grande para el título */
+        text-align: left; /* El título se alinea a la izquierda */
+        display: block; /* Se muestra como bloque */
+        float: left; /* Se alinea a la izquierda */
+        padding-right: 100px; /* Espaciado a la derecha */
+        margin: 0; /* Elimina márgenes */
       }
 
       #quesomos article {
-        width: 50%;
-        float: left;
+        width: 50%; /* Ancho del artículo al 50% del contenedor */
+        float: left; /* Alineación a la izquierda */
       }
 
+      /* Imagen de fondo en la sección "¿Qué somos?" */
       #quesomos > img {
-        position: absolute; /* Habilita el uso de top, left, etc. */
-        top: 70%; /* Ajusta la posición vertical */
-        left: 76%; /* Ajusta la posición horizontal */
-        transform: translate(-56.3%, -55%); /* Centra la imagen en ambos ejes */
-        width: 35%; /* Mantén el tamaño de la imagen */
-
-        background-color: #f5f5f5;
-        padding: 100px 10% 130px 10%;
-        z-index: -1;
+        position: absolute; /* Se posiciona de manera absoluta dentro de la sección */
+        top: 70%; /* Posición vertical */
+        left: 76%; /* Posición horizontal */
+        transform: translate(
+          -56.3%,
+          -55%
+        ); /* Centra la imagen respecto a su punto de referencia */
+        width: 35%; /* Ancho del 35% */
+        background-color: #f5f5f5; /* Fondo gris claro */
+        padding: 100px 10% 130px 10%; /* Espaciado alrededor de la imagen */
+        z-index: -1; /* La imagen se coloca detrás de otros elementos */
       }
 
       #quesomos p {
-        float: left;
-        text-align: left;
-        padding-right: 180px;
-        font-size: 1.4em;
+        float: left; /* Alineación a la izquierda */
+        text-align: left; /* Alineación del texto a la izquierda */
+        padding-right: 180px; /* Espaciado a la derecha */
+        font-size: 1.4em; /* Tamaño de fuente moderadamente grande */
       }
 
+      /* Botón en la sección "¿Qué somos?" */
       #quesomos button {
-        border: none;
-        background-color: #640ade;
-        border-radius: 8px;
-        padding: 20px 30px;
-        color: white;
-        float: left;
-        font-size: medium;
+        border: none; /* Se eliminan los bordes */
+        background-color: #640ade; /* Fondo morado */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 20px 30px; /* Espaciado interno */
+        color: white; /* Texto blanco */
+        float: left; /* Alineación a la izquierda */
+        font-size: medium; /* Tamaño de fuente medio */
       }
 
+      /* Otros estilos de la sección "¿Qué somos?" */
       #quesomos > article > img {
-        float: left;
-        margin-right: 40%;
-        margin-top: 20px;
+        float: left; /* Alineación de la imagen a la izquierda */
+        margin-right: 40%; /* Espaciado a la derecha de la imagen */
+        margin-top: 20px; /* Espaciado superior */
       }
 
       #quesomos a {
-        float: left;
-        padding: 5px;
-        margin-right: 5px;
-        font-size: medium;
-        color: #640ade;
-        font-size: small;
+        float: left; /* Alineación a la izquierda de los enlaces */
+        padding: 5px; /* Espaciado alrededor del enlace */
+        margin-right: 5px; /* Espaciado entre los enlaces */
+        font-size: small; /* Tamaño de fuente pequeño */
+        color: #640ade; /* Color morado */
       }
 
       #quesomos #nuevo {
-        background-color: #640ade;
-        border-radius: 8px;
-        color: white;
+        background-color: #640ade; /* Fondo morado */
+        border-radius: 8px; /* Bordes redondeados */
+        color: white; /* Texto blanco */
       }
 
+      /* Sección "Tú decides" */
       #tudecides {
-        float: left;
-        width: 100%;
-        height: 100vh;
-        text-align: center; /* Centra el contenido en línea dentro del contenedor */
-        margin: 250px 0;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        height: 100vh; /* Altura del 100% de la ventana */
+        text-align: center; /* Centra el contenido */
+        margin: 250px 0; /* Espaciado vertical */
       }
 
       #tudecides > div {
-        float: left;
-        background-color: #640ade;
-        text-align: center;
-        width: 40%;
-        border-radius: 10%;
+        float: left; /* Alineación a la izquierda */
+        background-color: #640ade; /* Fondo morado */
+        text-align: center; /* Centrado del texto */
+        width: 40%; /* Ancho del 40% */
+        border-radius: 10%; /* Bordes redondeados */
       }
 
       #tudecides > div > h2 {
-        color: white;
-        width: 100%;
-        text-align: center;
-        margin-top: 10%;
-        margin-bottom: 30px;
-        font-size: 4em;
-      }
-      #tudecides > div > img {
-        color: white;
-        width: 75%;
-        padding: 0 12%;
-        text-align: center;
-        float: left;
+        color: white; /* Texto blanco */
+        width: 100%; /* Ancho completo */
+        text-align: center; /* Alineación centrada */
+        margin-top: 10%; /* Espaciado superior */
+        margin-bottom: 30px; /* Espaciado inferior */
+        font-size: 4em; /* Tamaño grande para el título */
       }
 
+      #tudecides > div > img {
+        color: white; /* Color de la imagen */
+        width: 75%; /* Ancho del 75% */
+        padding: 0 12%; /* Espaciado interno horizontal */
+        text-align: center; /* Centrado de la imagen */
+        float: left; /* Alineación a la izquierda */
+      }
+
+      /* Más estilos para la sección "Tú decides" */
       #tudecides article {
-        width: 40%;
-        float: left;
-        margin-top: 5%;
-        margin-left: 10%;
+        width: 40%; /* Ancho del 40% */
+        float: left; /* Alineación a la izquierda */
+        margin-top: 5%; /* Espaciado superior */
+        margin-left: 10%; /* Espaciado a la izquierda */
       }
 
       #tudecides > article > h2 {
-        float: left;
-        font-size: 3.5em;
-        text-align: left;
-        display: block;
-        margin: 0;
-        margin-bottom: 30px;
-        width: 100%;
+        float: left; /* Alineación a la izquierda */
+        font-size: 3.5em; /* Tamaño de fuente grande */
+        text-align: left; /* Alineación a la izquierda */
+        display: block; /* Muestra el elemento como bloque */
+        margin: 0; /* Elimina márgenes */
+        margin-bottom: 30px; /* Espaciado inferior */
+        width: 100%; /* Ancho completo */
       }
 
       #tudecides > article > div {
-        float: left;
-        text-align: left;
+        float: left; /* Alineación a la izquierda */
+        text-align: left; /* Alineación a la izquierda */
       }
 
       #tudecides > article > div > a {
-        color: #640ade;
-        font-weight: bold;
-        font-size: x-large;
-        float: left;
-        width: 8%;
-        margin-right: 2%;
+        color: #640ade; /* Enlaces morados */
+        font-weight: bold; /* Texto en negrita */
+        font-size: x-large; /* Tamaño de fuente grande */
+        float: left; /* Alineación a la izquierda */
+        width: 8%; /* Ancho del 8% */
+        margin-right: 2%; /* Espaciado entre los enlaces */
       }
 
       #tudecides > article > div > h3 {
-        font-weight: bold;
-        font-size: x-large;
-        float: left;
-        width: 90%;
-        margin: 0;
+        font-weight: bold; /* Texto en negrita */
+        font-size: x-large; /* Tamaño grande */
+        float: left; /* Alineación a la izquierda */
+        width: 90%; /* Ancho del 90% */
+        margin: 0; /* Elimina márgenes */
       }
 
       #tudecides > article > div > img {
-        float: left;
-        margin: 0;
-        width: 8%;
-        margin-right: 2%;
+        float: left; /* Alineación a la izquierda */
+        margin: 0; /* Elimina márgenes */
+        width: 8%; /* Ancho del 8% */
+        margin-right: 2%; /* Espaciado entre imágenes */
       }
 
       #tudecides > article > div > p {
-        float: left;
-        margin: 0;
-        width: 78%;
+        float: left; /* Alineación a la izquierda */
+        margin: 0; /* Elimina márgenes */
+        width: 78%; /* Ancho del 78% */
       }
 
       #tudecides > article > div:last-of-type > p {
-        margin-left: 10%;
+        margin-left: 10%; /* Espaciado adicional en el último párrafo */
       }
 
+      /* Estilos para la sección "MandaRecibe" */
       #MandaRecibe {
-        float: left;
-        background-color: #f5f5f5;
-        padding: 8% 8% 3% 8%;
-        border-radius: 50px;
-        margin: 10vh 0;
+        float: left; /* Alinea el contenedor a la izquierda */
+        background-color: #f5f5f5; /* Fondo gris claro */
+        padding: 8% 8% 3% 8%; /* Espaciado interno en los 4 lados */
+        border-radius: 50px; /* Bordes redondeados en forma de óvalo */
+        margin: 10vh 0; /* Espaciado superior e inferior de 10% de la altura de la ventana */
       }
 
       #MandaRecibe div {
-        width: 55%;
-        float: left;
+        width: 55%; /* Ancho del 55% para los elementos dentro de 'div' */
+        float: left; /* Alineación a la izquierda */
       }
 
       #MandaRecibe h2 {
-        font-weight: bold;
-        font-size: x-large;
-        font-size: 3.7em;
-        float: left;
-        margin: 0;
+        font-weight: bold; /* El título se muestra en negrita */
+        font-size: 3.7em; /* Tamaño de fuente grande */
+        float: left; /* Alineación a la izquierda */
+        margin: 0; /* Elimina márgenes */
       }
 
       #MandaRecibe p {
-        float: left;
-        margin: 0;
-        font-size: 1.25em;
-        margin: 30px 0;
+        float: left; /* Alineación del párrafo a la izquierda */
+        margin: 30px 0; /* Espaciado superior e inferior */
+        font-size: 1.25em; /* Tamaño de fuente moderadamente grande */
       }
 
       #MandaRecibe button {
-        float: left;
-        margin: 0;
-
-        border: none;
-        background-color: #640ade;
-        border-radius: 8px;
-        color: white;
-        padding: 20px 30px;
-        font-size: medium;
+        float: left; /* Alineación a la izquierda */
+        margin: 0; /* Elimina márgenes */
+        border: none; /* Se eliminan los bordes */
+        background-color: #640ade; /* Fondo morado */
+        border-radius: 8px; /* Bordes redondeados */
+        color: white; /* Texto blanco */
+        padding: 20px 30px; /* Espaciado interno del botón */
+        font-size: medium; /* Tamaño de fuente medio */
       }
 
       #MandaRecibe img {
-        float: right;
-        width: 35%;
-        margin: 0;
+        float: right; /* Alineación de la imagen a la derecha */
+        width: 35%; /* Ancho de la imagen al 35% */
+        margin: 0; /* Elimina márgenes */
       }
 
+      /* Estilos para la sección "EducacionFinanciera" */
       #EducacionFinanciera {
-        float: left;
-        margin: 10vh 0;
+        float: left; /* Alineación a la izquierda */
+        margin: 10vh 0; /* Espaciado superior e inferior */
       }
+
       #EducacionFinanciera h3 {
-        float: left;
-        font-size: 3.7em;
-        width: 100%;
-        text-align: left;
-        display: block;
-        margin: 0;
+        float: left; /* Alineación a la izquierda */
+        font-size: 3.7em; /* Tamaño de fuente grande */
+        width: 100%; /* Ancho completo */
+        text-align: left; /* Alineación del texto a la izquierda */
+        display: block; /* El título se muestra como bloque */
+        margin: 0; /* Elimina márgenes */
       }
 
       #EducacionFinanciera p {
-        float: left;
-        width: 100%;
-        text-align: left;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        text-align: left; /* Alineación del texto a la izquierda */
       }
 
       #EducacionFinanciera > div {
-        float: left;
-        width: 29%;
-        margin-right: 6%;
-      }
-      #EducacionFinanciera > div:last-of-type {
-        margin-right: 0;
-      }
-      #EducacionFinanciera > div > img {
-        float: left;
-        width: 100%;
-        border-radius: 5px;
-      }
-      #EducacionFinanciera > div > a {
-        float: left;
-        margin: 12px 0;
-      }
-      #EducacionFinanciera > div > .tipo {
-        text-align: right;
-        float: right;
-      }
-      #EducacionFinanciera > div > p {
-        float: left;
-        font-weight: 600;
-        font-size: 22px;
-      }
-      #EducacionFinanciera > div > a:last-of-type {
-        float: left;
-        color: #640ade;
-        font-weight: 600;
+        float: left; /* Alineación a la izquierda */
+        width: 29%; /* Ancho del 29% para cada div dentro de la sección */
+        margin-right: 6%; /* Espaciado a la derecha entre los divs */
       }
 
+      #EducacionFinanciera > div:last-of-type {
+        margin-right: 0; /* Elimina el margen derecho en el último div */
+      }
+
+      #EducacionFinanciera > div > img {
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo de la imagen */
+        border-radius: 5px; /* Bordes redondeados en la imagen */
+      }
+
+      #EducacionFinanciera > div > a {
+        float: left; /* Alineación a la izquierda */
+        margin: 12px 0; /* Espaciado superior e inferior */
+      }
+
+      #EducacionFinanciera > div > .tipo {
+        text-align: right; /* Alineación del texto a la derecha */
+        float: right; /* Alineación a la derecha */
+      }
+
+      #EducacionFinanciera > div > p {
+        float: left; /* Alineación a la izquierda */
+        font-weight: 600; /* Fuente en negrita */
+        font-size: 22px; /* Tamaño de fuente grande */
+      }
+
+      #EducacionFinanciera > div > a:last-of-type {
+        float: left; /* Alineación a la izquierda */
+        color: #640ade; /* Color morado para los enlaces */
+        font-weight: 600; /* Fuente en negrita */
+      }
+
+      /* Estilos para la sección "AbreTuCuentaHoy" */
       #AbreTuCuentaHoy {
-        float: left;
-        margin: 10vh 0;
-        align-items: center;
-        text-align: center;
-        width: 85%;
-        margin-left: 7.5%;
-        background-color: #640ade;
-        padding: 25px 0;
-        border-radius: 25px;
+        float: left; /* Alineación a la izquierda */
+        margin: 10vh 0; /* Espaciado superior e inferior */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Alineación del texto al centro */
+        width: 85%; /* Ancho del 85% */
+        margin-left: 7.5%; /* Alineación centrada con margen izquierdo */
+        background-color: #640ade; /* Fondo morado */
+        padding: 25px 0; /* Espaciado vertical */
+        border-radius: 25px; /* Bordes redondeados */
       }
 
       #AbreTuCuentaHoy h3 {
-        float: left;
-        font-size: 3.7em;
-        width: 100%;
-        margin: 0;
-        color: white;
+        float: left; /* Alineación a la izquierda */
+        font-size: 3.7em; /* Tamaño grande del título */
+        width: 100%; /* Ancho completo */
+        margin: 0; /* Elimina márgenes */
+        color: white; /* Texto blanco */
       }
 
       #AbreTuCuentaHoy p {
-        float: left;
-        width: 100%;
-        color: white;
-        font-size: large;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        color: white; /* Texto blanco */
+        font-size: large; /* Tamaño de fuente grande */
       }
 
       #AbreTuCuentaHoy form {
-        float: left;
-        margin-left: 30%;
-        background-color: white;
-        padding: 25px 10px;
-        border-radius: 5px;
+        float: left; /* Alineación a la izquierda */
+        margin-left: 30%; /* Alineación centrada con margen izquierdo */
+        background-color: white; /* Fondo blanco */
+        padding: 25px 10px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
       }
 
       #AbreTuCuentaHoy input {
-        border: none;
+        border: none; /* Elimina los bordes de los inputs */
       }
 
       #AbreTuCuentaHoy label {
-        background-color: #640ade;
-        color: white;
-        padding: 15px;
-        border-radius: 5px;
+        background-color: #640ade; /* Fondo morado */
+        color: white; /* Texto blanco */
+        padding: 15px; /* Espaciado interno */
+        border-radius: 5px; /* Bordes redondeados */
       }
 
+      /* Estilos para el pie de página */
       footer {
-        float: left;
+        float: left; /* Alineación a la izquierda */
       }
 
       footer > div {
-        float: left;
-        width: 25%;
+        float: left; /* Alineación a la izquierda */
+        width: 25%; /* Ancho del 25% para cada columna en el pie */
       }
 
       footer > div > small {
-        float: left;
-        width: 100%;
-        font-size: 18px;
-        margin: 4% 0;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        font-size: 18px; /* Tamaño de fuente moderado */
+        margin: 4% 0; /* Espaciado superior e inferior */
       }
 
       footer > div > small:first-of-type {
-        font-weight: bold;
+        font-weight: bold; /* El primer 'small' tiene texto en negrita */
       }
 
       footer > small {
-        float: left;
+        float: left; /* Alineación a la izquierda */
       }
 
       footer > div > div > a {
-        font-size: 24px; /* Tamaño de los iconos */
-        text-decoration: none; /* Elimina subrayados */
-        float: left;
+        font-size: 24px; /* Tamaño grande para los iconos */
+        text-decoration: none; /* Elimina los subrayados en los enlaces */
+        float: left; /* Alineación a la izquierda */
         margin-right: 20px; /* Espaciado entre los iconos */
       }
 
       footer > div:last-of-type {
-        float: left;
-        width: 100%;
-        border-top: grey 1px solid;
+        float: left; /* Alineación a la izquierda */
+        width: 100%; /* Ancho completo */
+        border-top: grey 1px solid; /* Línea gris en la parte superior */
       }
 
       footer > div:last-of-type > small:first-of-type {
-        display: inline;
-        width: 50%;
-        float: left;
-        font-weight: lighter;
+        display: inline; /* Muestra en línea */
+        width: 50%; /* Ancho del 50% */
+        float: left; /* Alineación a la izquierda */
+        font-weight: lighter; /* Fuente más ligera */
       }
 
       footer > div:last-of-type > small {
-        display: inline;
-        width: fit-content;
-        margin-right: 10px;
-        float: right;
-        font-size: 12px;
+        display: inline; /* Muestra en línea */
+        width: fit-content; /* El ancho se ajusta al contenido */
+        margin-right: 10px; /* Espaciado a la derecha */
+        float: right; /* Alineación a la derecha */
+        font-size: 12px; /* Tamaño pequeño para el texto */
       }
     </style>
   </head>
   <body>
+    <!-- Encabezado con logo, botones y navegación -->
     <header>
-      <!-- Logo -->
+      <!-- Logo de la página, sección destacada de la banca digital -->
       <a id="logo">Banca Digital<span class="punto">.</span></a>
 
-      <!-- Sesion -->
+      <!-- Botones para iniciar sesión y descargar la app -->
       <div id="botones">
         <button id="iniciarSesion">iniciar sesión</button>
         <button id="descargaApp">Descarga la app</button>
       </div>
 
-      <!-- Opciones -->
+      <!-- Menú de navegación con enlaces a diferentes secciones -->
       <nav>
         <ul>
           <li><a href="#">Personas</a></li>
@@ -448,8 +473,11 @@
         </ul>
       </nav>
     </header>
+
+    <!-- Sección "¿Qué somos?" que describe los beneficios de la banca digital -->
     <section id="quesomos">
       <article>
+        <!-- Enlace para adquirir la nueva tarjeta de crédito -->
         <a id="nuevo">Nuevo</a><a>Adquiere nuestra nueva tarjeta de credito</a>
         <h2>La mejor Banca Digital<span class="punto">.</span></h2>
         <p>
@@ -457,23 +485,30 @@
           un banco 100% digital.
         </p>
         <button>Abre tu cuenta hoy</button>
+        <!-- Imagen destacada de la sección "¿Qué somos?" -->
         <img src="imgs/bancaDigital/foto2.png" />
       </article>
+      <!-- Imagen adicional para complementar la sección -->
       <img src="imgs/bancaDigital/foto1.png" />
     </section>
+
+    <!-- Sección "Tú decides" con pasos para crear una cuenta -->
     <section id="tudecides">
       <div>
         <h2>Tu decides.</h2>
+        <!-- Imagen para complementar la sección "Tú decides" -->
         <img src="imgs/bancaDigital/foto3.png" />
       </div>
       <article>
         <h2>Haz que crezca tu dinero<span class="punto">.</span></h2>
+        <!-- Primer paso para crear cuenta -->
         <div id="CreaTuCuenta">
           <a>01</a>
           <h3>Crea tu cuenta<span class="punto">.</span></h3>
           <img src="imgs/bancaDigital/linea.png" />
           <p>Es muy sencillo, solamente ingresa tu celular y listo.</p>
         </div>
+        <!-- Segundo paso para solicitar tarjeta personalizada -->
         <div id="SolicitaTuTarjeta">
           <a>02</a>
           <h3>Solicita tu tarjeta personalizada<span class="punto">.</span></h3>
@@ -483,6 +518,7 @@
             a tu domicilio.
           </p>
         </div>
+        <!-- Tercer paso para activar la tarjeta -->
         <div>
           <a>03</a>
           <h3>
@@ -492,6 +528,8 @@
         </div>
       </article>
     </section>
+
+    <!-- Sección "Manda y Recibe" que describe el uso de la app para pagos -->
     <section id="MandaRecibe">
       <div>
         <h2>Manda y recibe pagos al instante<span class="punto">.</span></h2>
@@ -501,11 +539,15 @@
         </p>
         <button>Abre tu cuenta hoy</button>
       </div>
+      <!-- Imagen destacada de la sección -->
       <img src="imgs/bancaDigital/foto4.png" />
     </section>
+
+    <!-- Sección de "Educación Financiera" con artículos sobre finanzas -->
     <section id="EducacionFinanciera">
       <h3>Educación Financiera<span class="punto">.</span></h3>
       <p>Comienza a aprender con nuestros artículos</p>
+      <!-- Artículo 1 sobre créditos -->
       <div>
         <img src="imgs/bancaDigital/retrato1.png" />
         <a>12 de febrero 2021</a>
@@ -513,6 +555,7 @@
         <p>Que debes saber antes de tramitar un crédito hipotecario</p>
         <a href="#">Leer más &#10142;</a>
       </div>
+      <!-- Artículo 2 sobre inversión -->
       <div>
         <img src="imgs/bancaDigital/retrato2.png" />
         <a>8 de febrero 2021</a>
@@ -520,6 +563,7 @@
         <p>Te damos 5 razones para invertir en la Bolsa de Valores</p>
         <a href="#">Leer más &#10142;</a>
       </div>
+      <!-- Artículo 3 sobre emprender -->
       <div>
         <img src="imgs/bancaDigital/retrato3.png" />
         <a>2 de febrero 2021</a>
@@ -528,9 +572,12 @@
         <a href="#">Leer más &#10142;</a>
       </div>
     </section>
+
+    <!-- Sección para abrir cuenta hoy -->
     <section id="AbreTuCuentaHoy">
       <h3>Abre tu cuenta hoy</h3>
       <p>Es rápido y sencillo, te tomará menos de 5 minutos</p>
+      <!-- Formulario para ingresar correo y abrir cuenta -->
       <form>
         <input
           type="text"
@@ -540,6 +587,8 @@
         <label for="correo">Abre tu cuenta hoy</label>
       </form>
     </section>
+
+    <!-- Pie de página con enlaces y redes sociales -->
     <footer>
       <div>
         <small>Productos</small>
@@ -563,6 +612,7 @@
         <small>Banca digital. </small>
         <small>Avenida Paseo de la Reforma 296. </small>
         <div>
+          <!-- Enlaces a redes sociales -->
           <a href="https://facebook.com" target="_blank"
             ><i class="fab fa-facebook"></i
           ></a>
