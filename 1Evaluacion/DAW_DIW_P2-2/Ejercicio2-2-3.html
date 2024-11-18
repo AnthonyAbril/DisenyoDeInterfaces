@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <style>
       * {
         color: black;
@@ -34,6 +39,7 @@
 
       header nav ul li {
         display: inline-block;
+        margin-right: 12px;
       }
 
       header #botones {
@@ -139,23 +145,43 @@
         width: 100%;
         height: 100vh;
         text-align: center; /* Centra el contenido en línea dentro del contenedor */
-        margin-top: 300px;
+        margin: 250px 0;
       }
 
-      #tudecides img {
+      #tudecides > div {
         float: left;
-        margin-right: 50px;
+        background-color: #640ade;
+        text-align: center;
+        width: 40%;
+        border-radius: 10%;
+      }
+
+      #tudecides > div > h2 {
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 10%;
+        margin-bottom: 30px;
+        font-size: 4em;
+      }
+      #tudecides > div > img {
+        color: white;
+        width: 75%;
+        padding: 0 12%;
+        text-align: center;
+        float: left;
       }
 
       #tudecides article {
-        width: 45%;
+        width: 40%;
         float: left;
-        padding: 40px;
+        margin-top: 5%;
+        margin-left: 10%;
       }
 
-      #tudecides h2 {
+      #tudecides > article > h2 {
         float: left;
-        font-size: 4em;
+        font-size: 3.5em;
         text-align: left;
         display: block;
         margin: 0;
@@ -198,8 +224,203 @@
         width: 78%;
       }
 
-      #tudecides > article > #ActivaTuTarjeta > p {
+      #tudecides > article > div:last-of-type > p {
         margin-left: 10%;
+      }
+
+      #MandaRecibe {
+        float: left;
+        background-color: #f5f5f5;
+        padding: 8% 8% 3% 8%;
+        border-radius: 50px;
+        margin: 10vh 0;
+      }
+
+      #MandaRecibe div {
+        width: 55%;
+        float: left;
+      }
+
+      #MandaRecibe h2 {
+        font-weight: bold;
+        font-size: x-large;
+        font-size: 3.7em;
+        float: left;
+        margin: 0;
+      }
+
+      #MandaRecibe p {
+        float: left;
+        margin: 0;
+        font-size: 1.25em;
+        margin: 30px 0;
+      }
+
+      #MandaRecibe button {
+        float: left;
+        margin: 0;
+
+        border: none;
+        background-color: #640ade;
+        border-radius: 8px;
+        color: white;
+        padding: 20px 30px;
+        font-size: medium;
+      }
+
+      #MandaRecibe img {
+        float: right;
+        width: 35%;
+        margin: 0;
+      }
+
+      #EducacionFinanciera {
+        float: left;
+        margin: 10vh 0;
+      }
+      #EducacionFinanciera h3 {
+        float: left;
+        font-size: 3.7em;
+        width: 100%;
+        text-align: left;
+        display: block;
+        margin: 0;
+      }
+
+      #EducacionFinanciera p {
+        float: left;
+        width: 100%;
+        text-align: left;
+      }
+
+      #EducacionFinanciera > div {
+        float: left;
+        width: 29%;
+        margin-right: 6%;
+      }
+      #EducacionFinanciera > div:last-of-type {
+        margin-right: 0;
+      }
+      #EducacionFinanciera > div > img {
+        float: left;
+        width: 100%;
+        border-radius: 5px;
+      }
+      #EducacionFinanciera > div > a {
+        float: left;
+        margin: 12px 0;
+      }
+      #EducacionFinanciera > div > .tipo {
+        text-align: right;
+        float: right;
+      }
+      #EducacionFinanciera > div > p {
+        float: left;
+        font-weight: 600;
+        font-size: 22px;
+      }
+      #EducacionFinanciera > div > a:last-of-type {
+        float: left;
+        color: #640ade;
+        font-weight: 600;
+      }
+
+      #AbreTuCuentaHoy {
+        float: left;
+        margin: 10vh 0;
+        align-items: center;
+        text-align: center;
+        width: 85%;
+        margin-left: 7.5%;
+        background-color: #640ade;
+        padding: 25px 0;
+        border-radius: 25px;
+      }
+
+      #AbreTuCuentaHoy h3 {
+        float: left;
+        font-size: 3.7em;
+        width: 100%;
+        margin: 0;
+        color: white;
+      }
+
+      #AbreTuCuentaHoy p {
+        float: left;
+        width: 100%;
+        color: white;
+        font-size: large;
+      }
+
+      #AbreTuCuentaHoy form {
+        float: left;
+        margin-left: 30%;
+        background-color: white;
+        padding: 25px 10px;
+        border-radius: 5px;
+      }
+
+      #AbreTuCuentaHoy input {
+        border: none;
+      }
+
+      #AbreTuCuentaHoy label {
+        background-color: #640ade;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      footer {
+        float: left;
+      }
+
+      footer > div {
+        float: left;
+        width: 25%;
+      }
+
+      footer > div > small {
+        float: left;
+        width: 100%;
+        font-size: 18px;
+        margin: 4% 0;
+      }
+
+      footer > div > small:first-of-type {
+        font-weight: bold;
+      }
+
+      footer > small {
+        float: left;
+      }
+
+      footer > div > div > a {
+        font-size: 24px; /* Tamaño de los iconos */
+        text-decoration: none; /* Elimina subrayados */
+        float: left;
+        margin-right: 20px; /* Espaciado entre los iconos */
+      }
+
+      footer > div:last-of-type {
+        float: left;
+        width: 100%;
+        border-top: grey 1px solid;
+      }
+
+      footer > div:last-of-type > small:first-of-type {
+        display: inline;
+        width: 50%;
+        float: left;
+        font-weight: lighter;
+      }
+
+      footer > div:last-of-type > small {
+        display: inline;
+        width: fit-content;
+        margin-right: 10px;
+        float: right;
+        font-size: 12px;
       }
     </style>
   </head>
@@ -237,7 +458,10 @@
       <img src="imgs/bancaDigital/foto1.png" />
     </section>
     <section id="tudecides">
-      <img src="imgs/bancaDigital/foto3.png" />
+      <div>
+        <h2>Tu decides.</h2>
+        <img src="imgs/bancaDigital/foto3.png" />
+      </div>
       <article>
         <h2>Haz que crezca tu dinero.</h2>
         <div id="CreaTuCuenta">
@@ -255,12 +479,100 @@
             a tu domicilio.
           </p>
         </div>
-        <div id="ActivaTuTarjeta">
+        <div>
           <a>03</a>
           <h3>Activa tu tarjeta y empieza a utilizarla.</h3>
           <p>Inicia sesión en la app e ingresa el número de tarjeta.</p>
         </div>
       </article>
     </section>
+    <section id="MandaRecibe">
+      <div>
+        <h2>Manda y recibe pagos al instante.</h2>
+        <p>
+          Tu dinero esta seguro en todo momento, puedes consultar todos los
+          movimientos de tu cuenta directamente desde tu celular.
+        </p>
+        <button>Abre tu cuenta hoy</button>
+      </div>
+      <img src="imgs/bancaDigital/foto4.png" />
+    </section>
+    <section id="EducacionFinanciera">
+      <h3>Educación Financiera.</h3>
+      <p>Comienza a aprender con nuestros artículos</p>
+      <div>
+        <img src="imgs/bancaDigital/retrato1.png" />
+        <a>12 de febrero 2021</a>
+        <a class="tipo">Créditos</a>
+        <p>Que debes saber antes de tramitar un crédito hipotecario</p>
+        <a href="#">Leer más &#10142;</a>
+      </div>
+      <div>
+        <img src="imgs/bancaDigital/retrato2.png" />
+        <a>8 de febrero 2021</a>
+        <a class="tipo">Inversión</a>
+        <p>Te damos 5 razones para invertir en la Bolsa de Valores</p>
+        <a href="#">Leer más &#10142;</a>
+      </div>
+      <div>
+        <img src="imgs/bancaDigital/retrato3.png" />
+        <a>2 de febrero 2021</a>
+        <a class="tipo">Emprender</a>
+        <p>Alcanza la libertad financiera antes de los 30</p>
+        <a href="#">Leer más &#10142;</a>
+      </div>
+    </section>
+    <section id="AbreTuCuentaHoy">
+      <h3>Abre tu cuenta hoy</h3>
+      <p>Es rápido y sencillo, te tomará menos de 5 minutos</p>
+      <form>
+        <input
+          type="text"
+          id="correo"
+          placeholder="Ingresa tu correo electrónico"
+        />
+        <label for="correo">Abre tu cuenta hoy</label>
+      </form>
+    </section>
+    <footer>
+      <div>
+        <small>Productos</small>
+        <small>Tarjeta de débito</small>
+        <small>Tarjeta de crédito</small>
+        <small>Créditos hipotecarios </small>
+      </div>
+      <div>
+        <small>Empresa</small>
+        <small>Acerca de nosotros</small>
+        <small>Tarjeta de crédito</small>
+        <small>Créditos hipotecarios </small>
+      </div>
+      <div>
+        <small>Centro de ayuda </small>
+        <small>Tarjeta de débito </small>
+        <small>Tarjeta de crédito</small>
+        <small>Créditos hipotecarios </small>
+      </div>
+      <div>
+        <small>Banca digital. </small>
+        <small>Avenida Paseo de la Reforma 296. </small>
+        <div>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div>
+        <small>2021 Banco digital. Todos los derechos resevados</small>
+        <small>Aviso de privacidad</small>
+        <small>Términos y condiciones</small>
+      </div>
+    </footer>
   </body>
 </html>
