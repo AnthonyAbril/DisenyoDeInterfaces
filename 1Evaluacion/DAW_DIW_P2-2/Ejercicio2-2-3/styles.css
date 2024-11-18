@@ -101,7 +101,7 @@
         ); /* Centra la imagen respecto a su punto de referencia */
         width: 35%; /* Ancho del 35% */
         background-color: #f5f5f5; /* Fondo gris claro */
-        padding: 100px 10% 130px 10%; /* Espaciado alrededor de la imagen */
+        padding: 130px 10% 130px 10%; /* Espaciado alrededor de la imagen */
         z-index: -1; /* La imagen se coloca detrás de otros elementos */
       }
 
