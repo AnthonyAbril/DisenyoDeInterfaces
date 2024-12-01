@@ -1,7 +1,5 @@
 /* Estilo predeterminado para pantallas mayores a 1200px */
-h1 {
-    background-color: yellow; /* Fondo amarillo por defecto */
-}
+
 
 li{
     color: blue;
@@ -24,14 +22,46 @@ div:first-child li{
 
 /* Pantallas entre 600px y 1200px */
 @media screen and (max-width: 1200px) and (min-width: 600px) {
-    h1 {
-        background-color: green; /* Fondo verde */
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #content div{
+        width: 33%;
+        float: right;
+        display: inline-block;
+    }
+
+    div:first-child{
+        float: left;
     }
 }
 
 /* Pantallas hasta 600px */
 @media screen and (max-width: 600px) {
-    h1 {
-        background-color: red; /* Fondo rojo */
+
+    h2{
+        border-bottom: 0.01em solid black;
+    }
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    div ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Estilo para la fecha en cada lista */
+    li strong {
+        display: block;  /* Hace que <strong> se comporte como un bloque, ocupando toda la línea */
+        margin-top: 5px; /* Espacio en la parte superior, si lo necesitas */
+        margin-bottom: 10px; /* Proporcionamos algo de espacio entre la fecha y el texto */
     }
 }
