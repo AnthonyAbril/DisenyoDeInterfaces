@@ -1,74 +1,75 @@
-@media screen and (max-width: 600px){
-    /* Estilo predeterminado para pantallas mayores a 1200px */
-    h1{
-        background-color: red;
-    }
+/* Estilos para pantallas menores o iguales a 600px */
+@media screen and (max-width: 600px) {
 
+    /* Estilos para los elementos de lista dentro de <aside> */
     aside ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        list-style: none; /* Elimina los puntos de la lista */
+        margin: 0; /* Elimina el margen predeterminado */
+        padding: 0; /* Elimina el padding predeterminado */
     }
 
     aside li{
-        display: inline;
+        display: inline; /* Hace que los elementos de la lista se muestren en línea, uno al lado del otro */
     }
 }
 
-/* Pantallas entre 600px y 1200px */
+/* Estilos para pantallas entre 600px y 1200px */
 @media screen and (max-width: 1200px) and (min-width: 600px) {
-    h1{
-        background-color: green;
-    }
 
-
+    /* Cambia el layout del contenedor principal a un diseño flex (horizontal) */
     body > div{
         display: flex;
     }
 
+    /* Ajusta el ancho de <aside> al 25% del contenedor */
     aside{
         width: 25%;
     }
     
+    /* Ajusta el ancho de <main> al 75% del contenedor */
     main{
         width: 75%;
     }
 
+    /* Estilos para el contenedor de listas dentro de <main> */
     main ul{
-        display: flex;
-        justify-content: space-around;
+        display: flex; /* Cambia el comportamiento de las listas para que se muestren en fila (flexbox) */
+        justify-content: space-around; /* Espacia los elementos de la lista de manera uniforme */
     }
 
+    /* Ajusta el tamaño de los elementos de lista dentro de <main> */
     main li{
-        width: 33.33%;
+        width: 33.33%; /* Hace que cada elemento de lista ocupe un tercio del contenedor */
     }
 
+    /* Elimina los estilos de lista (puntos, márgenes, etc.) dentro de los elementos <div> dentro de <main> */
     main div ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
+        list-style: none; /* Elimina los puntos de la lista */
+        margin: 0; /* Elimina el margen predeterminado */
+        padding: 0; /* Elimina el padding predeterminado */
     }
 }
 
-/* Pantallas hasta 600px */
+/* Estilos para pantallas mayores a 1200px */
 @media screen and (min-width: 1200px) {
-    h1{
-        background-color: yellow;
-    }
 
+    /* Ajusta el layout para el contenedor principal y <main> usando flexbox (fila) */
     body > div, main{
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* Organiza los elementos en una fila */
     }
 
+    /* Ajusta el ancho de <aside> al 33% del contenedor */
     aside {
         width: 33%;
     }
 
+    /* Ajusta el ancho de <main> al 66% del contenedor */
     main{
         width: 66%;
     }
 
+    /* Ajusta el tamaño de los elementos <div> dentro de <main> a la mitad del ancho del contenedor */
     main > div{
         width: 50%;
     }

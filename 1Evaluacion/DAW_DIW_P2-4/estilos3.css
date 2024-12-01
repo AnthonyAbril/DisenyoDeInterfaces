@@ -1,31 +1,40 @@
-
+/* Estilo para el body */
 body{
-    width: 80%;
-    margin: 0 auto;
+    width: 80%; /* El ancho del body será el 80% del ancho total de la pantalla */
+    margin: 0 auto; /* El margen izquierdo y derecho son automáticos, lo que centra el body en la pantalla */
 }
 
+/* Estilo para el h1 */
 h1{
-    display: flex;
-    justify-content: center;
+    display: flex; /* Usamos flexbox para organizar el contenido dentro de <h1> */
+    justify-content: center; /* El contenido dentro de <h1> se centra horizontalmente */
 }
 
+/* Estilo para todos los <div> */
 div{
-    display: flex;
+    display: flex; /* Usamos flexbox para organizar los elementos dentro de <div> */
 }
 
+/* Estilo para el aside */
 aside{
-    width: 25%;
+    width: 25%; /* El <aside> ocupará el 25% del ancho total disponible */
 }
 
+/* Estilo para el main */
 main{
-    width: 75%;
+    width: 75%; /* El <main> ocupará el 75% del ancho total disponible */
 }
 
+/* Estilo para las listas dentro de <main> */
 main ul{
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Usamos flexbox para organizar los elementos de la lista */
+    justify-content: space-around; /* Los elementos de la lista se distribuirán de manera uniforme con espacio entre ellos */
+    list-style: none; /* Elimina el punto de la lista, es decir, convierte la lista en una lista sin viñetas */
+    margin: 0; /* Elimina el margen predeterminado que las listas suelen tener */
+    padding: 0; /* Elimina el relleno interno de las listas */
 }
 
+/* Estilo para los elementos de lista dentro de <main> */
 main li{
-    width: 33.33%;
+    width: 33.33%; /* Cada elemento <li> ocupará un tercio del ancho disponible dentro de su contenedor */
 }
