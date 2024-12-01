@@ -31,7 +31,6 @@ div:first-child li{
 
     #content div{
         width: 33%;
-        float: right;
         display: inline-block;
     }
 
