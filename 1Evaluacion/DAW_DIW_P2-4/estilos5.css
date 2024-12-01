@@ -1,0 +1,75 @@
+@media screen and (max-width: 600px){
+    /* Estilo predeterminado para pantallas mayores a 1200px */
+    h1{
+        background-color: red;
+    }
+
+    aside ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    aside li{
+        display: inline;
+    }
+}
+
+/* Pantallas entre 600px y 1200px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    h1{
+        background-color: green;
+    }
+
+
+    body > div{
+        display: flex;
+    }
+
+    aside{
+        width: 25%;
+    }
+    
+    main{
+        width: 75%;
+    }
+
+    main ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main li{
+        width: 33.33%;
+    }
+
+    main div ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Pantallas hasta 600px */
+@media screen and (min-width: 1200px) {
+    h1{
+        background-color: yellow;
+    }
+
+    body > div, main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    aside {
+        width: 33%;
+    }
+
+    main{
+        width: 66%;
+    }
+
+    main > div{
+        width: 50%;
+    }
+}
