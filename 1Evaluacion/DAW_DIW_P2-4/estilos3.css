@@ -1,0 +1,31 @@
+
+body{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    display: flex;
+}
+
+aside{
+    width: 25%;
+}
+
+main{
+    width: 75%;
+}
+
+main ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+main li{
+    width: 33.33%;
+}
