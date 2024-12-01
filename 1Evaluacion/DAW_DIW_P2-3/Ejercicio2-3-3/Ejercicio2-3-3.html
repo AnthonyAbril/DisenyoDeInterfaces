@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetación con Float</title>
     <style>
+        /* 
+            Regla global para todos los elementos: 
+            - Elimina márgenes y rellenos predeterminados.
+            - Define el modelo de cajas como border-box.
+            - Aplica color de texto blanco y centrado.
+        */
         * {
             margin: 0;
             padding: 0;
@@ -14,48 +20,78 @@
             font-size: 100%;
         }
 
-        /* Contenedor centrado */
+        /* 
+            Contenedor principal:
+            - Utiliza Flexbox para organizar las secciones.
+            - Alinea los elementos en dirección columna (header, contenido, footer).
+            - Altura total de la ventana (100vh).
+        */
         #container {
-            display: flex; /* Distribuye los elementos hijos en filas */
-            flex-direction: column; /* Asegura que los hijos se alineen por secciones (header, contenido, footer) */
+            display: flex;
+            flex-direction: column;
             height: 100vh;
         }
 
-        /* Estilos para cada sección */
+        /* 
+            Header y footer:
+            - Ancho completo del contenedor.
+            - Altura relativa (10% para header y 5% para footer).
+            - Fondo verde (header) o coral claro (footer).
+            - Flexbox para centrar el contenido horizontal y verticalmente.
+        */
         #header, #footer {
             width: 100%;
-            height: 10vh; /* Altura relativa para ocupar el total de 100vh */
+            height: 10vh;
             background-color: green;
-
-
             display: flex;
-            
             padding: 10px;
         }
 
-        #header div{
+        /* Elementos del header:
+            - Cada opción ocupa un 15% del ancho del header.
+        */
+        #header div {
             width: 15%;
         }
 
+        /* 
+            Contenedor principal de contenido:
+            - Flexbox para posicionar #barra-lateral y #main uno al lado del otro.
+            - Ancho completo y altura relativa del 85% (entre el header y el footer).
+        */
         #main-container {
-            display: flex; /* Hace que #barra-lateral y #main estén uno al lado del otro */
+            display: flex;
             width: 100%;
-            height: 85vh; /* Altura del contenido principal */
+            height: 85vh;
         }
 
+        /* 
+            Barra lateral:
+            - Ocupa un 20% del ancho del contenedor.
+            - Altura del 100% del #main-container.
+            - Flexbox para alinear opciones de forma vertical y uniforme.
+            - Fondo azul claro.
+        */
         #barra-lateral {
-            width: 20%; /* Ancho relativo de la barra lateral */
-            height: 100%; /* Asegura que ocupe el 100% del contenedor */
+            width: 20%;
+            height: 100%;
             background-color: rgb(112, 178, 216);
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             padding: 10px;
         }
-        
+
+        /* 
+            Sección principal:
+            - Ocupa el 80% del ancho del #main-container.
+            - Altura del 100%.
+            - Flexbox con dirección vertical y espacio uniforme entre bloques.
+            - Fondo morado.
+        */
         #main {
-            width: 80%; /* Ancho relativo del contenido principal */
-            height: 100%; /* Asegura que ocupe el 100% del contenedor */
+            width: 80%;
+            height: 100%;
             background-color: rgb(225, 0, 255);
             display: flex;
             flex-direction: column;
@@ -63,43 +99,64 @@
             padding: 10px;
         }
 
+        /* 
+            Footer:
+            - Altura relativa del 5% de la ventana.
+            - Flexbox para centrar el contenido.
+            - Fondo coral claro.
+        */
         #footer {
             height: 5vh;
-            clear: both; /* Asegura que el footer quede debajo de todos los elementos flotantes */
             background-color: lightcoral;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        #primerBloque,#segundoBloque{
+        /* 
+            Bloques principales (#primerBloque y #segundoBloque):
+            - Flexbox para organizar elementos en filas.
+            - Bordes rojos para diferenciarlos visualmente.
+            - Relleno interno y espacio entre elementos.
+        */
+        #primerBloque, #segundoBloque {
             border: solid red 2px;
             justify-content: space-around;
             width: 100%;
-
             display: flex;
             flex-direction: row nowrap;
-            justify-content: space-around;
-
             padding: 4vh 2%;
         }
 
-        #primerBloque div{
+        /* 
+            Elementos internos del #primerBloque:
+            - Bordes azules.
+            - Cada elemento ocupa un 45% del ancho del bloque.
+            - Relleno interno de 15vh de altura y 10% de ancho.
+        */
+        #primerBloque div {
             border: solid blue 2px;
             padding: 15vh 10%;
             width: 45%;
         }
 
-        #segundoBloque div{
+        /* 
+            Elementos internos del #segundoBloque:
+            - Bordes azules.
+            - Cada elemento ocupa un 30% del ancho del bloque.
+            - Relleno interno de 15vh de altura y 10% de ancho.
+        */
+        #segundoBloque div {
             border: solid blue 2px;
-
             padding: 15vh 10%;
             width: 30%;
         }
     </style>
 </head>
 <body>
+    <!-- Contenedor principal -->
     <div id="container">
+        <!-- Encabezado -->
         <div id="header">
             <div><a href="#">OPCION 1</a></div>
             <div><a href="#">OPCION 2</a></div>
@@ -108,7 +165,9 @@
             <div><a href="#">OPCION 5</a></div>
         </div>
     
+        <!-- Contenedor de la barra lateral y el contenido principal -->
         <div id="main-container">
+            <!-- Barra lateral -->
             <div id="barra-lateral">
                 <div><a href="#">OPCION 1</a></div>
                 <div><a href="#">OPCION 2</a></div>
@@ -117,11 +176,14 @@
                 <div><a href="#">OPCION 5</a></div>
             </div>
     
+            <!-- Contenido principal -->
             <div id="main">
+                <!-- Primer bloque de contenido -->
                 <div id="primerBloque">
                     <div></div>
                     <div></div>
                 </div>
+                <!-- Segundo bloque de contenido -->
                 <div id="segundoBloque">
                     <div></div>
                     <div></div>
@@ -130,6 +192,7 @@
             </div>
         </div>
     
+        <!-- Pie de página -->
         <div id="footer">
             <p>FOOTER</p>
         </div>

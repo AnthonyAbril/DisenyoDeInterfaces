@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquetación con Float</title>
+    <title>Maquetación con FlexBox</title>
     <!--
-        Partiendo del resultado de Ejercicio 2-1-3. De DAW_DIW_P2-1. Realiza el mismo 
-        diseño web, pero utilizando FlexBox
+        Diseño web utilizando FlexBox para organizar los elementos.
+        Este ejercicio reemplaza el uso de float por FlexBox.
     -->
     <style>
+        /* 
+            Regla global para todos los elementos: 
+            - Elimina márgenes y rellenos predeterminados.
+            - Define el modelo de cajas como border-box.
+            - Aplica color de texto blanco y centrado.
+        */
         * {
             margin: 0;
             padding: 0;
@@ -17,105 +23,157 @@
             text-align: center;
         }
 
-        body{
-            display:flex;
+        /* 
+            Configuración del cuerpo principal:
+            - Flexbox con dirección de columna invertida (column-reverse).
+            - Centra el contenido en el eje principal.
+        */
+        body {
+            display: flex;
             justify-content: center;
             flex-direction: column-reverse wrap;
         }
 
-        div{
-            
+        /* 
+            Estilo genérico para todos los divs:
+            - Flexbox para centrar elementos.
+            - Relleno interno de 10px.
+        */
+        div {
             display: flex;
             padding: 10px;
             justify-content: center;
         }
 
-        /* Contenedor centrado */
+        /* 
+            Contenedor principal:
+            - Ancho fijo de 980px y altura completa de la ventana.
+            - Flexbox con elementos alineados al inicio y envueltos si es necesario.
+        */
         #container {
             width: 980px;
             height: 100vh;
             padding: 0;
-
-            justify-content:flex-start;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
 
-        /* Estilos para cada sección */
+        /* 
+            Encabezado y pie de página:
+            - Ancho completo del contenedor.
+            - Flexbox para centrar contenido en el eje principal y secundario.
+        */
         #header, #footer {
-            
-            background-color: green;
-            
+            background-color: green; /* Fondo verde */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
             width: 100%;
         }
 
+        /* 
+            Barra lateral:
+            - Ocupa un 20% del ancho del contenedor.
+            - Fondo azul claro.
+        */
         #barra-lateral {
-            
             background-color: rgb(112, 178, 216);
             width: 20%;
         }
 
+        /* 
+            Sección principal:
+            - Ocupa un 80% del ancho del contenedor.
+            - Altura del 85% de la ventana.
+            - Flexbox con los elementos alineados y espaciados uniformemente.
+        */
         #main {
-            
-            background-color: rgb(225, 0, 255);
-            
+            background-color: rgb(225, 0, 255); /* Fondo morado */
             width: 80%;
             height: 85vh;
             padding: 10px;
             display: flex;
-            
-            display: flex;
             flex-direction: column;
             justify-content: space-around;
-
         }
 
+        /* 
+            Pie de página:
+            - Altura del 5% de la ventana.
+            - Fondo color coral claro.
+        */
         #footer {
             height: 5vh;
             background-color: lightcoral;
         }
 
-        #primerBloque,#segundoBloque{
+        /* 
+            Bloques principales (#primerBloque y #segundoBloque):
+            - Bordes rojos para diferenciarlos.
+            - Margen superior e inferior de 20px.
+            - Ancho completo dentro de #main.
+        */
+        #primerBloque, #segundoBloque {
             border: solid red 2px;
             margin: 20px 0;
             width: 100%;
-
         }
 
-        #primerBloque div{
+        /* 
+            Elementos internos de #primerBloque:
+            - Bordes azules para diferenciarlos.
+            - Ancho relativo del 45%.
+            - Margen entre elementos (1%).
+            - Relleno interno de 80px.
+        */
+        #primerBloque div {
             border: solid blue 2px;
             width: 45%;
             margin: 20px 1%;
             padding: 80px;
         }
 
-        #segundoBloque div{
+        /* 
+            Elementos internos de #segundoBloque:
+            - Bordes azules.
+            - Ancho relativo del 30%.
+            - Margen entre elementos (1%).
+            - Relleno interno (80px en altura).
+        */
+        #segundoBloque div {
             border: solid blue 2px;
             width: 30%;
             margin: 20px 1%;
             padding: 80px 0;
         }
 
+        /* 
+            Altura del encabezado:
+            - Fija en un 10% de la ventana.
+        */
         #header {
             height: 10vh;
         }
     </style>
 </head>
 <body>
+    <!-- Contenedor principal -->
     <div id="container">
+        <!-- Encabezado -->
         <div id="header">
             <p>HEADER</p>
         </div>
 
+        <!-- Barra lateral -->
         <div id="barra-lateral">
             <p>aside</p>
         </div>
 
+        <!-- Contenido principal -->
         <div id="main">
             <p>main</p>
+
+            <!-- Primer bloque de contenido -->
             <div id="primerBloque">
                 <div>
                     <p></p>
@@ -124,6 +182,8 @@
                     <p></p>
                 </div>
             </div>
+
+            <!-- Segundo bloque de contenido -->
             <div id="segundoBloque">
                 <div>
                     <p></p>
@@ -137,6 +197,7 @@
             </div>
         </div>
 
+        <!-- Pie de página -->
         <div id="footer">
             <p>FOOTER</p>
         </div>
