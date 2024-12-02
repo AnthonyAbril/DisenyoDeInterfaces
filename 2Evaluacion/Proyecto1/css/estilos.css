@@ -96,7 +96,13 @@ body {
         border-bottom: 0.1vh solid brown;
     }
     
-
+    #content1 div{
+        background-image: url("../img/casa-bosque-sm.jpg");
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen */
+        width: 100%; /* Ajusta al tamaño del contenedor padre */
+        height: 300vh; /* Altura específica para que sea visible */
+    }
 }
 /* Media queries md */
 
