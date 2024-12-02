@@ -1,0 +1,103 @@
+/*
+
+.- Variables CSS:
+6.1.- Tipograf�a:
+fuente-principal -> Pacifico
+fuente-alternativa -> sans-serif
+6.2.- Tama�os:
+tam-fuente-xs -> 12px
+tam-max-contenedor-x -> 1200px
+tam-alto-encabezado-xs -> 8vh
+6.3.- Colores (buscar con utilidad adobe):
+fondo-encabezado ->B8D2F4
+fondo-menu ->894B26
+fondo-todo ->
+negro -> #000
+blanco -> #FFF
+color-texto ->517104
+color-titulos-claro ->2CDA1C
+color-titulos-oscuro->1F411C
+color-primario ->517104
+color-secundario ->83A705
+color-opuesto-primario ->894B26
+color-opuesto-secundario ->F58A03
+
+*/
+
+
+:root {
+    --fuente-principal: 'Pacifico';
+    --fuente-alternativa: sans-serif;
+    --tam-fuente-xs: 12px;
+    --tam-fuente-sm: 13px;
+    --tam-fuente-md: 15px;
+    --tam-fuente-lg: 17px;
+    --tam-fuente-xl: 17px;
+    --tam-max-contenedor-x: 1200px;
+    --tam-alto-encabezado-xs: 8vh;
+    --negro: #000;
+    --blanco: #FFF;
+    --fondo-encabezado: #B8D2F4;
+    --fondo-menu: var(--blanco);
+    --fondo-todo: var(--fondo-encabezado);
+    --color-texto: #517104;
+    --color-titulos-claro: #2CDA1C;
+    --color-titulos-oscuro: #1F411C;
+    --color-primario: #517104;
+    --color-secundario: #83A705;
+    --color-opuesto-primario: #894B26;
+    --color-opuesto-secundario: #F58A03;
+    --color-enlace: var(--color-opuesto-primario);
+    --color-enlace-hover: var(--color-opuesto-secundario);
+    --color-transparencia: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-family: var(--fuente-principal), var(--fuente-alternativa);
+    font-size: var(--tam-fuente-xs);
+    background-color: var(--fondo-todo);
+    color: var(--color-texto);
+}
+
+*,
+:after,
+:before {
+    padding: 0;
+    margin: 0
+}
+body {
+    overflow-x: hidden;
+}
+#inicio,#nosotros,#contacto{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Media queries sm */
+
+@media (min-width: 576px) {
+    nav ul{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav li{
+        background-color: white;
+        padding: 1vh 50%;
+    }
+
+}
+/* Media queries md */
+
+@media (min-width: 768px) {
+}
+/* Media queries lg */
+
+@media (min-width: 992px) {
+}
+/* Media queries xl */
+
+@media (min-width: 1200px) {
+}
