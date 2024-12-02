@@ -76,17 +76,26 @@ body {
 /* Media queries sm */
 
 @media (min-width: 576px) {
-    nav ul{
+    nav ul {
         display: flex;
         flex-flow: column wrap;
-        align-items: center;
+        align-items: center; /* Centra los elementos si tienen menos ancho */
+        
         list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%; /* Asegúrate de que la lista ocupe todo el contenedor */
     }
-
-    nav li{
+    
+    nav li {
         background-color: white;
-        padding: 1vh 50%;
+        width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho del contenedor */
+        text-align: center; /* Centra el contenido del <li> */
+        padding: 10px; /* Agrega espacio interno si es necesario */
+        box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+        border-bottom: 0.1vh solid brown;
     }
+    
 
 }
 /* Media queries md */
