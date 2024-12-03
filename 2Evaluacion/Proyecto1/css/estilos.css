@@ -132,27 +132,46 @@ body {
     }
 
     #nosotros{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("../img/texture-1674066_640.jpg");
+    }
+
+    #nosotros > div{
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nosotros #imagen{
+        background-image:url("../img/casa-cielo-xs.jpg"); 
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen */
+        width: 100%; /* Ajusta al tamaño del contenedor padre */
+        height:40vh; /* Altura específica para que sea visible */
+    }
+
+    #contacto{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-around;
-
-        background-image: url("../img/texture-1674066_640.jpg");
-    }
-    
-
-    #nosotros span{
-        background-image:url("../img/casa-cielo-xs.jpg"); 
-        background-size: contain; /* Ajusta la imagen para cubrir todo el área */
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
         background-position: center; /* Centra la imagen */
         background-repeat: no-repeat; /* Evita que el fondo se repita */
 
-        width: 100%; /* Ajusta al tamaño del contenedor padre */
-        height:90%; /* Altura específica para que sea visible */
-        margin: 10px;
+        background-image: url("../img/contacto-xs.jpg");
     }
 
-
+    #contacto form{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
 }
 
 /* Media queries sm */
