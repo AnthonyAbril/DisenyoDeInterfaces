@@ -73,9 +73,14 @@ body {
     height: 100vh;
 }
 
-/* Media queries sm */
 
-@media (min-width: 576px) {
+/* Media queries xs */
+
+@media (max-width: 576px){
+    h1{
+        height: var(--tam-alto-encabezado-xs);
+    }
+
     nav ul {
         display: flex;
         flex-flow: column wrap;
@@ -96,13 +101,34 @@ body {
         border-bottom: 0.1vh solid brown;
     }
     
-    #content1 div{
-        background-image: url("../img/casa-bosque-sm.jpg");
+    #inicio{
+        background-image: url("../img/casa-bosque-xs.jpg");
         background-size: cover; /* Ajusta la imagen para cubrir todo el área */
         background-position: center; /* Centra la imagen */
         width: 100%; /* Ajusta al tamaño del contenedor padre */
-        height: 300vh; /* Altura específica para que sea visible */
+        height:50vh; /* Altura específica para que sea visible */
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    #inicio p{
+        color: var(--color-titulos-claro);
+        background-color: var(--color-transparencia);
+        border: 0.01em solid var(--color-titulos-claro);
+        border-radius: 10px;
+        padding: 60px 20px;
+        font-size:x-large;
+        margin: 40px;
+        text-align: center;
+    }
+}
+
+/* Media queries sm */
+
+@media (min-width: 576px) {
 }
 /* Media queries md */
 
