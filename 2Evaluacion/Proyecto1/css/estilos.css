@@ -165,7 +165,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     h2{
@@ -202,7 +202,41 @@ body {
     }
 
     /* Galeria de Imagenes */
+    #GaleriaDeImagenes{
+        background-image: url("../img/texture-1674066_640.jpg");
+    }
 
+    #GaleriaDeImagenes .img{
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen */
+        width: 90%; /* Ajusta al tamaño del contenedor padre */
+        height:40vh; /* Altura específica para que sea visible */
+        margin: 2vh auto;
+    }
+
+    #GaleriaDeImagenes #imagen1{
+        background-image: url("../img/alone-1867464-xs.jpg");
+    }
+
+    #GaleriaDeImagenes #imagen2{
+        background-image: url("../img/architecture-1836070-xs.jpg");
+    }
+
+    #GaleriaDeImagenes #imagen3{
+        background-image: url("../img/autumn-1748644-xs.jpg");
+    }
+
+    #GaleriaDeImagenes #imagen4{
+        background-image: url("../img/apartment-3564955-xs.jpg");
+    }
+
+    #GaleriaDeImagenes #imagen5{
+        background-image: url("../img/country-house-540796-xs.jpg");
+    }
+    
+    #GaleriaDeImagenes #imagen6{
+        background-image: url("../img/large-home-389271-xs.jpg");
+    }
 
     #contacto{
         display: flex;
@@ -214,6 +248,7 @@ body {
         background-repeat: no-repeat; /* Evita que el fondo se repita */
 
         background-image: url("../img/contacto-xs.jpg");
+        color: var(--color-opuesto-primario);
     }
 
     #contacto form{
