@@ -102,9 +102,12 @@ body {
         background-color: white;
         width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho del contenedor */
         text-align: center; /* Centra el contenido del <li> */
+        font-weight:bold;
+        font-size: larger;
         padding: 10px; /* Agrega espacio interno si es necesario */
         box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
-        border-bottom: 0.1vh solid brown;
+        border-bottom: 0.1vh solid var(--color-opuesto-primario);
+        color: var(--color-opuesto-primario);
     }
     
     #inicio{
