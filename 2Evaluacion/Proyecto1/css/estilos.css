@@ -81,6 +81,12 @@ body {
         height: var(--tam-alto-encabezado-xs);
         font-weight: 400;
         font-style: normal;
+
+        background-image: url("../img/favicon/android-chrome-192x192.png");
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        padding: 0 70px ;
+        background-size: 70px; /* Ajusta el tamaño a 40px por 40px */
     }
 
     h1 span {
