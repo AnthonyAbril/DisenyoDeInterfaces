@@ -239,22 +239,41 @@ body {
     }
 
     #contacto{
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que el fondo se repita */
+        background-image: url("../img/contacto-xs.jpg");
+        color: var(--color-opuesto-primario);
+        
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: space-around;
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que el fondo se repita */
+    }
 
-        background-image: url("../img/contacto-xs.jpg");
-        color: var(--color-opuesto-primario);
+    #contacto > h2{
+        margin: 0;
+        justify-self: flex-start;
     }
 
     #contacto form{
+        color: var(--blanco);
+        background-color: #0000007a;
+        padding: 5%;
+        border-radius: 1vh;
+
+        justify-self: center;
+
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
+        width: 80%;
+        height: 60vh;
+    }
+
+    #contacto form p, #contacto form h2{
+        align-self: center;
+        margin: 0;
     }
 }
 
