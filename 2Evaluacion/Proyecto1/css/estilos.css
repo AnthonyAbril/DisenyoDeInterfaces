@@ -77,6 +77,7 @@ body {
 /* Media queries xs */
 
 @media (max-width: 576px){
+
     h1{
         height: var(--tam-alto-encabezado-xs);
         font-weight: 400;
@@ -289,6 +290,43 @@ body {
         align-self: center;
         margin: 0;
     }
+
+    footer{
+        background-color: var(--color-opuesto-primario);
+        padding: 5%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p{
+        margin: 0;
+        color: var(--blanco);
+    }
+
+    #btnSubir {
+        position: fixed;       /* Fijo en la pantalla */
+        bottom: 20px;          /* Separación desde el fondo */
+        right: 20px;           /* Separación desde la derecha */
+        width: 40px;           /* Ancho del botón */
+        height: 40px;          /* Alto del botón */
+        border: none;          /* Sin bordes */
+        cursor: pointer;       /* Cambia el cursor al pasar */
+
+        filter: drop-shadow(
+            0 0 10px rgba(0, 0, 0, .4)
+        );
+        display: none;         /* Ocultamos el botón inicialmente */
+        z-index: 1000;         /* Aseguramos que esté por encima del contenido */
+
+        background-image: url("../img/arrow-24846.svg");
+        background-color: transparent; /* Fondo transparente */
+        background-size: contain; /* Ajusta el tamaño de la imagen */
+        background-repeat: no-repeat; /* No repite la imagen */
+        background-position: center; /* Centra la imagen */
+    }
+    
 }
 
 /* Media queries sm */
