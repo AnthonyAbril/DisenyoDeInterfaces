@@ -160,7 +160,47 @@ body {
         height:30vh; /* Altura específica para que sea visible */
     }
 
+    #ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #GaleriaDeImagenes{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
     /* Conoce a nuestros modelos */
+    #ConoceNuestrosModelos h2{
+        margin: 0;
+        padding: 1vh;
+    }
+
+    #ConoceNuestrosModelos p{
+        width: 90%;
+    }
+
+    #ConoceNuestrosModelos #imagen1, #ConoceNuestrosModelos #imagen2, #ConoceNuestrosModelos #imagen3{
+        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+        background-position: center; /* Centra la imagen */
+        width: 100%; /* Ajusta al tamaño del contenedor padre */
+        height:40vh; /* Altura específica para que sea visible */
+    }
+
+    #ConoceNuestrosModelos #imagen1{
+        background-image: url("../img/casa-basica-xs.jpg");
+    }
+
+    #ConoceNuestrosModelos #imagen2{
+        background-image: url("../img/casa-grande-xs.jpg");
+    }
+
+    #ConoceNuestrosModelos #imagen3{
+        background-image: url("../img/casa-lago-xs.jpg");
+    }
+
 
     /* Galeria de Imagenes */
 
