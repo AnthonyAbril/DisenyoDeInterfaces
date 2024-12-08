@@ -160,6 +160,10 @@ body {
         height:30vh; /* Altura específica para que sea visible */
     }
 
+    /* Conoce a nuestros modelos */
+
+    /* Galeria de Imagenes */
+
     #contacto{
         display: flex;
         flex-flow: column nowrap;
