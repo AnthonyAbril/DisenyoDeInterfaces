@@ -115,6 +115,11 @@ body {
         border-bottom: 0.1vh solid var(--color-opuesto-primario);
         color: var(--color-opuesto-primario);
     }
+
+    nav a{
+        text-decoration: none;
+        color: var(--color-enlace);
+    }
     
     #inicio{
         background-image: url("../img/casa-bosque-xs.jpg");
