@@ -57,6 +57,8 @@ html {
     font-size: var(--tam-fuente-xs);
     background-color: var(--fondo-todo);
     color: var(--color-texto);
+    scroll-behavior: smooth;
+    /* Esto hace que cuando le demos click a las anclas, la página haga un scroll suave */
 }
 
 *,
@@ -76,259 +78,255 @@ body {
 
 /* Media queries xs */
 
-@media (max-width: 576px){
+h1{
+    height: var(--tam-alto-encabezado-xs);
+    font-weight: 400;
+    font-style: normal;
 
-    h1{
-        height: var(--tam-alto-encabezado-xs);
-        font-weight: 400;
-        font-style: normal;
-
-        background-image: url("../img/favicon/android-chrome-192x192.png");
-        background-repeat: no-repeat;
-        background-position: 0 center;
-        padding: 0 70px ;
-        background-size: 70px; /* Ajusta el tamaño a 40px por 40px */
-    }
-
-    h1 span {
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center; /* Centra los elementos si tienen menos ancho */
-        
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%; /* Asegúrate de que la lista ocupe todo el contenedor */
-    }
-    
-    nav li {
-        background-color: white;
-        width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho del contenedor */
-        text-align: center; /* Centra el contenido del <li> */
-        font-weight:bold;
-        font-size: larger;
-        padding: 10px; /* Agrega espacio interno si es necesario */
-        box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
-        border-bottom: 0.1vh solid var(--color-opuesto-primario);
-        color: var(--color-opuesto-primario);
-    }
-
-    nav a{
-        text-decoration: none;
-        color: var(--color-enlace);
-    }
-    
-    #inicio{
-        background-image: url("../img/casa-bosque-xs.jpg");
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        width: 100%; /* Ajusta al tamaño del contenedor padre */
-        height:50vh; /* Altura específica para que sea visible */
-        
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #inicio p{
-        color: var(--color-titulos-claro);
-        background-color: var(--color-transparencia);
-        border: 0.01em solid var(--color-titulos-claro);
-        border-radius: 10px;
-        padding: 60px 20px;
-        font-size:x-large;
-        margin: 40px;
-        text-align: center;
-    }
-
-    #nosotros{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: url("../img/texture-1674066_640.jpg");
-    }
-
-    #nosotros > div{
-        width: 80%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #nosotros > div > div,h2,p{
-        margin-bottom: 2vh;
-        margin-top: 2vh;
-    }
-
-    #nosotros #imagen{
-        background-image:url("../img/casa-cielo-xs.jpg"); 
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        width: 100%; /* Ajusta al tamaño del contenedor padre */
-        height:30vh; /* Altura específica para que sea visible */
-    }
-
-    #ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #GaleriaDeImagenes{
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    h2{
-        font-size: 2em;
-    }
-
-    /* Conoce a nuestros modelos */
-    #ConoceNuestrosModelos h2{
-        margin: 0;
-        padding: 1vh;
-    }
-
-    #ConoceNuestrosModelos p{
-        width: 90%;
-    }
-
-    #ConoceNuestrosModelos .img{
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        width: 100%; /* Ajusta al tamaño del contenedor padre */
-        height:40vh; /* Altura específica para que sea visible */
-    }
-
-    #ConoceNuestrosModelos #imagen1{
-        background-image: url("../img/casa-basica-xs.jpg");
-    }
-
-    #ConoceNuestrosModelos #imagen2{
-        background-image: url("../img/casa-grande-xs.jpg");
-    }
-
-    #ConoceNuestrosModelos #imagen3{
-        background-image: url("../img/casa-lago-xs.jpg");
-    }
-
-    /* Galeria de Imagenes */
-    #GaleriaDeImagenes{
-        background-image: url("../img/texture-1674066_640.jpg");
-    }
-
-    #GaleriaDeImagenes .img{
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        width: 90%; /* Ajusta al tamaño del contenedor padre */
-        height:40vh; /* Altura específica para que sea visible */
-        margin: 2vh auto;
-    }
-
-    #GaleriaDeImagenes #imagen1{
-        background-image: url("../img/alone-1867464-xs.jpg");
-    }
-
-    #GaleriaDeImagenes #imagen2{
-        background-image: url("../img/architecture-1836070-xs.jpg");
-    }
-
-    #GaleriaDeImagenes #imagen3{
-        background-image: url("../img/autumn-1748644-xs.jpg");
-    }
-
-    #GaleriaDeImagenes #imagen4{
-        background-image: url("../img/apartment-3564955-xs.jpg");
-    }
-
-    #GaleriaDeImagenes #imagen5{
-        background-image: url("../img/country-house-540796-xs.jpg");
-    }
-    
-    #GaleriaDeImagenes #imagen6{
-        background-image: url("../img/large-home-389271-xs.jpg");
-    }
-
-    #contacto{
-        background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que el fondo se repita */
-        background-image: url("../img/contacto-xs.jpg");
-        color: var(--color-opuesto-primario);
-        
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    #contacto > h2{
-        margin: 0;
-        justify-self: flex-start;
-    }
-
-    #contacto form{
-        color: var(--blanco);
-        background-color: #0000007a;
-        padding: 5%;
-        border-radius: 1vh;
-
-        justify-self: center;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-around;
-        width: 80%;
-        height: 60vh;
-    }
-
-    #contacto form p, #contacto form h2{
-        align-self: center;
-        margin: 0;
-    }
-
-    footer{
-        background-color: var(--color-opuesto-primario);
-        padding: 5%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer p{
-        margin: 0;
-        color: var(--blanco);
-    }
-
-    #btnSubir {
-        position: fixed;       /* Fijo en la pantalla */
-        bottom: 20px;          /* Separación desde el fondo */
-        right: 20px;           /* Separación desde la derecha */
-        width: 40px;           /* Ancho del botón */
-        height: 40px;          /* Alto del botón */
-        border: none;          /* Sin bordes */
-        cursor: pointer;       /* Cambia el cursor al pasar */
-
-        filter: drop-shadow(
-            0 0 10px rgba(0, 0, 0, .4)
-        );
-        display: none;         /* Ocultamos el botón inicialmente */
-        z-index: 1000;         /* Aseguramos que esté por encima del contenido */
-
-        background-image: url("../img/arrow-24846.svg");
-        background-color: transparent; /* Fondo transparente */
-        background-size: contain; /* Ajusta el tamaño de la imagen */
-        background-repeat: no-repeat; /* No repite la imagen */
-        background-position: center; /* Centra la imagen */
-    }
-    
+    background-image: url("../img/favicon/android-chrome-192x192.png");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left:  70px ;
+    background-size: 70px; /* Ajusta el tamaño a 40px por 40px */
 }
 
+h1 span {
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center; /* Centra los elementos si tienen menos ancho */
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Asegúrate de que la lista ocupe todo el contenedor */
+}
+
+nav li {
+    background-color: white;
+    width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho del contenedor */
+    text-align: center; /* Centra el contenido del <li> */
+    font-weight:bold;
+    font-size: larger;
+    padding: 10px; /* Agrega espacio interno si es necesario */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+    border-bottom: 0.1vh solid var(--color-opuesto-primario);
+    color: var(--color-opuesto-primario);
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color-enlace);
+}
+
+#inicio{
+    background-image: url("../img/casa-bosque-xs.jpg");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Ajusta al tamaño del contenedor padre */
+    height:50vh; /* Altura específica para que sea visible */
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio p{
+    color: var(--color-titulos-claro);
+    background-color: var(--color-transparencia);
+    border: 0.01em solid var(--color-titulos-claro);
+    border-radius: 10px;
+    padding: 60px 20px;
+    font-size:x-large;
+    margin: 40px;
+    text-align: center;
+}
+
+#nosotros{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/texture-1674066_640.jpg");
+}
+
+#nosotros > div{
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nosotros > div > div,h2,p{
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+#nosotros #imagen{
+    background-image:url("../img/casa-cielo-xs.jpg"); 
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Ajusta al tamaño del contenedor padre */
+    height:30vh; /* Altura específica para que sea visible */
+}
+
+#ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #GaleriaDeImagenes{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h2{
+    font-size: 2em;
+}
+
+/* Conoce a nuestros modelos */
+#ConoceNuestrosModelos h2{
+    margin: 0;
+    padding: 1vh;
+}
+
+#ConoceNuestrosModelos p{
+    width: 90%;
+}
+
+#ConoceNuestrosModelos .img{
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Ajusta al tamaño del contenedor padre */
+    height:40vh; /* Altura específica para que sea visible */
+}
+
+#ConoceNuestrosModelos #imagen1{
+    background-image: url("../img/casa-basica-xs.jpg");
+}
+
+#ConoceNuestrosModelos #imagen2{
+    background-image: url("../img/casa-grande-xs.jpg");
+}
+
+#ConoceNuestrosModelos #imagen3{
+    background-image: url("../img/casa-lago-xs.jpg");
+}
+
+/* Galeria de Imagenes */
+#GaleriaDeImagenes{
+    background-image: url("../img/texture-1674066_640.jpg");
+}
+
+#GaleriaDeImagenes .img{
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    width: 90%; /* Ajusta al tamaño del contenedor padre */
+    height:40vh; /* Altura específica para que sea visible */
+    margin: 2vh auto;
+}
+
+#GaleriaDeImagenes #imagen1{
+    background-image: url("../img/alone-1867464-xs.jpg");
+}
+
+#GaleriaDeImagenes #imagen2{
+    background-image: url("../img/architecture-1836070-xs.jpg");
+}
+
+#GaleriaDeImagenes #imagen3{
+    background-image: url("../img/autumn-1748644-xs.jpg");
+}
+
+#GaleriaDeImagenes #imagen4{
+    background-image: url("../img/apartment-3564955-xs.jpg");
+}
+
+#GaleriaDeImagenes #imagen5{
+    background-image: url("../img/country-house-540796-xs.jpg");
+}
+
+#GaleriaDeImagenes #imagen6{
+    background-image: url("../img/large-home-389271-xs.jpg");
+}
+
+#contacto{
+    background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-image: url("../img/contacto-xs.jpg");
+    color: var(--color-opuesto-primario);
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contacto > h2{
+    margin: 0;
+    justify-self: flex-start;
+}
+
+#contacto form{
+    color: var(--blanco);
+    background-color: #0000007a;
+    padding: 5%;
+    border-radius: 1vh;
+
+    justify-self: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    width: 80%;
+    height: 60vh;
+}
+
+#contacto form p, #contacto form h2{
+    align-self: center;
+    margin: 0;
+}
+
+footer{
+    background-color: var(--color-opuesto-primario);
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+    color: var(--blanco);
+}
+
+#btnSubir {
+    position: fixed;       /* Fijo en la pantalla */
+    bottom: 20px;          /* Separación desde el fondo */
+    right: 20px;           /* Separación desde la derecha */
+    width: 40px;           /* Ancho del botón */
+    height: 40px;          /* Alto del botón */
+    border: none;          /* Sin bordes */
+    cursor: pointer;       /* Cambia el cursor al pasar */
+
+    filter: drop-shadow(
+        0 0 10px rgba(0, 0, 0, .4)
+    );
+    display: none;         /* Ocultamos el botón inicialmente */
+    z-index: 1000;         /* Aseguramos que esté por encima del contenido */
+
+    background-image: url("../img/arrow-24846.svg");
+    background-color: transparent; /* Fondo transparente */
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-position: center; /* Centra la imagen */
+}
+    
 /* Media queries sm */
 
 @media (min-width: 576px) {
@@ -344,4 +342,60 @@ body {
 /* Media queries xl */
 
 @media (min-width: 1200px) {
+    html {
+        font-size: var(--size-font-lg);
+    }
+
+    body{
+        width: 66%;
+        margin: 0 auto;
+    }
+
+    header{
+        display: flex;
+        flex-flow: row nowrap;
+        /* cuando lo necesite en horizontal pasar a row */
+        height: 8vh;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+        /* cuando lo necesite en horizontal pasar a row */
+    }
+
+    nav li {
+        background-color: var(--color-background-header);
+        border-bottom: none;
+        font-weight: lighter;
+    }
+
+    #inicio{
+        height: 92vh;
+        background-image: url("../img/casa-bosque-lg.jpg");
+    }
+
+    #inicio p{
+        padding: 60px 40px;
+    }
+
+    #nosotros{
+        height:max-content;
+    }
+
+    #nosotros #imagen{
+        background-image:url("../img/casa-cielo-lg.jpg"); 
+        background-size: cover; /* También puede ser "contain" */
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        height: 70vh;
+
+    }
+
+    #nosotros p{
+        font-size: var(--tam-fuente-xl);
+    }
 }
