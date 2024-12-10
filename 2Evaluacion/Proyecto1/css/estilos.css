@@ -417,19 +417,16 @@ footer p{
     #ConoceNuestrosModelos .descripcion {
 
         position: absolute; /* Permite posicionar el texto sobre la imagen */
-        top: 30%; /* Centra verticalmente */
+        top: 0%; /* Centra verticalmente */
         left: 50%; /* Centra horizontalmente */
-        transform: translate(0%, -50%); /* Ajusta el punto de referencia al centro del texto */
-        background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para contraste */
-        color: white; /* Color del texto */
+        transform: translate(0%, 0%); /* Ajusta el punto de referencia al centro del texto */
         padding: 1em; /* Espaciado interno */
-        border-radius: 10px; /* Bordes redondeados */
         z-index: 2; /* Coloca el texto encima de la imagen */
         text-align: center; /* Centra el texto dentro del cuadro */
     }
 
     #ConoceNuestrosModelos > div:first-of-type .descripcion, #ConoceNuestrosModelos > div:last-of-type .descripcion{
-        transform: translate(-100%, -50%); /* Ajusta el punto de referencia al centro del texto */
+        transform: translate(-100%, 0%); /* Ajusta el punto de referencia al centro del texto */
     }
 
     #ConoceNuestrosModelos .descripcion p{
