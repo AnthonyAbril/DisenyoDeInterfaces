@@ -175,7 +175,7 @@ nav a{
     height:30vh; /* Altura específica para que sea visible */
 }
 
-#ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #GaleriaDeImagenes{
+#ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #ConoceNuestrosModelos .descripcion , #GaleriaDeImagenes{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -397,5 +397,42 @@ footer p{
 
     #nosotros p{
         font-size: var(--tam-fuente-xl);
+    }
+
+    /*ConoceNuestrosModelos*/
+    #ConoceNuestrosModelos .descripcion {
+        color: red;
+    }
+    
+    #ConoceNuestrosModelos > div {
+        position: relative; /* Necesario para que los hijos posicionados se refieran a este contenedor */
+        width: 100%;
+    }
+    
+    #ConoceNuestrosModelos .img {
+        position: relative; /* Base para la imagen */
+        z-index: 1; /* La imagen estará en el fondo */
+    }
+    
+    #ConoceNuestrosModelos .descripcion {
+
+        position: absolute; /* Permite posicionar el texto sobre la imagen */
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro del texto */
+        background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para contraste */
+        color: white; /* Color del texto */
+        padding: 1em; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+        z-index: 2; /* Coloca el texto encima de la imagen */
+        text-align: center; /* Centra el texto dentro del cuadro */
+    }
+
+    #ConoceNuestrosModelos .descripcion p{
+        font-size: var(--tam-fuente-sm);
+    }
+
+    #ConoceNuestrosModelos .descripcion h2{
+        font-size: var(--tam-fuente-md);
     }
 }
