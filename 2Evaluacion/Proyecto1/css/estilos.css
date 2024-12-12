@@ -175,7 +175,7 @@ nav a{
     height:30vh; /* Altura específica para que sea visible */
 }
 
-#ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #ConoceNuestrosModelos .descripcion , #GaleriaDeImagenes{
+#ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #ConoceNuestrosModelos .descripcion , #GaleriaDeImagenes {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -229,6 +229,12 @@ h2{
     margin: 2vh auto;
 }
 
+#GaleriaDeImagenes > div{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
 #GaleriaDeImagenes #imagen1{
     background-image: url("../img/alone-1867464-xs.jpg");
 }
@@ -251,6 +257,11 @@ h2{
 
 #GaleriaDeImagenes #imagen6{
     background-image: url("../img/large-home-389271-xs.jpg");
+}
+
+#GaleriaDeImagenes .img, #nosotros .img{
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 #contacto{
@@ -448,5 +459,20 @@ footer p{
 
     #ConoceNuestrosModelos .descripcion h2{
         font-size: var(--tam-fuente-md);
+    }
+
+    #GaleriaDeImagenes{
+        flex-flow: column wrap;
+    }
+
+    #GaleriaDeImagenes .img{
+        width: 45%;
+        margin: 2vh 2%;
+    }
+
+    #GaleriaDeImagenes > div{
+        flex-flow: row wrap;
+        justify-content: center;
+
     }
 }
