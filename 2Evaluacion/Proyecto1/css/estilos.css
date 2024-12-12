@@ -400,18 +400,30 @@ footer p{
     }
 
     /*ConoceNuestrosModelos*/
-    #ConoceNuestrosModelos .descripcion {
-        color: red;
+    #ConoceNuestrosModelos {
+        padding: 0 3%;  /* Añade un margen blanco para el contenido*/
     }
-    
+
     #ConoceNuestrosModelos > div {
         position: relative; /* Necesario para que los hijos posicionados se refieran a este contenedor */
-        width: 100%;
+        width: 100%;    
+        margin-bottom: 7vh; /* Añade margen blanco debajo de cada imagen que las separa */
     }
     
     #ConoceNuestrosModelos .img {
         position: relative; /* Base para la imagen */
         z-index: 1; /* La imagen estará en el fondo */
+        width: 75%; /*Tamaño de la imagen en cuanto al ancho del contenedor*/
+        align-self: flex-start; /* Pone las imagenes pegadas a la derecha */
+        height: 60vh;   /* Alto de las imagenes */
+    }
+
+    #ConoceNuestrosModelos > div:first-of-type .img, #ConoceNuestrosModelos > div:last-of-type .img{
+        align-self: flex-end;   /* Pone la primera y la ultima imagen pegadas a la derecha */
+    }
+
+    #ConoceNuestrosModelos > div:first-of-type .img{
+        margin-top: 5vh;    /* Añade margen superior a la primera imagen*/
     }
     
     #ConoceNuestrosModelos .descripcion {
