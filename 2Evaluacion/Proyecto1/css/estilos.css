@@ -275,6 +275,7 @@ h2{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+    height: 94vh;
 }
 
 #contacto > h2{
@@ -325,9 +326,6 @@ footer p{
     border: none;          /* Sin bordes */
     cursor: pointer;       /* Cambia el cursor al pasar */
 
-    filter: drop-shadow(
-        0 0 10px rgba(0, 0, 0, .4)
-    );
     display: none;         /* Ocultamos el botón inicialmente */
     z-index: 1000;         /* Aseguramos que esté por encima del contenido */
 
