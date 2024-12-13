@@ -378,3 +378,87 @@ footer p{
     background-repeat: no-repeat; /* No repite la imagen */
     background-position: center; /* Centra la imagen */
 }
+
+/* Media queries sm */
+
+@media (min-width: 576px) {
+    /* Estilos para la section */
+    #inicio {
+        background-image: url("../img/casa-bosque-sm.jpg");
+    }
+
+    #ConoceNuestrosModelos #imagen2 {
+        height: 40vh;
+    }
+
+    #ConoceNuestrosModelos #imagen3 {
+        height: 50vh;
+    }
+
+    #GaleriaDeImagenes .img {
+        width: 90%;
+        height: 40vh;
+    }
+}
+
+
+/* Media queries md */
+@media (min-width: 768px) {
+    /* Ajustes generales de tipografía */
+    html {
+        font-size: var(--tam-fuente-md); /* Tamaño base de fuente */
+    }
+
+    p {
+        font-size: 1.5rem; /* Tamaño de fuente para párrafos */
+    }
+
+    h1 {
+        font-size: 2rem; /* Tamaño de fuente para encabezados H1 */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Tamaño de fuente para encabezados H2 */
+        padding-top: 2vh; /* Espaciado superior */
+    }
+
+    /* Sección de inicio */
+    #inicio {
+        background-image: url("../img/casa-bosque-md.jpg"); /* Imagen ajustada para pantallas medianas */
+    }
+
+    #inicio #cuadrodetexto {
+        width: 80%; /* Ajusta el ancho del cuadro de texto */
+    }
+
+    /* Sección "Nosotros" */
+    #nosotros #imagen {
+        height: 30vh; /* Altura específica para la imagen */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos #imagen1 {
+        height: 50vh; /* Altura ajustada para el modelo 1 */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos #imagen2 {
+        height: 40vh; /* Altura ajustada para el modelo 2 */
+    }
+
+    #ConoceNuestrosModelos #imagen3 {
+        height: 50vh; /* Altura ajustada para el modelo 3 */
+    }
+    
+    /* Galería de imágenes */
+    #GaleriaDeImagenes .img {
+        width: 90%; /* Ancho ajustado */
+        height: 40vh; /* Altura ajustada */
+    }
+
+    /* Galería de imágenes */
+    #GaleriaDeImagenes .img:last-child {
+        margin-bottom: 5vh; /* Espaciado inferior para la última imagen */
+    }
+
+}

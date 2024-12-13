@@ -1,3 +1,30 @@
+/*
+
+.- Variables CSS:
+6.1.- Tipograf�a:
+fuente-principal -> Pacifico
+fuente-alternativa -> sans-serif
+6.2.- Tama�os:
+tam-fuente-xs -> 12px
+tam-max-contenedor-x -> 1200px
+tam-alto-encabezado-xs -> 8vh
+6.3.- Colores (buscar con utilidad adobe):
+fondo-encabezado ->B8D2F4
+fondo-menu ->894B26
+fondo-todo ->
+negro -> #000
+blanco -> #FFF
+color-texto ->517104
+color-titulos-claro ->2CDA1C
+color-titulos-oscuro->1F411C
+color-primario ->517104
+color-secundario ->83A705
+color-opuesto-primario ->894B26
+color-opuesto-secundario ->F58A03
+
+*/
+
+
 :root {
     /* Variables CSS para facilitar la gestión de estilos como colores, tamaños y fuentes */
     --fuente-principal: 'Pacifico';/* Fuente principal para textos */
@@ -378,7 +405,7 @@ footer p{
     background-repeat: no-repeat; /* No repite la imagen */
     background-position: center; /* Centra la imagen */
 }
-
+    
 /* Media queries sm */
 
 @media (min-width: 576px) {
@@ -400,3 +427,296 @@ footer p{
         height: 40vh;
     }
 }
+
+/* Media queries md */
+@media (min-width: 768px) {
+    /* Ajustes generales de tipografía */
+    html {
+        font-size: var(--tam-fuente-md); /* Tamaño base de fuente */
+    }
+
+    p {
+        font-size: 1.5rem; /* Tamaño de fuente para párrafos */
+    }
+
+    h1 {
+        font-size: 2rem; /* Tamaño de fuente para encabezados H1 */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Tamaño de fuente para encabezados H2 */
+        padding-top: 2vh; /* Espaciado superior */
+    }
+
+    /* Sección de inicio */
+    #inicio {
+        background-image: url("../img/casa-bosque-md.jpg"); /* Imagen ajustada para pantallas medianas */
+    }
+
+    #inicio #cuadrodetexto {
+        width: 80%; /* Ajusta el ancho del cuadro de texto */
+    }
+
+    /* Sección "Nosotros" */
+    #nosotros #imagen {
+        height: 30vh; /* Altura específica para la imagen */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos #imagen1 {
+        height: 50vh; /* Altura ajustada para el modelo 1 */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos #imagen2 {
+        height: 40vh; /* Altura ajustada para el modelo 2 */
+    }
+
+    #ConoceNuestrosModelos #imagen3 {
+        height: 50vh; /* Altura ajustada para el modelo 3 */
+    }
+    
+    /* Galería de imágenes */
+    #GaleriaDeImagenes .img {
+        width: 90%; /* Ancho ajustado */
+        height: 40vh; /* Altura ajustada */
+    }
+
+    /* Galería de imágenes */
+    #GaleriaDeImagenes .img:last-child {
+        margin-bottom: 5vh; /* Espaciado inferior para la última imagen */
+    }
+
+}
+
+/* Media queries lg */
+@media (min-width: 992px) {
+    /* Ajustes generales */
+    html {
+        font-size: var(--tam-fuente-lg); /* Incremento del tamaño base de fuente */
+    }
+
+    /* Encabezado */
+    header {
+        display: flex;
+        flex-flow: row nowrap; /* Configura los elementos en fila */
+        height: 8vh; /* Altura fija del encabezado */
+        justify-content: space-between; /* Espacio uniforme entre elementos */
+        padding: 1vh 0; /* Espaciado vertical */
+    }
+
+    header a {
+        font-size: 1.5rem; /* Tamaño del texto de los enlaces */
+    }
+
+    header nav ul {
+        display: flex;
+        flex-flow: row nowrap; /* Los elementos del menú se disponen en fila */
+    }
+
+    header nav li {
+        background-color: var(--color-background-header); /* Color de fondo de los elementos del menú */
+        border-bottom: none; /* Elimina el borde inferior */
+        font-weight: lighter; /* Fuente más ligera */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    /* Sección de inicio */
+    #inicio {
+        height: 90vh; /* Altura de la sección */
+        background-image: url("../img/casa-bosque-lg.jpg"); /* Imagen para pantallas grandes */
+        background-position: center; /* Centrado de la imagen */
+    }
+
+    #cuadrodetexto {
+        width: 90%; /* Ajusta el ancho del cuadro de texto */
+    }
+
+    #cuadrodetexto p {
+        padding: 60px 40px; /* Espaciado interno para mejorar la legibilidad */
+    }
+
+    /* Sección "Nosotros" */
+    #nosotros #imagen {
+        background-image: url("../img/casa-cielo-lg.jpg"); /* Imagen específica para pantallas grandes */
+        border-radius: 20px; /* Bordes redondeados */
+        height: 40vh; /* Altura de la imagen */
+        width: 100%; /* Ajusta al tamaño del contenedor */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos #imagen1 {
+        height: 60vh; /* Altura específica para el modelo 1 */
+    }
+
+    /* Galería de imágenes */
+    #GaleriaDeImagenes {
+        flex-flow: column wrap; /* Distribuye las imágenes en columnas */
+    }
+
+    #GaleriaDeImagenes .img {
+        width: 45%; /* Ajusta el ancho de las imágenes */
+        height: 30vh; /* Ajusta la altura */
+    }
+
+    #GaleriaDeImagenes > div {
+        flex-flow: row wrap; /* Ajusta las imágenes en filas y columnas */
+        justify-content: center; /* Centra las imágenes */
+    }
+
+    #GaleriaDeImagenes .img:last-child {
+        margin-bottom: 20px; /* Espaciado inferior para la última imagen */
+    }
+
+    #GaleriaDeImagenes h2 {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        display: flex; /* Configura el contenedor como flexible */
+        justify-content: center; /* Centra horizontalmente el encabezado */
+    }
+
+    /* Sección de contacto */
+    #contacto i,
+    #contacto p {
+        font-size: 1rem; /* Tamaño de fuente ajustado */
+    }
+
+    #contacto form {
+        height: 60vh; /* Altura específica del formulario */
+    }
+}
+
+/* Media queries xl */
+
+@media (min-width: 1200px) {
+    /* Ajustes generales */
+    html {
+        font-size: var(--tam-fuente-xl); /* Incrementa el tamaño base de fuente */
+    }
+
+    body {
+        width: 66%; /* Ancho del cuerpo centrado */
+        margin: 0 auto; /* Centra el contenido */
+    }
+
+    p {
+        font-size: 1rem; /* Tamaño de fuente para párrafos */
+        padding-bottom: 20px; /* Espaciado inferior */
+    }
+
+    /* Encabezado */
+    header {
+        height: 8vh; /* Altura del encabezado */
+        padding: 1vh 0; /* Espaciado vertical */
+    }
+
+    header nav ul li a:hover {
+        color: var(--color-enlace-hover); /* Cambio de color al pasar el mouse */
+    }
+
+    nav li {
+        padding: 10px; /* Espaciado interno para los elementos del menú */
+    }
+
+    /* Sección de inicio */
+    #inicio {
+        height: 90vh; /* Altura de la sección */
+        background-image: url("../img/casa-bosque-lg.jpg"); /* Imagen para pantallas extra grandes */
+    }
+
+    #cuadrodetexto {
+        width: 90%; /* Ancho ajustado del cuadro de texto */
+    }
+
+    #cuadrodetexto p {
+        padding: 60px 40px; /* Espaciado interno */
+    }
+
+    /* Sección "Nosotros" */
+    #nosotros {
+        height: max-content; /* Ajusta la altura al contenido */
+    }
+
+    #nosotros #imagen {
+        background-image: url("../img/casa-cielo-lg.jpg"); /* Imagen de fondo */
+        background-size: cover; /* Escala para cubrir el contenedor */
+        background-repeat: no-repeat; /* Evita la repetición */
+        background-position: center; /* Centra la imagen */
+        display: inline-block; /* Alinea en bloque */
+        height: 70vh; /* Altura ajustada */
+    }
+
+    #nosotros p {
+        font-size: var(--tam-fuente-xl); /* Tamaño de fuente para los párrafos */
+    }
+
+    /* Sección "Conoce Nuestros Modelos" */
+    #ConoceNuestrosModelos {
+        padding: 0 3%; /* Añade margen blanco lateral */
+    }
+
+    #ConoceNuestrosModelos > div {
+        position: relative; /* Posiciona elementos internos relativos al contenedor */
+        width: 100%; /* Ancho completo */
+        margin-bottom: 7vh; /* Espaciado inferior */
+        overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    #ConoceNuestrosModelos .img {
+        position: relative; /* Estilo base para las imágenes */
+        z-index: 1; /* Imagen en el fondo */
+        width: 75%; /* Ancho ajustado */
+        align-self: flex-start; /* Alineación inicial */
+        height: 60vh; /* Altura específica */
+    }
+
+    #ConoceNuestrosModelos > div:first-of-type .img, 
+    #ConoceNuestrosModelos > div:last-of-type .img {
+        align-self: flex-end; /* Alinea la primera y última imagen a la derecha */
+    }
+
+    #ConoceNuestrosModelos > div:first-of-type .img {
+        margin-top: 5vh; /* Espaciado superior para la primera imagen */
+    }
+
+    #ConoceNuestrosModelos .descripcion {
+        position: absolute; /* Texto sobre la imagen */
+        top: 0%; /* Ajuste vertical */
+        left: 50%; /* Ajuste horizontal */
+        transform: translate(0%, 0%); /* Centrado */
+        z-index: 2; /* Coloca el texto encima */
+        text-align: center; /* Centra el texto */
+    }
+
+    #ConoceNuestrosModelos > div:first-of-type .descripcion, 
+    #ConoceNuestrosModelos > div:last-of-type .descripcion {
+        transform: translate(-100%, 0%); /* Ajusta la posición del texto */
+    }
+
+    #ConoceNuestrosModelos .descripcion p {
+        font-size: var(--tam-fuente-sm); /* Fuente pequeña */
+        margin: 0; /* Sin márgenes */
+        width: fit-content; /* Ajusta al contenido */
+        text-align: left; /* Alineación a la izquierda */
+        padding: 0 5%; /* Espaciado interno */
+    }
+
+    #ConoceNuestrosModelos .descripcion h2 {
+        font-size: var(--tam-fuente-md); /* Tamaño de fuente para los títulos */
+    }
+
+    /* Galería de imágenes */
+    #GaleriaDeImagenes .img {
+        height: 35vh; /* Ajusta la altura de las imágenes */
+    }
+
+    /* Sección de contacto */
+    #contacto form input:last-child {
+        margin-top: 2vh; /* Espaciado superior para el último elemento */
+    }
+
+    /* Pie de página */
+    footer p {
+        padding: 0; /* Sin espaciado interno */
+    }
+}
+
