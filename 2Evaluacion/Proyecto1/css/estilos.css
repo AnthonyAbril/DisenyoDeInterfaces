@@ -313,9 +313,20 @@ nav a{
     height: 94vh;
 }
 
+#contacto form i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+#contacto form .telefonoicono {
+    transform: scale(-1, 1);
+    /* Así hago el efecto espejo de darle la vuelta al icono */
+}
+
 #contacto > h2{
     margin: 0;
     justify-self: flex-start;
+    font-weight: normal;
 }
 
 #contacto form{
@@ -376,15 +387,94 @@ footer p{
 /* Media queries sm */
 
 @media (min-width: 576px) {
+    /* Estilos para la section */
+    #inicio {
+        background-image: url("../img/casa-bosque-sm.jpg");
+    }
 
+    #ConoceNuestrosModelos #imagen2 {
+        height: 40vh;
+    }
+
+    #ConoceNuestrosModelos #imagen3 {
+        height: 50vh;
+    }
+
+    #GaleriaDeImagenes .img {
+        width: 90%;
+        height: 40vh;
+    }
 }
+
+
 /* Media queries md */
 
 @media (min-width: 768px) {
+    html {
+        font-size: var(--tam-fuente-md);
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        padding-top: 2vh;
+    }
+
+    /* Estilos para la section background-size: 100% 100%; */
+    #inicio {
+        background-image: url("../img/casa-bosque-md.jpg");
+        
+    }
+
+    /* Estilos para el cuadrado con mensaje */
+    #inicio #cuadrodetexto {
+        width: 80%;
+    }
+
+    #nosotros #imagen{
+        height: 30vh;
+    }
+    #ConoceNuestrosModelos #imagen1 {
+        height: 50vh;
+    }
+
+    #ConoceNuestrosModelos #imagen3 {
+        height: 40vh;
+        
+    }
+
+    #GaleriaDeImagenes .img:last-child {
+        margin-bottom: 5vh;
+    }
+
+    #contacto section{
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contacto>section {
+        height: 55vh;
+        margin-top: 5vh;
+        padding-top: 0px;
+
+    }
+
 }
 /* Media queries lg */
 
 @media (min-width: 992px) {
+
+    html {
+        font-size: var(--tam-fuente-lg);
+    }
+
     header{
         display: flex;
         flex-flow: row nowrap;
@@ -394,22 +484,28 @@ footer p{
         padding: 1vh 0;
     }
 
-    nav ul {
+    header a{
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
         display: flex;
         flex-flow: row nowrap;
         /* cuando lo necesite en horizontal pasar a row */
     }
 
-    nav li {
+    header nav li {
         background-color: var(--color-background-header);
         border-bottom: none;
         font-weight: lighter;
         padding: 10px; /* Agrega espacio interno si es necesario */
     }
 
+    
     #inicio{
         height: 90vh;
         background-image: url("../img/casa-bosque-lg.jpg");
+        background-position: center;
     }
 
     #cuadrodetexto{
@@ -419,6 +515,17 @@ footer p{
     #cuadrodetexto p{
         padding: 60px 40px;
     }
+
+    #nosotros #imagen {
+        background-image: url("../img/casa-cielo-lg.jpg");
+        border-radius: 20px;
+        height: 40vh;
+        width: 100%;
+    }
+
+    #ConoceNuestrosModelos #imagen1 {
+        height: 60vh;
+    }
     
     #GaleriaDeImagenes{
         flex-flow: column wrap;
@@ -426,20 +533,49 @@ footer p{
 
     #GaleriaDeImagenes .img{
         width: 45%;
-        margin: 3vh 2%;
-        height: 25vh;
+        height: 30vh;
     }
 
     #GaleriaDeImagenes > div{
         flex-flow: row wrap;
         justify-content: center;
     }
+
+    #GaleriaDeImagenes .img:last-child {
+        margin-bottom: 20px;
+    }
+
+    #GaleriaDeImagenes h2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contacto i,
+    #contacto p {
+        font-size: 1rem;
+
+    }
+
+    #contacto form {
+        height: 60vh;
+    }
 }
 /* Media queries xl */
 
 @media (min-width: 1200px) {
+
     html {
-        font-size: var(--size-font-lg);
+        font-size: var(--tam-fuente-xl);
+    }
+
+    header nav ul li a:hover{
+        color: var(--color-enlace-hover);
+    }
+
+    p{
+        font-size: 1rem;
+        padding-bottom: 20px;
     }
 
     body{
@@ -496,6 +632,7 @@ footer p{
         position: relative; /* Necesario para que los hijos posicionados se refieran a este contenedor */
         width: 100%;    
         margin-bottom: 7vh; /* Añade margen blanco debajo de cada imagen que las separa */
+        overflow: hidden;
     }
     
     #ConoceNuestrosModelos .img {
@@ -546,5 +683,9 @@ footer p{
 
     #contacto form input:last-child{
         margin-top: 2vh;
+    }
+
+    footer p{
+        padding: 0;
     }
 }
