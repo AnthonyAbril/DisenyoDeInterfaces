@@ -28,28 +28,41 @@ color-opuesto-secundario ->F58A03
 :root {
     --fuente-principal: 'Pacifico';
     --fuente-alternativa: sans-serif;
+
     --tam-fuente-xs: 12px;
     --tam-fuente-sm: 13px;
     --tam-fuente-md: 15px;
     --tam-fuente-lg: 17px;
     --tam-fuente-xl: 17px;
+
     --tam-max-contenedor-x: 1200px;
     --tam-alto-encabezado-xs: 8vh;
+
     --negro: #000;
     --blanco: #FFF;
+
     --fondo-encabezado: #B8D2F4;
     --fondo-menu: var(--blanco);
     --fondo-todo: var(--fondo-encabezado);
     --color-texto: #517104;
+
     --color-titulos-claro: #2CDA1C;
     --color-titulos-oscuro: #1F411C;
+
     --color-primario: #517104;
     --color-secundario: #83A705;
+
     --color-opuesto-primario: #894B26;
     --color-opuesto-secundario: #F58A03;
+
     --color-enlace: var(--color-opuesto-primario);
     --color-enlace-hover: var(--color-opuesto-secundario);
+
     --color-transparencia: rgba(0, 0, 0, 0.5);
+
+    /* Tamaños */
+    --size-titles: 2rem;
+    --size-subtitles: 3rem;
 }
 
 html {
@@ -78,16 +91,28 @@ body {
 
 /* Media queries xs */
 
+p{
+    font-size: 1.5rem;
+    /* Tamaño de letra relativo al root (html) 
+    que es 12px, entonces sería 18px*/
+    font-weight: 100;
+}
+
 h1{
     height: var(--tam-alto-encabezado-xs);
     font-weight: 400;
     font-style: normal;
+    font-size: var(--size-titles);
 
     background-image: url("../img/favicon/android-chrome-192x192.png");
     background-repeat: no-repeat;
     background-position: 0 center;
     padding-left:  70px ;
     background-size: 70px; /* Ajusta el tamaño a 40px por 40px */
+}
+
+h2{
+    font-size: var(--size-subtitles);
 }
 
 h1 span {
@@ -109,17 +134,21 @@ nav li {
     background-color: white;
     width: 100%; /* Asegúrate de que cada elemento ocupe todo el ancho del contenedor */
     text-align: center; /* Centra el contenido del <li> */
-    font-weight:bold;
-    font-size: larger;
-    padding: 10px; /* Agrega espacio interno si es necesario */
     box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
     border-bottom: 0.1vh solid var(--color-opuesto-primario);
     color: var(--color-opuesto-primario);
+    height: 8vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a{
     text-decoration: none;
     color: var(--color-enlace);
+    font-size: 2em;
+    font-size: var(--size-titles);
 }
 
 #inicio{
@@ -127,7 +156,7 @@ nav a{
     background-size: cover; /* Ajusta la imagen para cubrir todo el área */
     background-position: center; /* Centra la imagen */
     width: 100%; /* Ajusta al tamaño del contenedor padre */
-    height:50vh; /* Altura específica para que sea visible */
+    height:61vh; /* Altura específica para que sea visible */
     
 
     display: flex;
@@ -140,14 +169,14 @@ nav a{
     background-color: var(--color-transparencia);
     border: 0.01em solid var(--color-titulos-claro);
     border-radius: 10px;
-    padding: 60px 20px;
-    font-size:x-large;
+    padding: 120px 20px;
     margin: 40px;
     text-align: center;
 }
 
 #nosotros{
     width: 100%;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,10 +185,20 @@ nav a{
 
 #nosotros > div{
     width: 80%;
+    height: fit-content;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+}
+
+#cuadrodetexto{
+    display: flex;
+    flex-flow: column;
+}
+
+#cuadrodetexto p{
+    font-size: var(--size-subtitles);
 }
 
 #nosotros > div > div,h2,p{
@@ -172,7 +211,7 @@ nav a{
     background-size: cover; /* Ajusta la imagen para cubrir todo el área */
     background-position: center; /* Centra la imagen */
     width: 100%; /* Ajusta al tamaño del contenedor padre */
-    height:30vh; /* Altura específica para que sea visible */
+    height:40vh; /* Altura específica para que sea visible */
 }
 
 #ConoceNuestrosModelos, #ConoceNuestrosModelos > div, #ConoceNuestrosModelos .descripcion , #GaleriaDeImagenes {
@@ -181,10 +220,6 @@ nav a{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
-
-h2{
-    font-size: 2em;
 }
 
 /* Conoce a nuestros modelos */
@@ -225,7 +260,7 @@ h2{
     background-size: cover; /* Ajusta la imagen para cubrir todo el área */
     background-position: center; /* Centra la imagen */
     width: 90%; /* Ajusta al tamaño del contenedor padre */
-    height:40vh; /* Altura específica para que sea visible */
+    height:35vh; /* Altura específica para que sea visible */
     margin: 2vh auto;
 }
 
@@ -305,16 +340,18 @@ h2{
 
 footer{
     background-color: var(--color-opuesto-primario);
-    padding: 2vh 5%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 6vh;
 }
 
 footer p{
     margin: 0;
     color: var(--blanco);
+    font-size: var(--tam-fuente-lg);
 }
 
 #btnSubir {
@@ -339,6 +376,7 @@ footer p{
 /* Media queries sm */
 
 @media (min-width: 576px) {
+
 }
 /* Media queries md */
 
@@ -347,6 +385,55 @@ footer p{
 /* Media queries lg */
 
 @media (min-width: 992px) {
+    header{
+        display: flex;
+        flex-flow: row nowrap;
+        /* cuando lo necesite en horizontal pasar a row */
+        height: 8vh;
+        justify-content: space-between;
+        padding: 1vh 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        /* cuando lo necesite en horizontal pasar a row */
+    }
+
+    nav li {
+        background-color: var(--color-background-header);
+        border-bottom: none;
+        font-weight: lighter;
+        padding: 10px; /* Agrega espacio interno si es necesario */
+    }
+
+    #inicio{
+        height: 90vh;
+        background-image: url("../img/casa-bosque-lg.jpg");
+    }
+
+    #cuadrodetexto{
+        width: 90%;
+    }
+
+    #cuadrodetexto p{
+        padding: 60px 40px;
+    }
+    
+    #GaleriaDeImagenes{
+        flex-flow: column wrap;
+    }
+
+    #GaleriaDeImagenes .img{
+        width: 45%;
+        margin: 3vh 2%;
+        height: 25vh;
+    }
+
+    #GaleriaDeImagenes > div{
+        flex-flow: row wrap;
+        justify-content: center;
+    }
 }
 /* Media queries xl */
 
@@ -361,32 +448,24 @@ footer p{
     }
 
     header{
-        display: flex;
-        flex-flow: row nowrap;
-        /* cuando lo necesite en horizontal pasar a row */
         height: 8vh;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 10px;
-        /* cuando lo necesite en horizontal pasar a row */
+        padding: 1vh 0;
     }
 
     nav li {
-        background-color: var(--color-background-header);
-        border-bottom: none;
-        font-weight: lighter;
+        padding: 10px; /* Agrega espacio interno si es necesario */
     }
 
     #inicio{
-        height: 92vh;
+        height: 90vh;
         background-image: url("../img/casa-bosque-lg.jpg");
     }
 
-    #inicio p{
+    #cuadrodetexto{
+        width: 90%;
+    }
+
+    #cuadrodetexto p{
         padding: 60px 40px;
     }
 
@@ -453,24 +532,19 @@ footer p{
         font-size: var(--tam-fuente-sm);
         margin: 0;
         width: fit-content;
+        text-align: left;
+        padding: 0 5%;
     }
 
     #ConoceNuestrosModelos .descripcion h2{
         font-size: var(--tam-fuente-md);
     }
 
-    #GaleriaDeImagenes{
-        flex-flow: column wrap;
-    }
-
     #GaleriaDeImagenes .img{
-        width: 45%;
-        margin: 2vh 2%;
+        height: 35vh;
     }
 
-    #GaleriaDeImagenes > div{
-        flex-flow: row wrap;
-        justify-content: center;
-
+    #contacto form input:last-child{
+        margin-top: 2vh;
     }
 }
