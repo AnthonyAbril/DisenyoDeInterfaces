@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desplazamiento del Círculo</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Círculo */
+    .circulo {
+      width: 200px; /* Diámetro del círculo (radio x 2) */
+      height: 200px;
+      background-color: blue;
+      border-radius: 50%; /* Hace que el div sea un círculo */
+      position: absolute;
+      animation: mover 5s ease-in-out infinite; /* Movimiento con animación */
+    }
+
+    /* Animación */
+    @keyframes mover {
+      0% {
+        /*transform: translateX(0);  Inicio (extremo izquierdo) */
+        justify-self: flex-end;
+      }
+      100% {
+        /*transform: translateX(100vw);  Fin (extremo derecho de la pantalla) */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circulo"></div>
+</body>
+</html>

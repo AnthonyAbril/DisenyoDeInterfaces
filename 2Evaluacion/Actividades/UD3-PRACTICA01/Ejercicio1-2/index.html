@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido a mi Web</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      overflow-x: hidden; /* Para evitar barras de desplazamiento */
+    }
+
+    h1 {
+      margin: 20px 0;
+      transform: translateX(100vw); /* Empieza desde fuera de la pantalla (derecha) */
+      animation: slideIn 1s ease-in-out forwards;
+    }
+
+    /* Animación general */
+    @keyframes slideIn {
+      to {
+        transform: translateX(0); /* Termina en la posición original */
+
+        font-size: 300%;
+        margin-left: 25%; /* Se posiciona al 25% del margen izquierdo */
+      }
+      75%{
+        font-size: 300%;   /* Aumenta el tamaño al 300% */
+        margin-left: 25%; /* Se posiciona al 25% del margen izquierdo */
+      }
+      from{
+        font-size: 100%;
+        margin-left: 0;
+      }
+
+    }
+
+    /* Tiempos específicos para cada etiqueta */
+    h1 {
+      animation-delay: 0.5s; /* Se ejecuta primero */
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenido a mi web</h1>
+</body>
+</html>
