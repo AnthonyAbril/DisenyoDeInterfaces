@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo del bloque cuadrado */
+.color-block {
+    width: 300px;         /* Ancho del cuadrado */
+    height: 300px;        /* Alto del cuadrado */
+    animation: color-change 5s linear 4; /* Animación que dura 5s y se repite 4 veces */
+    background-color: #FF0000; /* Rojo */
+  }
+  
+/* Definición de la animación */
+@keyframes color-change {
+    0% {
+      background-color: #FF0000; /* Rojo */
+    }
+    25% {
+      background-color: #FFC0CB; /* Rosa */
+    }
+    50% {
+      background-color: #0000FF; /* Azul */
+    }
+    75% {
+      background-color: #FFC0CB; /* Rosa (regreso) */
+    }
+    100% {
+        background-color: #FF0000; /* Rosa (regreso) */
+    }
+  }
+  
