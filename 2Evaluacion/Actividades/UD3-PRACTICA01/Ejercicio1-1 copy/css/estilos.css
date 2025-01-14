@@ -18,6 +18,88 @@ body {
     font-size: 20vh;
   }
 
+  /* Contenedores principales */
+.contenedor {
+    width: fit-content;
+    height: 20vh;
+  position: absolute;
+  perspective: 1000px; /* Perspectiva 3D */
+  cursor: pointer;
+}
+
+.contenedor-1 {
+  top: 15vh;
+  left: 35vh;
+}
+
+.contenedor-2 {
+  top: 28vh;
+  right: 80vh;
+}
+
+.contenedor-3 {
+  top: 5vh;
+  right: 100vh;
+}
+
+.contenedor-4 {
+  top: 10vh;
+  right: 40vh;
+}
+
+
+.contenedor-5 {
+    top: 35vh;
+    left: 60vh;
+}
+
+  /* Estilo de la tarjeta interna */
+.inner {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    transform-style: preserve-3d; /* Habilita el 3D */
+    transition: transform 0.6s ease; /* Suaviza el giro */
+  }
+  
+  /* Girar al pasar el ratón */
+  .contenedor:hover .inner {
+    transform: rotateY(180deg); /* Gira la tarjeta 180 grados */
+  }
+  
+  /* Caras de la tarjeta */
+  .front,
+  .back {
+    position: absolute;
+    width: 15vw;
+    height: fit-content;
+    backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    padding: 4vh;
+    box-sizing: border-box;
+  }
+  
+  /* Cara frontal */
+  .front {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  
+  /* Cara trasera */
+  .back {
+    background-color: rgb(255, 192, 203); /* Rosa claro */
+    color: black;
+    transform: rotateY(180deg); /* Gira la cara trasera */
+  }
+
+  .contenedor p{
+    margin: 0;
+    padding: 0;
+  }
+
   .tallo{
     position: absolute;
     width: 10px;
