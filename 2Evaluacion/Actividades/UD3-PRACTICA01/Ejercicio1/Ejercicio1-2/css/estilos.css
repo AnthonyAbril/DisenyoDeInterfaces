@@ -1,0 +1,39 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    /* Para evitar barras de desplazamiento */
+}
+
+h1 {
+    margin: 20px 0;
+    transform: translateX(100vw);
+    /* Empieza desde fuera de la pantalla (derecha) */
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* Animación general */
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        /* Termina en la posición original */
+        font-size: auto;
+        margin-left: 25%;
+        /* Se posiciona al 25% del margen izquierdo */
+    }
+
+    75% {
+        font-size: 300%;
+        /* Aumenta el tamaño al 300% */
+    }
+
+    from {
+        font-size: auto;
+    }
+
+}

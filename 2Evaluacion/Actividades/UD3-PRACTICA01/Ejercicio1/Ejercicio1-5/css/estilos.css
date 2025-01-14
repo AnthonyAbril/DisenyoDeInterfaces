@@ -6,7 +6,7 @@ body{
 /* Estilo inicial del texto */
 .zoom-text {
     font-size: 2rem; /* Tamaño base del texto */
-    transition: transform 3s linear;
+    transition: transform 3s linear;    /* Se aplica transicion al transform que se aplique*/
     display: inline-block; /* Necesario para aplicar transform */
     cursor: pointer;    /*  Cambia el raton*/
 }
