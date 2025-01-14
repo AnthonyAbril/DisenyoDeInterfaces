@@ -16,6 +16,49 @@ body {
     top: 15vh;
     text-align: center;
     font-size: 20vh;
+    
+    animation: slideUp 1s forwards; /* Aparece con animación */
+  }
+
+  
+  .flores, .flor, .flor img{
+    position: absolute;
+  }
+
+  .flor{
+    animation: appear 02s forwards;
+  }
+
+  .flor img{
+    width: 15vh;
+    height: 50vh;
+  }
+
+  .flor-1{
+    transform: translate(-40vw,-5vh) rotate(45deg);
+  }
+
+  .flor-2{
+    transform: translate(-45vw,-15vh) rotate(30deg);
+  }
+
+  .flor-3{
+    transform: translate(40vw) rotate(-45deg);
+  }
+
+  .flor-4{
+    transform: translate(40vw,20vh) rotate(-60deg);
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-50vh); /* Comienza desde abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Llega a su posición final */
+      opacity: 1;
+    }
   }
 
   /* Contenedores principales */
@@ -25,32 +68,64 @@ body {
   position: absolute;
   perspective: 1000px; /* Perspectiva 3D */
   cursor: pointer;
+  opacity: 0; /* Inicialmente oculto */
+  animation: slideDown 1s forwards; /* Aparece con animación */
 }
+
+/* Animación para mover los contenedores desde abajo */
+@keyframes slideDown {
+    0% {
+      transform: translateY(-50vh); /* Comienza desde abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Llega a su posición final */
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(
+        50vh); /* Comienza desde abajo */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Llega a su posición final */
+      opacity: 1;
+    }
+  }
+  
 
 .contenedor-1 {
   top: 15vh;
   left: 35vh;
+  animation-delay: 2s;
 }
 
 .contenedor-2 {
   top: 28vh;
   right: 80vh;
+  animation-delay: 2.4s;
 }
 
 .contenedor-3 {
   top: 5vh;
   right: 100vh;
+  animation-delay: 2.6s;
 }
 
 .contenedor-4 {
   top: 10vh;
   right: 40vh;
+  animation-delay: 2.2s;
 }
 
 
 .contenedor-5 {
     top: 35vh;
     left: 60vh;
+    animation-delay: 2.2s;
 }
 
   /* Estilo de la tarjeta interna */
@@ -104,9 +179,10 @@ body {
     position: absolute;
     width: 10px;
     height: 60vh;
-    background-color: green;
+    background-color: #008000;
     z-index: -1;
     transform: translateY(20vh);
+    animation: move-to-top 1s ease-in-out forwards; /* Mover a la parte superior */
   }
 
   .flowercontent{
@@ -118,7 +194,6 @@ body {
     position: relative;
     width: 50px;
     height: 50px;
-    animation: move-to-top 4s ease-in-out forwards; /* Mover a la parte superior */
     transform-origin: center;
     animation: spin 4s linear infinite; /* Rotación continua */
   }
@@ -128,7 +203,7 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: yellow;
+    background-color: #ffff00;
     transform-origin: center center;
     border-radius: 50%;
     z-index: 10;
@@ -139,42 +214,41 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: pink;
+    background-color: #ffc0cb;
     border-radius: 50%;
     transform-origin: center center;
     opacity: 0;
-    animation: appear 4s ease-in-out forwards;
+    animation: appear 5s ease-in-out forwards;
   }
   
   .petal-1 {
-
     transform: rotate(0deg) translateY(-50px);
-    animation-delay: 1s;
+    animation-delay: 0.5s;
   }
   
   .petal-2 {
     transform: rotate(60deg) translateY(-50px);
-    animation-delay: 1s;
+    animation-delay: 0.75s;
   }
   
   .petal-3 {
     transform: rotate(120deg) translateY(-50px);
-    animation-delay: 1.5s;
+    animation-delay: 1s;
   }
   
   .petal-4 {
     transform: rotate(180deg) translateY(-50px);
-    animation-delay: 2s;
+    animation-delay: 1.25s;
   }
   
   .petal-5 {
     transform: rotate(240deg) translateY(-50px);
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
   }
   
   .petal-6 {
     transform: rotate(300deg) translateY(-50px);
-    animation-delay: 3s;
+    animation-delay: 1.75s;
   }
   
   /* Animaciones */
@@ -202,10 +276,9 @@ body {
   /* Mover la flor hacia arriba */
   @keyframes move-to-top {
     0% {
-      transform: translateY(0);
+      transform: translateY(100vh);
     }
     100% {
-      transform: translateY(-300px);
+      transform: translateY(20vh);
     }
   }
-  
