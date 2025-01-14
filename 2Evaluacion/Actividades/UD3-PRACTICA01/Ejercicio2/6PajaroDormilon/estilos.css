@@ -1,383 +1,470 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500italic);
+
+/* Animación de los ojos */
 @-webkit-keyframes eyes {
   0%, 8.8888888889%, 100% {
-    top: -50px;
+    top: -50px; /* Posición inicial y final fuera del área visible */
   }
   17.7777777778% {
-    top: -45px;
+    top: -45px; /* Movimiento hacia arriba */
   }
   91.1111111111% {
-    top: -20px;
+    top: -20px; /* Movimiento hacia abajo */
   }
   57.7777777778%, 88.8888888889% {
-    top: -15px;
+    top: -15px; /* Posición más baja */
   }
   66.6666666667% {
-    top: -25px;
+    top: -25px; /* Movimiento intermedio */
   }
 }
+
 @keyframes eyes {
   0%, 8.8888888889%, 100% {
-    top: -50px;
+    top: -50px; /* Posición inicial y final fuera del área visible */
   }
   17.7777777778% {
-    top: -45px;
+    top: -45px; /* Movimiento hacia arriba */
   }
   91.1111111111% {
-    top: -20px;
+    top: -20px; /* Movimiento hacia abajo */
   }
   57.7777777778%, 88.8888888889% {
-    top: -15px;
+    top: -15px; /* Posición más baja */
   }
   66.6666666667% {
-    top: -25px;
+    top: -25px; /* Movimiento intermedio */
   }
 }
+
+/* Animación de las alas */
 @-webkit-keyframes wings {
   0%, 88.8888888889%, 100% {
-    top: 70px;
+    top: 70px; /* Posición inicial y final */
   }
   91.1111111111% {
-    top: 60px;
+    top: 60px; /* Movimiento hacia arriba */
   }
 }
+
 @keyframes wings {
   0%, 88.8888888889%, 100% {
-    top: 70px;
+    top: 70px; /* Posición inicial y final */
   }
   91.1111111111% {
-    top: 60px;
+    top: 60px; /* Movimiento hacia arriba */
   }
 }
+
+/* Animación de los pies */
 @-webkit-keyframes feet {
   0%, 88.8888888889%, 100% {
-    top: -2px;
+    top: -2px; /* Posición inicial y final */
   }
   91.1111111111% {
-    top: 0px;
+    top: 0px; /* Movimiento hacia abajo */
   }
 }
+
 @keyframes feet {
   0%, 88.8888888889%, 100% {
-    top: -2px;
+    top: -2px; /* Posición inicial y final */
   }
   91.1111111111% {
-    top: 0px;
+    top: 0px; /* Movimiento hacia abajo */
   }
 }
+
+/* Animación de las nubes */
 @-webkit-keyframes cloud {
   0% {
-    left: -140px;
+    left: -140px; /* Comienza fuera de la pantalla */
   }
   100% {
-    left: 280px;
+    left: 280px; /* Termina fuera de la pantalla */
   }
 }
+
 @keyframes cloud {
   0% {
-    left: -140px;
+    left: -140px; /* Comienza fuera de la pantalla */
   }
   100% {
-    left: 280px;
+    left: 280px; /* Termina fuera de la pantalla */
   }
 }
+
+/* Estilo general */
 html {
-  height: 100%;
-  background-color: #222024;
-  background: radial-gradient(circle at center, #47414c 0%, #222024 100%);
-  background-repeat: no-repeat;
+  height: 100%; /* Altura de toda la página */
+  background-color: #222024; /* Fondo oscuro inicial */
+  background: radial-gradient(circle at center, #47414c 0%, #222024 100%); /* Gradiente radial */
+  background-repeat: no-repeat; /* Sin repetición del fondo */
 }
 
 body {
-  text-align: center;
-  font: normal 100% "Fira Sans", sans-serif;
+  text-align: center; /* Centrado de texto */
+  font: normal 100% "Fira Sans", sans-serif; /* Fuente principal */
 }
 
 h2 {
-  font-size: 4vw;
+  font-size: 4vw; /* Tamaño proporcional al ancho de la ventana */
 }
+
 h2 span {
-  font-size: 60%;
+  font-size: 60%; /* Tamaño reducido de los elementos secundarios */
 }
 
 a {
-  color: #aaa;
+  color: #aaa; /* Color de enlaces */
+}
+/* Estilos generales para el globo */
+.globe {
+  margin: 1em 0 0 0; /* Margen superior */
+  position: relative; /* Posicionamiento relativo */
+  display: inline-block; /* Mostrar en línea y mantener el formato de bloque */
+  text-align: left; /* Alinear el texto a la izquierda */
+  width: 400px; /* Ancho del globo */
+  height: 400px; /* Alto del globo */
+  border-radius: 50%; /* Bordes redondeados para forma circular */
+  border: 20px solid #f7dbcf; /* Borde color claro */
+  box-sizing: border-box; /* Incluir el borde en el tamaño total */
+  background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%); /* Gradiente de fondo */
+  overflow: hidden; /* Ocultar contenido que sobresale del área */
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombras internas y externas */
 }
 
-.globe {
-  margin: 1em 0 0 0;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  border: 20px solid #f7dbcf;
-  box-sizing: border-box;
-  background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%);
-  overflow: hidden;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
-}
+/* Pseudo-elementos para agregar detalles adicionales al globo */
 .globe:before, .globe:after {
-  position: absolute;
-  content: "";
-  box-sizing: border-box;
-  border-radius: 50%;
-  z-index: 10;
+  position: absolute; /* Posición absoluta */
+  content: ""; /* Sin contenido */
+  box-sizing: border-box; /* Ajuste del tamaño de la caja */
+  border-radius: 50%; /* Bordes redondeados */
+  z-index: 10; /* Nivel superior */
 }
+
+/* Estilo para el pseudo-elemento :before */
 .globe:before {
-  height: 94%;
-  width: 94%;
-  top: 3%;
-  right: 3%;
-  border: 10px solid transparent;
-  border-right-color: rgba(255, 255, 255, 0.3);
-  border-right-width: 10px;
-  border-right-style: solid;
+  height: 94%; /* Alto */
+  width: 94%; /* Ancho */
+  top: 3%; /* Distancia desde el borde superior */
+  right: 3%; /* Distancia desde el borde derecho */
+  border: 10px solid transparent; /* Borde transparente */
+  border-right-color: rgba(255, 255, 255, 0.3); /* Borde derecho semi-transparente */
+  border-right-width: 10px; /* Ancho del borde derecho */
+  border-right-style: solid; /* Estilo sólido */
 }
+
+/* Estilo para el pseudo-elemento :after */
 .globe:after {
-  top: 50px;
-  right: 65px;
-  width: 10px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.3);
+  top: 50px; /* Distancia desde el borde superior */
+  right: 65px; /* Distancia desde el borde derecho */
+  width: 10px; /* Ancho */
+  height: 10px; /* Alto */
+  background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
 }
+
+/* Estilos para el pájaro */
 .globe .bird {
-  position: absolute;
-  z-index: 1;
-  left: 96px;
-  top: 100px;
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel medio */
+  left: 96px; /* Distancia desde el borde izquierdo */
+  top: 100px; /* Distancia desde el borde superior */
 }
+
+/* Estilo para el cuerpo del pájaro */
 .globe .bird .body {
-  position: absolute;
-  width: 175px;
-  height: 186px;
-  border-radius: 50%;
-  background-clip: padding-box;
-  background-color: #11e7d7;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3);
+  position: absolute; /* Posicionamiento absoluto */
+  width: 175px; /* Ancho */
+  height: 186px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-clip: padding-box; /* Recortar el fondo al área del relleno */
+  background-color: #11e7d7; /* Color de fondo */
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3); /* Sombra interna */
 }
+
+/* Estilos para las alas del pájaro */
 .globe .bird .body:before, .globe .bird .body:after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  width: 26px;
-  height: 93px;
-  border-radius: 50%;
-  background-color: #11e7d7;
-  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3);
-  top: 70px;
-  -webkit-animation: wings 4.5s linear infinite;
-          animation: wings 4.5s linear infinite;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  z-index: -1; /* Nivel inferior */
+  width: 26px; /* Ancho */
+  height: 93px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #11e7d7; /* Color de fondo */
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3); /* Sombra interna */
+  top: 70px; /* Distancia desde el borde superior */
+  -webkit-animation: wings 4.5s linear infinite; /* Animación de alas */
+  animation: wings 4.5s linear infinite; /* Animación de alas */
 }
+
+/* Estilo para el ala izquierda */
 .globe .bird .body:before {
-  left: 0;
+  left: 0; /* Posición izquierda */
 }
+
+/* Estilo para el ala derecha */
 .globe .bird .body:after {
-  right: 0;
+  right: 0; /* Posición derecha */
 }
+
+/* Estilo para los ojos */
 .globe .bird .body .eye {
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  width: 56px;
-  height: 56px;
-  top: 28px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 1px solid #01c7be;
-  box-shadow: inset 0 0 0 1px #01c7be;
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel superior */
+  overflow: hidden; /* Ocultar desbordes */
+  width: 56px; /* Ancho */
+  height: 56px; /* Alto */
+  top: 28px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #01c7be; /* Borde color aqua */
+  box-shadow: inset 0 0 0 1px #01c7be; /* Sombra interna del borde */
 }
+
+/* Detalles de los ojos */
 .globe .bird .body .eye:before, .globe .bird .body .eye:after {
-  position: absolute;
-  content: "";
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
 }
+
+/* Estilo para el ojo izquierdo */
 .globe .bird .body .eye:before {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #000;
-  top: 30px;
+  width: 18px; /* Ancho */
+  height: 18px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #000; /* Fondo negro */
+  top: 30px; /* Distancia desde el borde superior */
 }
+
+/* Estilo para la pupila (ojos animados) */
 .globe .bird .body .eye:after {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(ellipse at center, rgba(109, 0, 25, 0) 0%, rgba(130, 1, 31, 0) 35%, #01c7be 36%, #31bfae 100%);
-  -webkit-animation: eyes 4.5s linear infinite;
-          animation: eyes 4.5s linear infinite;
+  width: 200px; /* Ancho */
+  height: 200px; /* Alto */
+  background: radial-gradient(ellipse at center, rgba(109, 0, 25, 0) 0%, rgba(130, 1, 31, 0) 35%, #01c7be 36%, #31bfae 100%); /* Gradiente para el ojo */
+  -webkit-animation: eyes 4.5s linear infinite; /* Animación de los ojos */
+  animation: eyes 4.5s linear infinite; /* Animación de los ojos */
 }
+
+/* Estilo para el ojo izquierdo */
 .globe .bird .body .eye.left {
-  left: 15px;
+  left: 15px; /* Distancia desde el borde izquierdo */
 }
+
+/* Estilo para la pupila del ojo izquierdo */
 .globe .bird .body .eye.left:before {
-  left: 20px;
+  left: 20px; /* Distancia desde el borde izquierdo */
 }
+
+/* Estilo para la pupila del ojo izquierdo (animada) */
 .globe .bird .body .eye.left:after {
-  left: -60px;
-  top: -45px;
+  left: -60px; /* Distancia desde el borde izquierdo */
+  top: -45px; /* Distancia desde el borde superior */
 }
+
+/* Estilo para el ojo derecho */
 .globe .bird .body .eye.right {
-  right: 15px;
+  right: 15px; /* Distancia desde el borde derecho */
 }
+
+/* Estilo para la pupila del ojo derecho */
 .globe .bird .body .eye.right:before {
-  right: 20px;
+  right: 20px; /* Distancia desde el borde derecho */
 }
+
+/* Estilo para la pupila del ojo derecho (animada) */
 .globe .bird .body .eye.right:after {
-  right: -60px;
-  top: -45px;
+  right: -60px; /* Distancia desde el borde derecho */
+  top: -45px; /* Distancia desde el borde superior */
 }
+/* Estilos para el pico del pájaro */
 .globe .bird .body .beak {
-  position: absolute;
-  z-index: 1;
-  width: 41px;
-  height: 55px;
-  top: 70px;
-  left: 67px;
-  border-radius: 50%;
-  background-color: #31bfae;
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel superior */
+  width: 41px; /* Ancho */
+  height: 55px; /* Alto */
+  top: 70px; /* Distancia desde el borde superior */
+  left: 67px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #31bfae; /* Color de fondo */
 }
+
+/* Estilo para el pico (parte interna) */
 .globe .bird .body .beak:before {
-  position: absolute;
-  content: "";
-  width: inherit;
-  height: inherit;
-  top: 2px;
-  border-radius: 50%;
-  background: #eb9f2d;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: inherit; /* Heredar ancho */
+  height: inherit; /* Heredar alto */
+  top: 2px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  background: #eb9f2d; /* Color de fondo */
 }
+
+/* Estilo para la parte inferior del pico */
 .globe .bird .body .beak:after {
-  position: absolute;
-  content: "";
-  z-index: -1;
-  width: 37px;
-  height: inherit;
-  top: 12px;
-  left: 2px;
-  border-radius: 50%;
-  background: #31bfae;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  z-index: -1; /* Nivel inferior */
+  width: 37px; /* Ancho */
+  height: inherit; /* Alto heredado */
+  top: 12px; /* Distancia desde el borde superior */
+  left: 2px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background: #31bfae; /* Color de fondo */
 }
+
+/* Estilo para el centro del pico (detalles adicionales) */
 .globe .bird .body .beak div {
-  position: absolute;
-  width: 43px;
-  height: 43px;
-  top: -1px;
-  left: -1px;
-  border-radius: 50% 60% 50% 40%;
-  background-clip: padding-box;
-  background-color: #f7d35d;
-  transform: rotate(-45deg);
+  position: absolute; /* Posicionamiento absoluto */
+  width: 43px; /* Ancho */
+  height: 43px; /* Alto */
+  top: -1px; /* Distancia desde el borde superior */
+  left: -1px; /* Distancia desde el borde izquierdo */
+  border-radius: 50% 60% 50% 40%; /* Bordes redondeados con diferentes curvaturas */
+  background-clip: padding-box; /* Recortar el fondo al área del relleno */
+  background-color: #f7d35d; /* Color de fondo */
+  transform: rotate(-45deg); /* Rotar el pico */
 }
+
+/* Estilo para el detalle en el centro del pico */
 .globe .bird .body .beak div:before {
-  position: absolute;
-  content: "";
-  transform: rotate(45deg);
-  width: 17px;
-  height: 8px;
-  top: 10px;
-  left: 20px;
-  border-radius: 50%;
-  background-color: #fff;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  transform: rotate(45deg); /* Rotación en dirección opuesta */
+  width: 17px; /* Ancho */
+  height: 8px; /* Alto */
+  top: 10px; /* Distancia desde el borde superior */
+  left: 20px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo */
 }
+
+/* Estilos para las patas del pájaro */
 .globe .bird .body .feet {
-  position: absolute;
-  bottom: 15px;
-  width: 100%;
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 15px; /* Distancia desde el borde inferior */
+  width: 100%; /* Ancho completo */
 }
+
+/* Estilos para las patas (animadas) */
 .globe .bird .body .feet:before, .globe .bird .body .feet:after {
-  position: absolute;
-  content: "";
-  width: 27px;
-  height: 21px;
-  border-radius: 50%;
-  background-color: #f8c14d;
-  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
-  -webkit-animation: feet 4.5s linear infinite;
-          animation: feet 4.5s linear infinite;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: 27px; /* Ancho */
+  height: 21px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #f8c14d; /* Color de fondo */
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2); /* Sombra interna */
+  -webkit-animation: feet 4.5s linear infinite; /* Animación de las patas */
+  animation: feet 4.5s linear infinite; /* Animación de las patas */
 }
+
+/* Estilo para la pata izquierda */
 .globe .bird .body .feet:before {
-  left: 40px;
+  left: 40px; /* Distancia desde el borde izquierdo */
 }
+
+/* Estilo para la pata derecha */
 .globe .bird .body .feet:after {
-  right: 40px;
+  right: 40px; /* Distancia desde el borde derecho */
 }
+
+/* Estilos para el alambre (parte que sostiene el pájaro) */
 .globe .wire {
-  position: absolute;
-  z-index: -1;
-  width: 500px;
-  height: 400px;
-  left: -173px;
-  top: -215px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-bottom-color: black;
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: -1; /* Nivel inferior */
+  width: 500px; /* Ancho */
+  height: 400px; /* Alto */
+  left: -173px; /* Distancia desde el borde izquierdo */
+  top: -215px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  border: 3px solid transparent; /* Borde transparente */
+  border-bottom-color: black; /* Color del borde inferior */
 }
+/* Estilos para las colinas en el globo */
 .globe .hills {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 30%;
-  top: 230px;
-  left: 60px;
-  transform: rotate(45deg);
-  background: radial-gradient(ellipse at top left, #aad95d 0%, #bbc369 100%);
-  box-shadow: inset 5px 0 12px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Posicionamiento absoluto */
+  width: 60px; /* Ancho */
+  height: 60px; /* Alto */
+  border-radius: 30%; /* Bordes redondeados */
+  top: 230px; /* Distancia desde el borde superior */
+  left: 60px; /* Distancia desde el borde izquierdo */
+  transform: rotate(45deg); /* Rotación del objeto */
+  background: radial-gradient(ellipse at top left, #aad95d 0%, #bbc369 100%); /* Degradado radial con tonos verdes */
+  box-shadow: inset 5px 0 12px rgba(0, 0, 0, 0.2); /* Sombra interna */
 }
+
+/* Estilos para las colinas (elementos antes y después) */
 .globe .hills:before, .globe .hills:after {
-  position: absolute;
-  content: "";
-  width: 178px;
-  height: 90px;
-  border-radius: 50%;
-  background: inherit;
-  box-shadow: inherit;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: 178px; /* Ancho */
+  height: 90px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background: inherit; /* Hereda el fondo */
+  box-shadow: inherit; /* Hereda la sombra */
 }
+
+/* Estilo para la primera colina (antes) */
 .globe .hills:before {
-  left: -90px;
-  top: 30px;
-  z-index: -1;
-  transform: rotate(-20deg);
+  left: -90px; /* Distancia desde el borde izquierdo */
+  top: 30px; /* Distancia desde el borde superior */
+  z-index: -1; /* Nivel inferior */
+  transform: rotate(-20deg); /* Rotación */
 }
+
+/* Estilo para la segunda colina (después) */
 .globe .hills:after {
-  left: 0px;
-  top: -55px;
-  transform: rotate(120deg);
+  left: 0px; /* Distancia desde el borde izquierdo */
+  top: -55px; /* Distancia desde el borde superior */
+  transform: rotate(120deg); /* Rotación */
 }
+
+/* Estilos para la nube dentro del globo */
 .globe .cloud {
-  position: absolute;
-  width: 70px;
-  height: 24px;
-  background: linear-gradient(to bottom, #f2f9fe 5%, #d6f0fd 100%);
-  border-radius: 20px;
-  top: -20px;
-  z-index: -1;
-  -webkit-animation: cloud 9s linear infinite;
-          animation: cloud 9s linear infinite;
+  position: absolute; /* Posicionamiento absoluto */
+  width: 70px; /* Ancho */
+  height: 24px; /* Alto */
+  background: linear-gradient(to bottom, #f2f9fe 5%, #d6f0fd 100%); /* Degradado de color azul claro */
+  border-radius: 20px; /* Bordes redondeados */
+  top: -20px; /* Distancia desde el borde superior */
+  z-index: -1; /* Nivel inferior */
+  -webkit-animation: cloud 9s linear infinite; /* Animación para la nube */
+  animation: cloud 9s linear infinite; /* Animación para la nube */
 }
+
+/* Estilos para la nube pequeña */
 .globe .cloud.small {
-  top: -50px;
-  transform: scale(0.6);
-  -webkit-animation-delay: -1.5s;
-          animation-delay: -1.5s;
-  -webkit-animation-duration: 13.5s;
-          animation-duration: 13.5s;
+  top: -50px; /* Distancia desde el borde superior */
+  transform: scale(0.6); /* Escala de la nube */
+  -webkit-animation-delay: -1.5s; /* Retraso en la animación */
+  animation-delay: -1.5s; /* Retraso en la animación */
+  -webkit-animation-duration: 13.5s; /* Duración de la animación */
+  animation-duration: 13.5s; /* Duración de la animación */
 }
+
+/* Estilos para los elementos antes y después de la nube */
 .globe .cloud:before, .globe .cloud:after {
-  position: absolute;
-  content: "";
-  background: inherit;
-  z-index: -1;
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  background: inherit; /* Hereda el fondo */
+  z-index: -1; /* Nivel inferior */
 }
+
+/* Estilo para la primera parte de la nube */
 .globe .cloud:before {
-  width: 36px;
-  height: 36px;
-  top: -18px;
-  right: 10px;
-  border-radius: 40px;
+  width: 36px; /* Ancho */
+  height: 36px; /* Alto */
+  top: -18px; /* Distancia desde el borde superior */
+  right: 10px; /* Distancia desde el borde derecho */
+  border-radius: 40px; /* Bordes redondeados */
 }
+
+/* Estilo para la segunda parte de la nube */
 .globe .cloud:after {
-  width: 20px;
-  height: 20px;
-  top: -10px;
-  left: 10px;
-  border-radius: 20px;
+  width: 20px; /* Ancho */
+  height: 20px; /* Alto */
+  top: -10px; /* Distancia desde el borde superior */
+  left: 10px; /* Distancia desde el borde izquierdo */
+  border-radius: 20px; /* Bordes redondeados */
 }
