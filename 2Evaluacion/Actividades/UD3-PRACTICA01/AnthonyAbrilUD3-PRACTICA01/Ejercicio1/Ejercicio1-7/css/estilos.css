@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Configuración de la escena con perspectiva */
+.scene {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px; /* Añade la perspectiva 3D */
+}
+
+/* Estilo del contenedor que realiza el giro */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Habilita el 3D */
+  transition: transform 1s ease-in-out; /* Suaviza el giro */
+  cursor: pointer;
+}
+
+/* Estilo de las caras del cartel */
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
+}
+
+/* Cara frontal */
+.front {
+  background-color: red;
+}
+
+/* Cara trasera */
+.back {
+  background-color: blue;
+  transform: rotateY(180deg); /* Gira la cara trasera 180º */
+}
+
+/* Efecto de giro al hacer clic */
+.scene:hover .card {
+  transform: rotateY(180deg); /* Gira el cartel 180º */
+}

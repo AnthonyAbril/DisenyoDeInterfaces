@@ -1,0 +1,470 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,500italic);
+
+/* Animación de los ojos */
+@-webkit-keyframes eyes {
+  0%, 8.8888888889%, 100% {
+    top: -50px; /* Posición inicial y final fuera del área visible */
+  }
+  17.7777777778% {
+    top: -45px; /* Movimiento hacia arriba */
+  }
+  91.1111111111% {
+    top: -20px; /* Movimiento hacia abajo */
+  }
+  57.7777777778%, 88.8888888889% {
+    top: -15px; /* Posición más baja */
+  }
+  66.6666666667% {
+    top: -25px; /* Movimiento intermedio */
+  }
+}
+
+@keyframes eyes {
+  0%, 8.8888888889%, 100% {
+    top: -50px; /* Posición inicial y final fuera del área visible */
+  }
+  17.7777777778% {
+    top: -45px; /* Movimiento hacia arriba */
+  }
+  91.1111111111% {
+    top: -20px; /* Movimiento hacia abajo */
+  }
+  57.7777777778%, 88.8888888889% {
+    top: -15px; /* Posición más baja */
+  }
+  66.6666666667% {
+    top: -25px; /* Movimiento intermedio */
+  }
+}
+
+/* Animación de las alas */
+@-webkit-keyframes wings {
+  0%, 88.8888888889%, 100% {
+    top: 70px; /* Posición inicial y final */
+  }
+  91.1111111111% {
+    top: 60px; /* Movimiento hacia arriba */
+  }
+}
+
+@keyframes wings {
+  0%, 88.8888888889%, 100% {
+    top: 70px; /* Posición inicial y final */
+  }
+  91.1111111111% {
+    top: 60px; /* Movimiento hacia arriba */
+  }
+}
+
+/* Animación de los pies */
+@-webkit-keyframes feet {
+  0%, 88.8888888889%, 100% {
+    top: -2px; /* Posición inicial y final */
+  }
+  91.1111111111% {
+    top: 0px; /* Movimiento hacia abajo */
+  }
+}
+
+@keyframes feet {
+  0%, 88.8888888889%, 100% {
+    top: -2px; /* Posición inicial y final */
+  }
+  91.1111111111% {
+    top: 0px; /* Movimiento hacia abajo */
+  }
+}
+
+/* Animación de las nubes */
+@-webkit-keyframes cloud {
+  0% {
+    left: -140px; /* Comienza fuera de la pantalla */
+  }
+  100% {
+    left: 280px; /* Termina fuera de la pantalla */
+  }
+}
+
+@keyframes cloud {
+  0% {
+    left: -140px; /* Comienza fuera de la pantalla */
+  }
+  100% {
+    left: 280px; /* Termina fuera de la pantalla */
+  }
+}
+
+/* Estilo general */
+html {
+  height: 100%; /* Altura de toda la página */
+  background-color: #222024; /* Fondo oscuro inicial */
+  background: radial-gradient(circle at center, #47414c 0%, #222024 100%); /* Gradiente radial */
+  background-repeat: no-repeat; /* Sin repetición del fondo */
+}
+
+body {
+  text-align: center; /* Centrado de texto */
+  font: normal 100% "Fira Sans", sans-serif; /* Fuente principal */
+}
+
+h2 {
+  font-size: 4vw; /* Tamaño proporcional al ancho de la ventana */
+}
+
+h2 span {
+  font-size: 60%; /* Tamaño reducido de los elementos secundarios */
+}
+
+a {
+  color: #aaa; /* Color de enlaces */
+}
+/* Estilos generales para el globo */
+.globe {
+  margin: 1em 0 0 0; /* Margen superior */
+  position: relative; /* Posicionamiento relativo */
+  display: inline-block; /* Mostrar en línea y mantener el formato de bloque */
+  text-align: left; /* Alinear el texto a la izquierda */
+  width: 400px; /* Ancho del globo */
+  height: 400px; /* Alto del globo */
+  border-radius: 50%; /* Bordes redondeados para forma circular */
+  border: 20px solid #f7dbcf; /* Borde color claro */
+  box-sizing: border-box; /* Incluir el borde en el tamaño total */
+  background: linear-gradient(to bottom, #86aecc 0%, #d4e4ef 100%); /* Gradiente de fondo */
+  overflow: hidden; /* Ocultar contenido que sobresale del área */
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombras internas y externas */
+}
+
+/* Pseudo-elementos para agregar detalles adicionales al globo */
+.globe:before, .globe:after {
+  position: absolute; /* Posición absoluta */
+  content: ""; /* Sin contenido */
+  box-sizing: border-box; /* Ajuste del tamaño de la caja */
+  border-radius: 50%; /* Bordes redondeados */
+  z-index: 10; /* Nivel superior */
+}
+
+/* Estilo para el pseudo-elemento :before */
+.globe:before {
+  height: 94%; /* Alto */
+  width: 94%; /* Ancho */
+  top: 3%; /* Distancia desde el borde superior */
+  right: 3%; /* Distancia desde el borde derecho */
+  border: 10px solid transparent; /* Borde transparente */
+  border-right-color: rgba(255, 255, 255, 0.3); /* Borde derecho semi-transparente */
+  border-right-width: 10px; /* Ancho del borde derecho */
+  border-right-style: solid; /* Estilo sólido */
+}
+
+/* Estilo para el pseudo-elemento :after */
+.globe:after {
+  top: 50px; /* Distancia desde el borde superior */
+  right: 65px; /* Distancia desde el borde derecho */
+  width: 10px; /* Ancho */
+  height: 10px; /* Alto */
+  background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+}
+
+/* Estilos para el pájaro */
+.globe .bird {
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel medio */
+  left: 96px; /* Distancia desde el borde izquierdo */
+  top: 100px; /* Distancia desde el borde superior */
+}
+
+/* Estilo para el cuerpo del pájaro */
+.globe .bird .body {
+  position: absolute; /* Posicionamiento absoluto */
+  width: 175px; /* Ancho */
+  height: 186px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-clip: padding-box; /* Recortar el fondo al área del relleno */
+  background-color: #11e7d7; /* Color de fondo */
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3); /* Sombra interna */
+}
+
+/* Estilos para las alas del pájaro */
+.globe .bird .body:before, .globe .bird .body:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  z-index: -1; /* Nivel inferior */
+  width: 26px; /* Ancho */
+  height: 93px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #11e7d7; /* Color de fondo */
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.3); /* Sombra interna */
+  top: 70px; /* Distancia desde el borde superior */
+  -webkit-animation: wings 4.5s linear infinite; /* Animación de alas */
+  animation: wings 4.5s linear infinite; /* Animación de alas */
+}
+
+/* Estilo para el ala izquierda */
+.globe .bird .body:before {
+  left: 0; /* Posición izquierda */
+}
+
+/* Estilo para el ala derecha */
+.globe .bird .body:after {
+  right: 0; /* Posición derecha */
+}
+
+/* Estilo para los ojos */
+.globe .bird .body .eye {
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel superior */
+  overflow: hidden; /* Ocultar desbordes */
+  width: 56px; /* Ancho */
+  height: 56px; /* Alto */
+  top: 28px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  border: 1px solid #01c7be; /* Borde color aqua */
+  box-shadow: inset 0 0 0 1px #01c7be; /* Sombra interna del borde */
+}
+
+/* Detalles de los ojos */
+.globe .bird .body .eye:before, .globe .bird .body .eye:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+}
+
+/* Estilo para el ojo izquierdo */
+.globe .bird .body .eye:before {
+  width: 18px; /* Ancho */
+  height: 18px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #000; /* Fondo negro */
+  top: 30px; /* Distancia desde el borde superior */
+}
+
+/* Estilo para la pupila (ojos animados) */
+.globe .bird .body .eye:after {
+  width: 200px; /* Ancho */
+  height: 200px; /* Alto */
+  background: radial-gradient(ellipse at center, rgba(109, 0, 25, 0) 0%, rgba(130, 1, 31, 0) 35%, #01c7be 36%, #31bfae 100%); /* Gradiente para el ojo */
+  -webkit-animation: eyes 4.5s linear infinite; /* Animación de los ojos */
+  animation: eyes 4.5s linear infinite; /* Animación de los ojos */
+}
+
+/* Estilo para el ojo izquierdo */
+.globe .bird .body .eye.left {
+  left: 15px; /* Distancia desde el borde izquierdo */
+}
+
+/* Estilo para la pupila del ojo izquierdo */
+.globe .bird .body .eye.left:before {
+  left: 20px; /* Distancia desde el borde izquierdo */
+}
+
+/* Estilo para la pupila del ojo izquierdo (animada) */
+.globe .bird .body .eye.left:after {
+  left: -60px; /* Distancia desde el borde izquierdo */
+  top: -45px; /* Distancia desde el borde superior */
+}
+
+/* Estilo para el ojo derecho */
+.globe .bird .body .eye.right {
+  right: 15px; /* Distancia desde el borde derecho */
+}
+
+/* Estilo para la pupila del ojo derecho */
+.globe .bird .body .eye.right:before {
+  right: 20px; /* Distancia desde el borde derecho */
+}
+
+/* Estilo para la pupila del ojo derecho (animada) */
+.globe .bird .body .eye.right:after {
+  right: -60px; /* Distancia desde el borde derecho */
+  top: -45px; /* Distancia desde el borde superior */
+}
+/* Estilos para el pico del pájaro */
+.globe .bird .body .beak {
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: 1; /* Nivel superior */
+  width: 41px; /* Ancho */
+  height: 55px; /* Alto */
+  top: 70px; /* Distancia desde el borde superior */
+  left: 67px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #31bfae; /* Color de fondo */
+}
+
+/* Estilo para el pico (parte interna) */
+.globe .bird .body .beak:before {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: inherit; /* Heredar ancho */
+  height: inherit; /* Heredar alto */
+  top: 2px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  background: #eb9f2d; /* Color de fondo */
+}
+
+/* Estilo para la parte inferior del pico */
+.globe .bird .body .beak:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  z-index: -1; /* Nivel inferior */
+  width: 37px; /* Ancho */
+  height: inherit; /* Alto heredado */
+  top: 12px; /* Distancia desde el borde superior */
+  left: 2px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background: #31bfae; /* Color de fondo */
+}
+
+/* Estilo para el centro del pico (detalles adicionales) */
+.globe .bird .body .beak div {
+  position: absolute; /* Posicionamiento absoluto */
+  width: 43px; /* Ancho */
+  height: 43px; /* Alto */
+  top: -1px; /* Distancia desde el borde superior */
+  left: -1px; /* Distancia desde el borde izquierdo */
+  border-radius: 50% 60% 50% 40%; /* Bordes redondeados con diferentes curvaturas */
+  background-clip: padding-box; /* Recortar el fondo al área del relleno */
+  background-color: #f7d35d; /* Color de fondo */
+  transform: rotate(-45deg); /* Rotar el pico */
+}
+
+/* Estilo para el detalle en el centro del pico */
+.globe .bird .body .beak div:before {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  transform: rotate(45deg); /* Rotación en dirección opuesta */
+  width: 17px; /* Ancho */
+  height: 8px; /* Alto */
+  top: 10px; /* Distancia desde el borde superior */
+  left: 20px; /* Distancia desde el borde izquierdo */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #fff; /* Color de fondo */
+}
+
+/* Estilos para las patas del pájaro */
+.globe .bird .body .feet {
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 15px; /* Distancia desde el borde inferior */
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilos para las patas (animadas) */
+.globe .bird .body .feet:before, .globe .bird .body .feet:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: 27px; /* Ancho */
+  height: 21px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background-color: #f8c14d; /* Color de fondo */
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2); /* Sombra interna */
+  -webkit-animation: feet 4.5s linear infinite; /* Animación de las patas */
+  animation: feet 4.5s linear infinite; /* Animación de las patas */
+}
+
+/* Estilo para la pata izquierda */
+.globe .bird .body .feet:before {
+  left: 40px; /* Distancia desde el borde izquierdo */
+}
+
+/* Estilo para la pata derecha */
+.globe .bird .body .feet:after {
+  right: 40px; /* Distancia desde el borde derecho */
+}
+
+/* Estilos para el alambre (parte que sostiene el pájaro) */
+.globe .wire {
+  position: absolute; /* Posicionamiento absoluto */
+  z-index: -1; /* Nivel inferior */
+  width: 500px; /* Ancho */
+  height: 400px; /* Alto */
+  left: -173px; /* Distancia desde el borde izquierdo */
+  top: -215px; /* Distancia desde el borde superior */
+  border-radius: 50%; /* Bordes redondeados */
+  border: 3px solid transparent; /* Borde transparente */
+  border-bottom-color: black; /* Color del borde inferior */
+}
+/* Estilos para las colinas en el globo */
+.globe .hills {
+  position: absolute; /* Posicionamiento absoluto */
+  width: 60px; /* Ancho */
+  height: 60px; /* Alto */
+  border-radius: 30%; /* Bordes redondeados */
+  top: 230px; /* Distancia desde el borde superior */
+  left: 60px; /* Distancia desde el borde izquierdo */
+  transform: rotate(45deg); /* Rotación del objeto */
+  background: radial-gradient(ellipse at top left, #aad95d 0%, #bbc369 100%); /* Degradado radial con tonos verdes */
+  box-shadow: inset 5px 0 12px rgba(0, 0, 0, 0.2); /* Sombra interna */
+}
+
+/* Estilos para las colinas (elementos antes y después) */
+.globe .hills:before, .globe .hills:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  width: 178px; /* Ancho */
+  height: 90px; /* Alto */
+  border-radius: 50%; /* Bordes redondeados */
+  background: inherit; /* Hereda el fondo */
+  box-shadow: inherit; /* Hereda la sombra */
+}
+
+/* Estilo para la primera colina (antes) */
+.globe .hills:before {
+  left: -90px; /* Distancia desde el borde izquierdo */
+  top: 30px; /* Distancia desde el borde superior */
+  z-index: -1; /* Nivel inferior */
+  transform: rotate(-20deg); /* Rotación */
+}
+
+/* Estilo para la segunda colina (después) */
+.globe .hills:after {
+  left: 0px; /* Distancia desde el borde izquierdo */
+  top: -55px; /* Distancia desde el borde superior */
+  transform: rotate(120deg); /* Rotación */
+}
+
+/* Estilos para la nube dentro del globo */
+.globe .cloud {
+  position: absolute; /* Posicionamiento absoluto */
+  width: 70px; /* Ancho */
+  height: 24px; /* Alto */
+  background: linear-gradient(to bottom, #f2f9fe 5%, #d6f0fd 100%); /* Degradado de color azul claro */
+  border-radius: 20px; /* Bordes redondeados */
+  top: -20px; /* Distancia desde el borde superior */
+  z-index: -1; /* Nivel inferior */
+  -webkit-animation: cloud 9s linear infinite; /* Animación para la nube */
+  animation: cloud 9s linear infinite; /* Animación para la nube */
+}
+
+/* Estilos para la nube pequeña */
+.globe .cloud.small {
+  top: -50px; /* Distancia desde el borde superior */
+  transform: scale(0.6); /* Escala de la nube */
+  -webkit-animation-delay: -1.5s; /* Retraso en la animación */
+  animation-delay: -1.5s; /* Retraso en la animación */
+  -webkit-animation-duration: 13.5s; /* Duración de la animación */
+  animation-duration: 13.5s; /* Duración de la animación */
+}
+
+/* Estilos para los elementos antes y después de la nube */
+.globe .cloud:before, .globe .cloud:after {
+  position: absolute; /* Posicionamiento absoluto */
+  content: ""; /* Sin contenido */
+  background: inherit; /* Hereda el fondo */
+  z-index: -1; /* Nivel inferior */
+}
+
+/* Estilo para la primera parte de la nube */
+.globe .cloud:before {
+  width: 36px; /* Ancho */
+  height: 36px; /* Alto */
+  top: -18px; /* Distancia desde el borde superior */
+  right: 10px; /* Distancia desde el borde derecho */
+  border-radius: 40px; /* Bordes redondeados */
+}
+
+/* Estilo para la segunda parte de la nube */
+.globe .cloud:after {
+  width: 20px; /* Ancho */
+  height: 20px; /* Alto */
+  top: -10px; /* Distancia desde el borde superior */
+  left: 10px; /* Distancia desde el borde izquierdo */
+  border-radius: 20px; /* Bordes redondeados */
+}

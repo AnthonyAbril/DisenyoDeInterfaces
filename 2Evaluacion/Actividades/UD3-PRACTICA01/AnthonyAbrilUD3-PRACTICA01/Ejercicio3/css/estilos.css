@@ -1,0 +1,266 @@
+/* Variables CSS para colores, tamaños, y animaciones */
+:root {
+    --color-fondo: #f0f8ff;
+    --color-tallo: #008000;
+    --color-flor: #ffc0cb;
+    --color-centro-flor: #ffff00;
+    --color-texto-frontal: #000;
+    --color-texto-trasero: #000;
+    --color-trasero: #ffc0cb;
+    --color-frontal: #000;
+    --fuente-titulo: 20vh;
+    --tamano-flores: 15vh;
+  }
+  
+  /* Estilo general del cuerpo de la página */
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-fondo); /* Fondo desde la variable */
+    overflow: hidden;
+  }
+  
+  /* Estilo del encabezado principal (Floristería) */
+  header {
+    position: absolute;
+    top: 15vh;
+    text-align: center;
+    font-size: var(--fuente-titulo); /* Uso de la variable para el tamaño */
+    animation: slideUp 1s forwards;
+  }
+  
+  /* Estilo para las flores y su animación */
+  .flores, .flor, .flor img {
+    position: absolute;
+  }
+  
+  .flor {
+    animation: appear 0.2s forwards;
+  }
+  
+  .flor img {
+    width: var(--tamano-flores);
+    height: 50vh;
+  }
+  
+  /* Posicionamiento individual de cada flor */
+  .flor-1 {
+    transform: translate(-40vw, -5vh) rotate(45deg);
+  }
+  
+  .flor-2 {
+    transform: translate(-45vw, -15vh) rotate(30deg);
+  }
+  
+  .flor-3 {
+    transform: translate(40vw) rotate(-45deg);
+  }
+  
+  .flor-4 {
+    transform: translate(40vw, 20vh) rotate(-60deg);
+  }
+  
+  /* Animación de aparición de las flores */
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Consolidación de las animaciones slideDown y slideUp en una sola */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo de los contenedores principales */
+  .contenedor {
+    width: fit-content;
+    height: 20vh;
+    position: absolute;
+    perspective: 1000px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideUp 1s forwards;
+  }
+  
+  .contenedor-1 {
+    top: 15vh;
+    left: 35vh;
+    animation-delay: 2s;
+  }
+  
+  .contenedor-2 {
+    top: 28vh;
+    right: 80vh;
+    animation-delay: 2.4s;
+  }
+  
+  .contenedor-3 {
+    top: 5vh;
+    right: 100vh;
+    animation-delay: 2.6s;
+  }
+  
+  .contenedor-4 {
+    top: 10vh;
+    right: 40vh;
+    animation-delay: 2.2s;
+  }
+  
+  .contenedor-5 {
+    top: 35vh;
+    left: 60vh;
+    animation-delay: 2.2s;
+  }
+  
+  /* Estilo de la tarjeta interna (giro 3D) */
+  .inner {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  
+  .contenedor:hover .inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Estilo de las caras de la tarjeta */
+  .front, .back {
+    position: absolute;
+    width: 15vw;
+    height: fit-content;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    padding: 4vh;
+    box-sizing: border-box;
+  }
+  
+  .front {
+    background-color: var(--color-frontal);
+    color: white;
+  }
+  
+  .back {
+    background-color: var(--color-trasero);
+    color: var(--color-texto-trasero);
+    transform: rotateY(180deg);
+  }
+  
+  /* Elimina márgenes y relleno de los párrafos dentro de los contenedores */
+  .contenedor p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo y animación del tallo de la flor */
+  .tallo {
+    position: absolute;
+    width: 10px;
+    height: 60vh;
+    background-color: var(--color-tallo);
+    z-index: -1;
+    transform: translateY(20vh);
+    animation: move-to-top 1s ease-in-out forwards;
+  }
+  
+  /* Estilo del contenedor de la flor */
+  .flowercontent {
+    height: 40vh;
+  }
+  
+  .flower {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform-origin: center;
+    animation: spin 4s linear infinite;
+  }
+  
+  .center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-centro-flor);
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .petal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-flor);
+    border-radius: 50%;
+    transform-origin: center center;
+    opacity: 0;
+    animation: appear 5s ease-in-out forwards;
+  }
+  
+  /* Posicionamiento de los pétalos */
+  .petal-1 {
+    transform: rotate(0deg) translateY(-50px);
+    animation-delay: 0.5s;
+  }
+  
+  .petal-2 {
+    transform: rotate(60deg) translateY(-50px);
+    animation-delay: 0.75s;
+  }
+  
+  .petal-3 {
+    transform: rotate(120deg) translateY(-50px);
+    animation-delay: 1s;
+  }
+  
+  .petal-4 {
+    transform: rotate(180deg) translateY(-50px);
+    animation-delay: 1.25s;
+  }
+  
+  .petal-5 {
+    transform: rotate(240deg) translateY(-50px);
+    animation-delay: 1.5s;
+  }
+  
+  .petal-6 {
+    transform: rotate(300deg) translateY(-50px);
+    animation-delay: 1.75s;
+  }
+  
+  /* Animaciones */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes move-to-top {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(20vh);
+    }
+  }
+  

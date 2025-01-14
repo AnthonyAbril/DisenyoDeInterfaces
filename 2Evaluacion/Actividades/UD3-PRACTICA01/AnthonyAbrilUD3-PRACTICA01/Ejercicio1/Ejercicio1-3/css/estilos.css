@@ -1,0 +1,31 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Cuadro */
+.cuadro {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    animation: girar 3s ease-in-out forwards;
+}
+
+/* Animación */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+        /* Sin giro al inicio */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Gira 360º */
+    }
+}

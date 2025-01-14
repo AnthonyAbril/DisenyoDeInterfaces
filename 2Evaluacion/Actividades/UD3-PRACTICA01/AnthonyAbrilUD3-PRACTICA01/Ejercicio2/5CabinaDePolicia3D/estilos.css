@@ -1,0 +1,462 @@
+/* Estilo general del documento */
+body {
+  font-family: arial; /* Fuente general del texto */
+  background: #fff; /* Fondo blanco */
+}
+
+/* Estilo del nombre o firma */
+.name {
+  color: #aaa; /* Color de texto gris claro */
+  font-size: 12px; /* Tamaño de fuente pequeño */
+  position: fixed; /* Posición fija en pantalla */
+  bottom: 10px; /* Ubicado cerca de la parte inferior */
+  right: 10px; /* Ubicado hacia la derecha */
+  text-align: right; /* Alineación a la derecha */
+}
+
+.name div:first-of-type {
+  font-size: 14px; /* Tamaño de fuente ligeramente mayor para el primer elemento */
+}
+
+.name a {
+  color: #aaa; /* Color gris claro para enlaces */
+}
+
+.name a:hover {
+  color: #888; /* Color gris más oscuro al pasar el ratón */
+}
+
+/* Clases para flotación de elementos */
+.left {
+  float: left; /* Flotación a la izquierda */
+}
+
+.right {
+  float: right; /* Flotación a la derecha */
+}
+
+/* Contenedor con perspectiva */
+.perspective {
+  perspective: 1200px; /* Profundidad de perspectiva */
+  -webkit-perspective: 1200px; /* Prefijo para compatibilidad con WebKit */
+}
+
+/* Contenedor que envuelve la TARDIS */
+.tardis-wrap {
+  transform-style: preserve-3d; /* Mantiene el estilo 3D de los hijos */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform: translateZ(-300px); /* Mueve el contenedor en el eje Z */
+  -webkit-transform: translateZ(-300px); /* Prefijo para compatibilidad */
+}
+
+/* Estilo general de la TARDIS */
+.tardis {
+  position: relative; /* Posición relativa para elementos internos */
+  width: 200px; /* Ancho de la TARDIS */
+  height: 200px; /* Altura inicial */
+  margin: 100px auto; /* Centrado horizontal con margen superior */
+  transform-style: preserve-3d; /* Permite transformar elementos 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform-origin: 50% 50%; /* Origen de las transformaciones */
+  -webkit-transform-origin: 50% 50%; /* Prefijo para compatibilidad */
+  transform: rotateX(-20deg) rotateY(-30deg); /* Rotación inicial en 3D */
+  -webkit-transform: rotateX(-20deg) rotateY(-30deg); /* Prefijo para compatibilidad */
+  animation-name: spin; /* Nombre de la animación */
+  animation-duration: 5000ms; /* Duración de 5 segundos */
+  animation-iteration-count: infinite; /* Animación infinita */
+  animation-timing-function: linear; /* Velocidad constante */
+}
+
+/* Animación para girar la TARDIS */
+@keyframes spin {
+  from {
+    transform: rotateX(-20deg) rotateY(0deg); /* Rotación inicial */
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg); /* Rotación completa */
+  }
+}
+
+/* Detalles de las caras de la TARDIS */
+.tardis .side {
+  position: absolute; /* Posición absoluta dentro de la TARDIS */
+  top: 0px; /* Alineación superior */
+  left: 0px; /* Alineación izquierda */
+  width: 200px; /* Ancho de cada cara */
+  height: 360px; /* Altura de cada cara */
+  background-color: #3f577d; /* Color azul oscuro */
+  box-shadow: inset 1px 0 0 #313d49, inset -1px 0 0 #313d49, inset 0 1px 0 #313d49, inset 0 -1px 0 #313d49; /* Bordes oscuros para relieve */
+  transform-style: preserve-3d; /* Mantiene las transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  z-index: 1; /* Capa superior */
+}
+/* Transformaciones de las caras de la TARDIS */
+
+/* Cara frontal */
+.side:nth-of-type(1) {
+  transform: translateZ(100px); /* Mueve la cara hacia adelante */
+  -webkit-transform: translateZ(100px); /* Prefijo para compatibilidad */
+}
+
+/* Cara derecha */
+.side:nth-of-type(2) {
+  transform: rotateY(90deg) translateZ(100px); /* Rotación de 90° y traslado hacia adelante */
+  -webkit-transform: rotateY(90deg) translateZ(100px); /* Prefijo para compatibilidad */
+}
+
+/* Cara trasera */
+.side:nth-of-type(3) {
+  transform: rotateY(180deg) translateZ(100px); /* Rotación de 180° y traslado hacia adelante */
+  -webkit-transform: rotateY(180deg) translateZ(100px); /* Prefijo para compatibilidad */
+}
+
+/* Cara izquierda */
+.side:nth-of-type(4) {
+  transform: rotateY(-90deg) translateZ(100px); /* Rotación de -90° y traslado hacia adelante */
+  -webkit-transform: rotateY(-90deg) translateZ(100px); /* Prefijo para compatibilidad */
+}
+
+/* Techo de la TARDIS */
+.tardis .roof {
+  position: absolute;
+  width: 200px; /* Ancho del techo */
+  height: 200px; /* Profundidad del techo */
+  background-color: #3f577d; /* Color azul oscuro */
+  transform-style: preserve-3d; /* Estilo 3D para elementos hijos */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform: rotateX(-90deg) translateZ(-100px); /* Rotación para colocarlo como techo */
+  -webkit-transform: rotateX(-90deg) translateZ(-100px); /* Prefijo para compatibilidad */
+  z-index: 2; /* Prioridad de renderizado */
+}
+
+/* Caja superior del techo */
+.roof-top {
+  position: absolute;
+  left: 30px; /* Centrado horizontal */
+  width: 140px; /* Ancho de la caja */
+  height: 140px; /* Altura de la caja */
+  z-index: 2; /* Prioridad de renderizado */
+  transform-style: preserve-3d; /* Estilo 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Tapa superior de la caja */
+.top-lid {
+  width: 140px; /* Tamaño igual al de la caja */
+  height: 140px;
+  background-color: #355683; /* Color azul más oscuro */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform: rotateX(-90deg) translateZ(-89px); /* Rotación para la parte superior */
+  -webkit-transform: rotateX(-90deg) translateZ(-89px); /* Prefijo para compatibilidad */
+}
+
+/* Paneles laterales del techo */
+.roof-panel {
+  position: absolute;
+  width: 140px; /* Ancho igual al de la caja */
+  height: 20px; /* Altura de los paneles */
+  background-color: #445d84; /* Color azul grisáceo */
+  box-shadow: inset 1px 0 0 #313d49, inset -1px 0 0 #313d49, inset 0 1px 0 #313d49, inset 0 -1px 0 #313d49; /* Sombra interna para relieve */
+  top: -20px; /* Posición sobre la tapa */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Panel frontal del techo */
+.roof-panel.a {
+  transform: rotateY(0deg) translateZ(70px); /* Posición en el frente */
+  -webkit-transform: rotateY(0deg) translateZ(70px); /* Prefijo para compatibilidad */
+}
+
+/* Panel derecho del techo */
+.roof-panel.b {
+  transform: rotateY(90deg) translateZ(70px); /* Rotación hacia el lado derecho */
+  -webkit-transform: rotateY(90deg) translateZ(70px); /* Prefijo para compatibilidad */
+}
+
+/* Panel trasero del techo */
+.roof-panel.c {
+  transform: rotateY(180deg) translateZ(70px); /* Rotación hacia la parte trasera */
+  -webkit-transform: rotateY(180deg) translateZ(70px); /* Prefijo para compatibilidad */
+}
+
+/* Panel izquierdo del techo */
+.roof-panel.d {
+  transform: rotateY(-90deg) translateZ(70px); /* Rotación hacia el lado izquierdo */
+  -webkit-transform: rotateY(-90deg) translateZ(70px); /* Prefijo para compatibilidad */
+}
+
+/* Luz en la parte superior de la TARDIS */
+.light {
+  position: absolute;
+  width: 40px; /* Tamaño de la base de la luz */
+  height: 40px; /* Altura de la base de la luz */
+  top: -60px; /* Desplazamiento hacia arriba del techo */
+  left: 85px; /* Centrado horizontal */
+  z-index: 3; /* Prioridad superior */
+  transform-style: preserve-3d; /* Estilo 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Tapa superior de la luz */
+.light-lid {
+  width: 30px; /* Tamaño más pequeño que la base */
+  height: 30px;
+  background-color: #eee; /* Color blanco claro */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform: rotateX(-90deg) translateZ(-14px); /* Rotación para la tapa */
+  -webkit-transform: rotateX(-90deg) translateZ(-14px); /* Prefijo para compatibilidad */
+}
+
+  /* Paneles de la luz superior */
+.light .light-panel {
+  position: absolute;
+  width: 30px; /* Ancho del panel */
+  height: 40px; /* Altura del panel */
+  transform-style: preserve-3d; /* Estilo 3D para elementos hijos */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Parte inferior del panel de la luz */
+.light .light-panel .bottom {
+  width: 30px; /* Tamaño igual al panel */
+  height: 12px; /* Altura de la parte inferior */
+  position: absolute;
+  bottom: 0px; /* Ubicación en la parte inferior */
+  background-color: #355683; /* Color azul oscuro */
+  box-shadow: inset 1px 0 0 #313d49, inset -1px 0 0 #313d49, inset 0 1px 0 #313d49, inset 0 -1px 0 #313d49; /* Sombra interna para efecto de profundidad */
+}
+
+/* Parte superior del panel de la luz */
+.light .light-panel .top {
+  width: 30px; /* Tamaño igual al panel */
+  height: 28px; /* Altura de la parte superior */
+  position: absolute;
+  top: 0px; /* Ubicación en la parte superior */
+  background-color: #eee; /* Color blanco claro */
+  box-shadow: inset 1px 0 0 #fff, inset -1px 0 0 #fff, inset 0 1px 0 #fff, inset 0 -1px 0 #fff; /* Sombra para resaltar */
+}
+
+/* Panel frontal de la luz */
+.light-panel.a {
+  transform: rotateY(0deg) translateZ(15px); /* Frente */
+  -webkit-transform: rotateY(0deg) translateZ(15px); /* Prefijo para compatibilidad */
+}
+
+/* Panel derecho de la luz */
+.light-panel.b {
+  transform: rotateY(90deg) translateZ(15px); /* Derecha */
+  -webkit-transform: rotateY(90deg) translateZ(15px); /* Prefijo para compatibilidad */
+}
+
+/* Panel trasero de la luz */
+.light-panel.c {
+  transform: rotateY(180deg) translateZ(15px); /* Atrás */
+  -webkit-transform: rotateY(180deg) translateZ(15px); /* Prefijo para compatibilidad */
+}
+
+/* Panel izquierdo de la luz */
+.light-panel.d {
+  transform: rotateY(-90deg) translateZ(15px); /* Izquierda */
+  -webkit-transform: rotateY(-90deg) translateZ(15px); /* Prefijo para compatibilidad */
+}
+
+/* Piso de la TARDIS */
+.tardis .floor {
+  position: absolute;
+  width: 220px; /* Tamaño mayor que la base de la TARDIS */
+  height: 220px; /* Igual al ancho para formar un cuadrado */
+  left: -10px; /* Ajuste para centrar */
+  top: 360px; /* Ubicación debajo de las paredes */
+  transform-style: preserve-3d; /* Estilo 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Tapa del piso */
+.floor-lid {
+  position: absolute;
+  width: 220px; /* Igual al piso */
+  height: 220px;
+  background-color: #355683; /* Azul oscuro */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+  transform: rotateX(90deg) translateZ(109px); /* Colocado como base horizontal */
+  -webkit-transform: rotateX(90deg) translateZ(109px); /* Prefijo para compatibilidad */
+}
+
+/* Paneles laterales del piso */
+.floor-panel {
+  position: absolute;
+  width: 220px; /* Tamaño igual al piso */
+  height: 10px; /* Altura pequeña para el borde */
+  background-color: #3f577d; /* Azul oscuro */
+  box-shadow: inset 1px 0 0 #313d49, inset -1px 0 0 #313d49, inset 0 1px 0 #313d49, inset 0 -1px 0 #313d49; /* Relieve interno */
+  transform-style: preserve-3d; /* Mantiene transformaciones 3D */
+  -webkit-transform-style: preserve-3d; /* Prefijo para compatibilidad */
+}
+
+/* Panel frontal del piso */
+.floor-panel.a {
+  transform: rotateY(0deg) translateZ(110px); /* Frente */
+  -webkit-transform: rotateY(0deg) translateZ(110px); /* Prefijo para compatibilidad */
+}
+
+/* Panel derecho del piso */
+.floor-panel.b {
+  transform: rotateY(90deg) translateZ(110px); /* Derecha */
+  -webkit-transform: rotateY(90deg) translateZ(110px); /* Prefijo para compatibilidad */
+}
+
+/* Panel trasero del piso */
+.floor-panel.c {
+  transform: rotateY(180deg) translateZ(110px); /* Atrás */
+  -webkit-transform: rotateY(180deg) translateZ(110px); /* Prefijo para compatibilidad */
+}
+
+/* Panel izquierdo del piso */
+.floor-panel.d {
+  transform: rotateY(-90deg) translateZ(110px); /* Izquierda */
+  -webkit-transform: rotateY(-90deg) translateZ(110px); /* Prefijo para compatibilidad */
+}
+
+  
+  
+  
+  
+  
+  
+  /*
+#
+# Cartel superior
+#
+*/
+.side .top-sign {
+  width: 180px; /* Ancho del cartel */
+  height: 28px; /* Altura del cartel */
+  background-color: #445d84; /* Fondo azul oscuro */
+  border: solid 1px #54749f; /* Borde azul más claro */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra para resaltar */
+  border-radius: 2px; /* Esquinas redondeadas */
+  position: absolute;
+  top: 10px; /* Posición superior */
+  left: 10px; /* Posición izquierda */
+  z-index: 10; /* Prioridad en la pila */
+}
+
+.top-sign .text {
+  background-color: #28394d; /* Fondo azul oscuro */
+  border: solid 1px #54749f; /* Borde azul claro */
+  border-radius: 2px; /* Esquinas redondeadas */
+  width: 100px; /* Ancho del texto */
+  margin: 3px auto; /* Centrado */
+  height: 20px; /* Altura del contenedor de texto */
+  color: #fff; /* Color del texto blanco */
+  font-size: 12px; /* Tamaño de la fuente */
+  line-height: 20px; /* Alineación vertical del texto */
+  padding: 0px 5px; /* Espaciado interno */
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.4); /* Sombra interna */
+  position: relative; /* Posicionamiento relativo para ajustes */
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6); /* Brillo en el texto */
+}
+
+.text .tiny {
+  font-size: 4px; /* Tamaño de fuente pequeño */
+  line-height: 6px; /* Altura de línea */
+  text-align: center; /* Centrado horizontal */
+  width: 20px; /* Ancho del texto */
+  position: absolute;
+  right: 35px; /* Posición derecha */
+  top: 4px; /* Posición superior */
+}
+
+/*
+#
+# Marco de la puerta
+#
+*/
+.side .door-frame {
+  position: absolute;
+  width: 160px; /* Ancho del marco */
+  left: 20px; /* Ajuste para centrar */
+  top: 35px; /* Posición superior */
+  bottom: 0px; /* Extiende hasta la base */
+  background-color: #445d84; /* Fondo azul oscuro */
+  box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.5); /* Sombra interna */
+  z-index: 5; /* Prioridad de la pila */
+}
+
+.door-frame .door {
+  position: absolute;
+  top: 0px; /* Ajuste superior */
+  bottom: 0px; /* Extiende hasta la base */
+  width: 77px; /* Ancho de cada puerta */
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.7); /* Sombra interna */
+}
+
+.door.door-left {
+  left: 0px; /* Puerta izquierda */
+}
+
+.door.door-right {
+  right: 0px; /* Puerta derecha */
+}
+
+/* Recuadros interiores */
+.door .door-inset {
+  position: absolute;
+  left: 10px; /* Alineación izquierda */
+  bottom: 10px; /* Distancia inferior inicial */
+  width: 55px; /* Ancho del recuadro */
+  height: 65px; /* Altura del recuadro */
+  box-shadow: inset 0px 0.5px 5px rgba(0, 0, 0, 0.5); /* Sombra interna */
+}
+
+.door-inset:nth-of-type(2) {
+  bottom: 85px; /* Recuadro más alto */
+}
+
+.door-inset:nth-of-type(3) {
+  bottom: 160px; /* Recuadro superior */
+}
+
+/* Cartel de la puerta */
+.door .sign {
+  position: absolute;
+  left: 15px; /* Ajuste izquierdo */
+  bottom: 165px; /* Ubicación en la puerta */
+  width: 45px; /* Ancho del cartel */
+  height: 55px; /* Altura del cartel */
+  background-color: #d5e4f6; /* Fondo celeste claro */
+  box-shadow: inset 1px 0 0 #313d49, inset -1px 0 0 #313d49, inset 0 1px 0 #313d49, inset 0 -1px 0 #313d49; /* Relieve interno */
+}
+
+/* Ventana */
+.door .window {
+  position: absolute;
+  left: 10px; /* Posición izquierda */
+  bottom: 235px; /* Altura de la ventana */
+  width: 55px; /* Ancho de la ventana */
+  height: 65px; /* Altura de la ventana */
+  background-color: #28475d; /* Fondo azul oscuro */
+}
+
+.window .pane {
+  width: 14px; /* Ancho de los cristales */
+  height: 28px; /* Altura de los cristales */
+  background-color: #dfe7fc; /* Color celeste claro */
+  float: left; /* Alineación en fila */
+  margin: 2px; /* Espaciado entre cristales */
+  box-shadow: inset 0px 0px 10px #fff; /* Sombra interna brillante */
+}
+
+.pane.a {
+  margin-left: 3px; /* Ajuste de margen */
+  margin-right: 1px;
+}
+
+.pane.d {
+  margin-left: 3px;
+  margin-right: 1px;
+}

@@ -1,0 +1,34 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo inicial del texto */
+.zoom-text {
+    font-size: 2rem; /* Tamaño base del texto */
+    transition: transform 3s linear;    /* Se aplica transicion al transform que se aplique*/
+    display: inline-block; /* Necesario para aplicar transform */
+    cursor: pointer;    /*  Cambia el raton*/
+}
+
+/* Animación al pasar el ratón */
+.zoom-text:hover {
+    animation: zoom-animation 3s linear infinite;
+}
+
+/* Definición de la animación */
+@keyframes zoom-animation {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    33.33% {
+        transform: scale(2); /* Doble de tamaño */
+    }
+    66.66% {
+        transform: scale(0.25); /* 25% del tamaño */
+    }
+    100% {
+        transform: scale(1); /* Tamaño original */
+    }
+}
+  
