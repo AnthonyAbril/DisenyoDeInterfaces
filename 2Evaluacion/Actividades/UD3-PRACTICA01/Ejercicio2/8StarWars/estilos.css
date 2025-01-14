@@ -1,142 +1,155 @@
-/* Animation properties */
+/* Propiedades de animación para las estrellas */
 .star {
-  animation: star 10s ease-out infinite;
-}
-.wars {
-  animation: wars 10s ease-out infinite;
-}
-.byline span {
-  animation: spin-letters 10s linear infinite;
-}
-.byline {
-  animation: move-byline 10s linear infinite;
+  animation: star 10s ease-out infinite; /* Animación de las estrellas con una duración de 10 segundos */
 }
 
-/* Keyframes */
+/* Propiedades de animación para las guerras */
+.wars {
+  animation: wars 10s ease-out infinite; /* Animación para las guerras con una duración de 10 segundos */
+}
+
+/* Propiedades de animación para las letras de la línea de texto */
+.byline span {
+  animation: spin-letters 10s linear infinite; /* Animación de rotación de letras */
+}
+
+/* Propiedades de animación para el movimiento de la línea de texto */
+.byline {
+  animation: move-byline 10s linear infinite; /* Movimiento continuo de la línea de texto */
+}
+
+/* Keyframes para la animación de las estrellas */
 @keyframes star {
   0% {
-    opacity: 0;
-    transform: scale(1.5) translateY(-0.75em);
+    opacity: 0; /* Comienza invisible */
+    transform: scale(1.5) translateY(-0.75em); /* Estrella grande y desplazada hacia arriba */
   }
   20% {
-    opacity: 1;
+    opacity: 1; /* Se vuelve completamente visible */
   }
   89% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* Se mantiene visible */
+    transform: scale(1); /* Estrella en tamaño normal */
   }
   100% {
-    opacity: 0;
-    transform: translateZ(-1000em);
+    opacity: 0; /* Se vuelve invisible al final */
+    transform: translateZ(-1000em); /* Se aleja mucho en el espacio 3D */
   }
 }
 
+/* Keyframes para la animación de las guerras */
 @keyframes wars {
   0% {
-    opacity: 0;
-    transform: scale(1.5) translateY(0.5em);
+    opacity: 0; /* Comienza invisible */
+    transform: scale(1.5) translateY(0.5em); /* Elemento grande y desplazado hacia abajo */
   }
   20% {
-    opacity: 1;
+    opacity: 1; /* Se vuelve completamente visible */
   }
   90% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* Se mantiene visible */
+    transform: scale(1); /* Elemento en tamaño normal */
   }
   100% {
-    opacity: 0;
-    transform: translateZ(-1000em);
+    opacity: 0; /* Se vuelve invisible al final */
+    transform: translateZ(-1000em); /* Se aleja mucho en el espacio 3D */
   }
 }
 
+/* Keyframes para la animación de las letras que giran */
 @keyframes spin-letters {
   0%, 10% {
-    opacity: 0;
-    transform: rotateY(90deg);
+    opacity: 0; /* Comienza invisible */
+    transform: rotateY(90deg); /* Las letras giran fuera de vista */
   }
   30% {
-    opacity: 1;
+    opacity: 1; /* Se vuelve completamente visible */
   }
   70%, 86% {
-    transform: rotateY(0);
-    opacity: 1;
+    transform: rotateY(0); /* Se giran a la posición inicial */
+    opacity: 1; /* Se mantiene visible */
   }
   95%, 100% {
-    opacity: 0;
+    opacity: 0; /* Se vuelve invisible al final */
   }
 }
 
+/* Keyframes para el movimiento de la línea de texto */
 @keyframes move-byline {
   0% {
-    transform: translateZ(5em);
+    transform: translateZ(5em); /* Comienza a una distancia lejana */
   }
   100% {
-    transform: translateZ(0);
+    transform: translateZ(0); /* Se mueve a la distancia normal */
   }
 }
 
-/* Make the 3D work on the container */
+/* Establecer la perspectiva 3D para el contenedor */
 .starwars-demo {
-  perspective: 800px;
-  transform-style: preserve3d;
+  perspective: 800px; /* Agrega la perspectiva 3D */
+  transform-style: preserve3d; /* Mantiene el estilo 3D en los elementos dentro del contenedor */
 }
 
-/* General styles and layout */
+/* Estilos generales y disposición */
 body {
-  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg); /* Fondo negro con imagen */
 }
 
 .starwars-demo {
-  height: 17em;
-  left: 50%;
-  position: absolute;
-  top: 53%;
-  transform: translate(-50%, -50%);
-  width: 34em;
+  height: 17em; /* Altura del contenedor */
+  left: 50%; /* Centrado horizontal */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 53%; /* Posicionamiento vertical */
+  transform: translate(-50%, -50%); /* Centrado total en la pantalla */
+  width: 34em; /* Ancho del contenedor */
 }
 
+/* Los elementos dentro de la línea de texto */
 .byline span {
-  display: inline-block;
+  display: inline-block; /* Los elementos dentro de la línea de texto se muestran en línea */
 }
 
 img {
-  width: 100%;
+  width: 100%; /* Las imágenes ocupan el 100% del ancho del contenedor */
 }
 
+/* Posicionamiento absoluto para los elementos */
 .star, .wars, .byline {
-  position: absolute;
+  position: absolute; /* Posición absoluta para cada uno de estos elementos */
 }
 
 .star {
-  top: -0.75em;
+  top: -0.75em; /* Estrella posicionada hacia arriba */
 }
 
 .wars {
-  bottom: -0.5em;
+  bottom: -0.5em; /* Guerras posicionadas hacia abajo */
 }
 
 .byline {
-  color: #fff;
-  font-family: "ITC Serif Gothic", Lato;
-  font-size: 2.25em;
-  left: -2em;
-  letter-spacing: 0.4em;
-  right: -2em;
-  text-align: center;
-  text-transform: uppercase;
-  top: 29%;
+  color: #fff; /* Color de texto blanco */
+  font-family: "ITC Serif Gothic", Lato; /* Tipografía */
+  font-size: 2.25em; /* Tamaño de fuente grande */
+  left: -2em; /* Desplazamiento hacia la izquierda */
+  letter-spacing: 0.4em; /* Espaciado entre letras */
+  right: -2em; /* Desplazamiento hacia la derecha */
+  text-align: center; /* Alineación central del texto */
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+  top: 29%; /* Posición vertical del texto */
 }
 
-/*** Media queries for adjusting to different screen sizes ***/
+/*** Media queries para ajustar el diseño a diferentes tamaños de pantalla ***/
 
+/* Pantallas con un ancho máximo de 600px */
 @media only screen and (max-width: 600px) {
   .starwars-demo {
-    font-size: 10px;
+    font-size: 10px; /* Reducir el tamaño de la fuente */
   }
 }
 
+/* Pantallas con un ancho máximo de 480px */
 @media only screen and (max-width: 480px) {
   .starwars-demo {
-    font-size: 7px;
+    font-size: 7px; /* Reducir aún más el tamaño de la fuente */
   }
 }
