@@ -1,432 +1,513 @@
+/* Botón flotante en la esquina superior derecha */
 #ajerez {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 9999;
+  position: absolute; /* Se posiciona de forma absoluta en relación al contenedor más cercano con posición relativa */
+  top: 5px; /* Separación de 5px desde la parte superior */
+  right: 5px; /* Separación de 5px desde el lado derecho */
+  z-index: 9999; /* Asegura que esté por encima de otros elementos en la página */
 }
+
+/* Estilo de la imagen dentro del botón flotante */
 #ajerez img {
-  box-sizing: border-box;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid #7482A5;
-  transition: border-radius 0.2s ease-in-out;
+  box-sizing: border-box; /* Incluye el padding y border en el cálculo del tamaño total */
+  width: 45px; /* Ancho fijo de la imagen */
+  height: 45px; /* Altura fija de la imagen */
+  border-radius: 50%; /* Hace la imagen completamente redonda */
+  border: 2px solid #7482A5; /* Borde de 2px con color específico */
+  transition: border-radius 0.2s ease-in-out; /* Transición suave para los cambios en el radio de borde */
 }
+
+/* Efecto hover en la imagen */
 #ajerez img:hover {
-  border-radius: 30%;
+  border-radius: 30%; /* Cambia el radio de borde al pasar el ratón, dándole un aspecto ovalado */
 }
 
+/* Color de fondo para el cuerpo de la página */
 body {
-  background-color: #306D85;
+  background-color: #306D85; /* Azul oscuro */
 }
 
+/* Configuración global para asegurar que el modelo de caja sea consistente */
 *, *:before, *:after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Todos los elementos, incluyendo pseudo-elementos, usarán este modelo de caja */
 }
 
+/* Contenedor principal del efecto "mar" */
 .sea {
-  margin: 40px auto 0 auto;
-  overflow: hidden;
-}
-.sea .bubble {
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #6bafca;
-  opacity: 0.9;
-  -webkit-animation: bubble1-h-movement 1s ease-in infinite, bubble1-v-movement 300ms ease-in-out infinite alternate, bubble-scale-movement 300ms ease-in-out infinite alternate;
-          animation: bubble1-h-movement 1s ease-in infinite, bubble1-v-movement 300ms ease-in-out infinite alternate, bubble-scale-movement 300ms ease-in-out infinite alternate;
-}
-.sea .bubble:after {
-  position: absolute;
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #6bafca;
-  opacity: 0.9;
-}
-.sea .bubble:after {
-  top: -20;
-  left: 100px;
-  width: 9px;
-  height: 9px;
-}
-.sea .circle-wrapper {
-  position: relative;
-  background: linear-gradient(#2c647a, #204858);
-  width: 300px;
-  height: 300px;
-  margin: 10px auto 0 auto;
-  overflow: hidden;
-  z-index: 0;
-  border-radius: 50%;
-  padding: 0 50px 0 50px;
-  border: 6px solid #3e8caa;
-}
-.sea .submarine-wrapper {
-  height: 300px;
-  width: 300px;
-  padding: 30px 50px 30px 150px;
-  margin: 0 auto 0 auto;
-  -webkit-animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
-          animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
-}
-.sea .submarine-wrapper .submarine-body {
-  width: 150px;
-  height: 80px;
-  position: absolute;
-  margin-top: 50px;
-  left: 25px;
-  background-color: #D93A54;
-  border-radius: 40px;
-  background: linear-gradient(#D93A54, #bc243d);
-}
-.sea .submarine-wrapper .submarine-body .light {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 40px 150px 40px;
-  border-color: transparent transparent #377c98 transparent;
-  transform: rotate(-50deg);
-  top: 40px;
-  left: 99%;
-}
-.sea .submarine-wrapper .submarine-body .light:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 13px;
-  border-radius: 5px;
-  background-color: #d12844;
-  margin-left: -10px;
-}
-.sea .submarine-wrapper .submarine-body .window {
-  width: 37px;
-  height: 37px;
-  position: absolute;
-  margin-top: 23px;
-  right: 18px;
-  background: linear-gradient(#1e4554, #183642);
-  border-radius: 50%;
-  border: 3px solid #D93A54;
-}
-.sea .submarine-wrapper .submarine-body .window:after {
-  content: "";
-  position: absolute;
-  margin-top: 3px;
-  margin-left: 3px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: transparent;
-  opacity: 0.8;
-  border-top: 3px solid white;
-  transform: rotate(-45deg);
-}
-.sea .submarine-wrapper .submarine-body .engine {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  margin-top: 32px;
-  left: 53px;
-  background-color: #bc243d;
-  border-radius: 50%;
-  border: 5px solid #D93A54;
-}
-.sea .submarine-wrapper .submarine-body .engine:after, .sea .submarine-wrapper .submarine-body .engine:before {
-  position: absolute;
-  content: "";
-  border-radius: 2px;
-  background-color: white;
-  -webkit-animation: spin 900ms linear infinite;
-          animation: spin 900ms linear infinite;
-  opacity: 0.8;
-}
-.sea .submarine-wrapper .submarine-body .engine:after {
-  top: 8px;
-  width: 20px;
-  height: 4px;
-}
-.sea .submarine-wrapper .submarine-body .engine:before {
-  left: 8px;
-  width: 4px;
-  height: 20px;
-}
-.sea .submarine-wrapper .helix {
-  width: 30px;
-  height: 70px;
-  position: absolute;
-  margin-top: 55px;
-  left: 0;
-  background-color: #D93A54;
-  border-radius: 7px;
-  background: linear-gradient(#D93A54, #bc243d);
-}
-.sea .submarine-wrapper .helix:after {
-  content: "";
-  position: absolute;
-  margin-top: 5px;
-  margin-left: 7px;
-  width: 17px;
-  height: 60px;
-  border-radius: 3px;
-  background-color: transparent;
-  opacity: 0.8;
-  background: linear-gradient(to bottom, #D93A54, #D93A54 50%, #e57a8c 50%, #e57a8c);
-  background-size: 100% 20px;
-  -webkit-animation: helix-movement 110ms linear infinite;
-          animation: helix-movement 110ms linear infinite;
-}
-.sea .submarine-wrapper .hat {
-  width: 65px;
-  height: 25px;
-  position: absolute;
-  margin-top: 26px;
-  left: 70px;
-  background-color: #D93A54;
-  border-radius: 10px 10px 0 0;
-  background: linear-gradient(#D93A54, #d72d49);
-}
-.sea .submarine-wrapper .hat .periscope {
-  position: absolute;
-  width: 7px;
-  height: 20px;
-  background-color: #D93A54;
-  margin-top: -27px;
-  margin-left: 32px;
-  border-radius: 5px 5px 0 0;
-}
-.sea .submarine-wrapper .hat .periscope:after, .sea .submarine-wrapper .hat .periscope:before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 7px;
-  border-radius: 5px;
-  background-color: #D93A54;
-}
-.sea .submarine-wrapper .hat .leds-wrapper {
-  width: 53px;
-  height: 13px;
-  position: relative;
-  top: 7px;
-  left: 7px;
-  background-color: #D93A54;
-  border-radius: 10px;
-  background: linear-gradient(#b3233a, #a21f35);
-}
-.sea .submarine-wrapper .hat .leds-wrapper .leds {
-  position: absolute;
-  margin-top: 4px;
-  margin-left: 7px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: white;
-  -webkit-animation: leds-off 500ms linear infinite;
-          animation: leds-off 500ms linear infinite;
-}
-.sea .submarine-wrapper .hat .leds-wrapper .leds:after, .sea .submarine-wrapper .hat .leds-wrapper .leds:before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: white;
-}
-.sea .submarine-wrapper .hat .leds-wrapper .leds:after {
-  margin-top: 0px;
-  margin-left: 17px;
-}
-.sea .submarine-wrapper .hat .leds-wrapper .leds:before {
-  margin-top: 0px;
-  margin-left: 34px;
+  margin: 40px auto 0 auto; /* Márgenes superiores de 40px y centrado horizontal */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
 }
 
+/* Estilo de las burbujas dentro del mar */
+.sea .bubble {
+  position: absolute; /* Se posicionan de manera absoluta dentro del contenedor */
+  width: 7px; /* Tamaño fijo de ancho */
+  height: 7px; /* Tamaño fijo de altura */
+  border-radius: 50%; /* Hace que las burbujas sean completamente redondas */
+  background-color: #6bafca; /* Color azul claro para las burbujas */
+  opacity: 0.9; /* Hace las burbujas ligeramente transparentes */
+  /* Animaciones combinadas para movimiento horizontal, vertical y escalado */
+  -webkit-animation: bubble1-h-movement 1s ease-in infinite, bubble1-v-movement 300ms ease-in-out infinite alternate, bubble-scale-movement 300ms ease-in-out infinite alternate;
+  animation: bubble1-h-movement 1s ease-in infinite, bubble1-v-movement 300ms ease-in-out infinite alternate, bubble-scale-movement 300ms ease-in-out infinite alternate;
+}
+
+/* Burbuja secundaria que aparece como pseudo-elemento */
+.sea .bubble:after {
+  position: absolute; /* Se posiciona en relación con la burbuja original */
+  content: ""; /* No muestra texto, pero crea un espacio visual */
+  width: 7px; /* Tamaño similar a la burbuja principal */
+  height: 7px; /* Tamaño similar a la burbuja principal */
+  border-radius: 50%; /* Redondez total */
+  background-color: #6bafca; /* Mismo color azul claro */
+  opacity: 0.9; /* Misma transparencia */
+}
+
+/* Ajustes adicionales para la burbuja secundaria */
+.sea .bubble:after {
+  top: -20; /* Posición superior negativa (probablemente faltan unidades, debería ser "px") */
+  left: 100px; /* Posición a 100px desde la izquierda */
+  width: 9px; /* Tamaño más grande que la burbuja principal */
+  height: 9px; /* Tamaño más grande que la burbuja principal */
+}
+
+/* Contenedor circular que representa el mar */
+.sea .circle-wrapper {
+  position: relative; /* Posiciona los elementos hijos en relación a este contenedor */
+  background: linear-gradient(#2c647a, #204858); /* Degradado de azul más claro a azul oscuro */
+  width: 300px; /* Tamaño fijo del contenedor */
+  height: 300px; /* Tamaño fijo del contenedor */
+  margin: 10px auto 0 auto; /* Espaciado superior y centrado horizontal */
+  overflow: hidden; /* Oculta el contenido que excede los bordes del círculo */
+  z-index: 0; /* Se coloca por detrás de otros elementos */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  padding: 0 50px 0 50px; /* Espaciado interno a los lados */
+  border: 6px solid #3e8caa; /* Borde grueso con un azul intermedio */
+}
+
+/* Contenedor del submarino dentro del mar */
+.sea .submarine-wrapper {
+  height: 300px; /* Altura igual al contenedor circular */
+  width: 300px; /* Ancho igual al contenedor circular */
+  padding: 30px 50px 30px 150px; /* Espaciado interno */
+  margin: 0 auto 0 auto; /* Centrado horizontal */
+  /* Animaciones para simular el movimiento de buceo y rotación */
+  -webkit-animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+  animation: diving 3s ease-in-out infinite, diving-rotate 3s ease-in-out infinite;
+}
+/* Cuerpo principal del submarino */
+.sea .submarine-wrapper .submarine-body {
+  width: 150px; /* Ancho fijo del cuerpo */
+  height: 80px; /* Altura fija del cuerpo */
+  position: absolute; /* Posiciona el cuerpo dentro del contenedor */
+  margin-top: 50px; /* Espaciado superior */
+  left: 25px; /* Desplazamiento desde la izquierda */
+  background-color: #D93A54; /* Color rojo base */
+  border-radius: 40px; /* Bordes redondeados para darle forma al cuerpo */
+  background: linear-gradient(#D93A54, #bc243d); /* Degradado para un efecto tridimensional */
+}
+
+/* Luz frontal del submarino */
+.sea .submarine-wrapper .submarine-body .light {
+  position: absolute; /* Posiciona la luz dentro del cuerpo */
+  width: 0; /* Sin ancho definido, ya que es un triángulo */
+  height: 0; /* Sin altura definida, ya que es un triángulo */
+  border-style: solid; /* Crea los bordes del triángulo */
+  border-width: 0 40px 150px 40px; /* Define el tamaño y la forma del triángulo */
+  border-color: transparent transparent #377c98 transparent; /* Color del triángulo para simular un haz de luz */
+  transform: rotate(-50deg); /* Rota el triángulo para alinearlo */
+  top: 40px; /* Posición vertical */
+  left: 99%; /* Alineación a la derecha del cuerpo */
+}
+
+/* Detalles adicionales de la luz */
+.sea .submarine-wrapper .submarine-body .light:after {
+  content: ""; /* Elemento vacío para diseño visual */
+  position: absolute; /* Relativo al triángulo */
+  width: 20px; /* Ancho del detalle */
+  height: 13px; /* Altura del detalle */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #d12844; /* Color rojo */
+  margin-left: -10px; /* Ajuste de posición horizontal */
+}
+
+/* Ventana circular del submarino */
+.sea .submarine-wrapper .submarine-body .window {
+  width: 37px; /* Ancho fijo */
+  height: 37px; /* Altura fija */
+  position: absolute; /* Posiciona la ventana dentro del cuerpo */
+  margin-top: 23px; /* Separación superior */
+  right: 18px; /* Separación desde el borde derecho */
+  background: linear-gradient(#1e4554, #183642); /* Degradado azul oscuro */
+  border-radius: 50%; /* Forma circular */
+  border: 3px solid #D93A54; /* Borde rojo */
+}
+
+/* Reflejo en la ventana */
+.sea .submarine-wrapper .submarine-body .window:after {
+  content: ""; /* Elemento vacío para crear el reflejo */
+  position: absolute; /* Relativo a la ventana */
+  margin-top: 3px; /* Ajuste superior */
+  margin-left: 3px; /* Ajuste izquierdo */
+  width: 25px; /* Ancho del reflejo */
+  height: 25px; /* Altura del reflejo */
+  border-radius: 50%; /* Forma circular */
+  background-color: transparent; /* Transparente para permitir el degradado de fondo */
+  opacity: 0.8; /* Ligera opacidad */
+  border-top: 3px solid white; /* Línea blanca para simular luz reflejada */
+  transform: rotate(-45deg); /* Rota el reflejo */
+}
+
+/* Motor del submarino */
+.sea .submarine-wrapper .submarine-body .engine {
+  width: 30px; /* Tamaño del motor */
+  height: 30px; /* Tamaño del motor */
+  position: absolute; /* Posición dentro del cuerpo */
+  margin-top: 32px; /* Separación superior */
+  left: 53px; /* Separación desde el borde izquierdo */
+  background-color: #bc243d; /* Rojo oscuro */
+  border-radius: 50%; /* Forma circular */
+  border: 5px solid #D93A54; /* Borde rojo */
+}
+
+/* Hélices del motor */
+.sea .submarine-wrapper .submarine-body .engine:after, 
+.sea .submarine-wrapper .submarine-body .engine:before {
+  position: absolute; /* Relativo al motor */
+  content: ""; /* Elemento vacío para diseño visual */
+  border-radius: 2px; /* Bordes ligeramente redondeados */
+  background-color: white; /* Color blanco */
+  -webkit-animation: spin 900ms linear infinite; /* Animación de rotación */
+          animation: spin 900ms linear infinite; /* Animación de rotación */
+  opacity: 0.8; /* Ligera opacidad */
+}
+
+/* Hélice horizontal */
+.sea .submarine-wrapper .submarine-body .engine:after {
+  top: 8px; /* Posición superior */
+  width: 20px; /* Longitud */
+  height: 4px; /* Grosor */
+}
+
+/* Hélice vertical */
+.sea .submarine-wrapper .submarine-body .engine:before {
+  left: 8px; /* Posición izquierda */
+  width: 4px; /* Grosor */
+  height: 20px; /* Longitud */
+}
+
+/* Hélice trasera del submarino */
+.sea .submarine-wrapper .helix {
+  width: 30px; /* Tamaño de la hélice */
+  height: 70px; /* Altura de la hélice */
+  position: absolute; /* Posiciona la hélice dentro del contenedor */
+  margin-top: 55px; /* Separación superior */
+  left: 0; /* Alineación izquierda */
+  background-color: #D93A54; /* Rojo base */
+  border-radius: 7px; /* Bordes redondeados */
+  background: linear-gradient(#D93A54, #bc243d); /* Degradado para simular profundidad */
+}
+
+/* Detalles en la hélice */
+.sea .submarine-wrapper .helix:after {
+  content: ""; /* Elemento vacío para diseño */
+  position: absolute; /* Relativo a la hélice */
+  margin-top: 5px; /* Ajuste superior */
+  margin-left: 7px; /* Ajuste izquierdo */
+  width: 17px; /* Ancho del detalle */
+  height: 60px; /* Altura del detalle */
+  border-radius: 3px; /* Bordes redondeados */
+  background-color: transparent; /* Transparente para permitir el degradado */
+  opacity: 0.8; /* Ligera opacidad */
+  background: linear-gradient(to bottom, #D93A54, #D93A54 50%, #e57a8c 50%, #e57a8c); /* Degradado con bandas */
+  background-size: 100% 20px; /* Tamaño del patrón de degradado */
+  -webkit-animation: helix-movement 110ms linear infinite; /* Animación de movimiento */
+          animation: helix-movement 110ms linear infinite; /* Animación de movimiento */
+}
+
+/* Parte superior del submarino */
+.sea .submarine-wrapper .hat {
+  width: 65px; /* Ancho */
+  height: 25px; /* Altura */
+  position: absolute; /* Posiciona el sombrero */
+  margin-top: 26px; /* Separación superior */
+  left: 70px; /* Alineación izquierda */
+  background-color: #D93A54; /* Rojo base */
+  border-radius: 10px 10px 0 0; /* Bordes superiores redondeados */
+  background: linear-gradient(#D93A54, #d72d49); /* Degradado para profundidad */
+}
+
+/* Periscopio del submarino */
+.sea .submarine-wrapper .hat .periscope {
+  position: absolute; /* Posición dentro del sombrero */
+  width: 7px; /* Ancho */
+  height: 20px; /* Altura */
+  background-color: #D93A54; /* Rojo base */
+  margin-top: -27px; /* Ajuste superior */
+  margin-left: 32px; /* Ajuste izquierdo */
+  border-radius: 5px 5px 0 0; /* Bordes superiores redondeados */
+}
+
+/* Detalles del periscopio */
+.sea .submarine-wrapper .hat .periscope:after, 
+.sea .submarine-wrapper .hat .periscope:before {
+  content: ""; /* Elementos vacíos para diseño */
+  position: absolute; /* Relativo al periscopio */
+  width: 15px; /* Ancho */
+  height: 7px; /* Altura */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #D93A54; /* Rojo base */
+}
+/* Contenedor de los LEDs en el sombrero del submarino */
+.sea .submarine-wrapper .hat .leds-wrapper {
+  width: 53px; /* Ancho del contenedor */
+  height: 13px; /* Altura del contenedor */
+  position: relative; /* Relativo al sombrero */
+  top: 7px; /* Separación superior */
+  left: 7px; /* Separación izquierda */
+  background-color: #D93A54; /* Rojo base */
+  border-radius: 10px; /* Bordes redondeados */
+  background: linear-gradient(#b3233a, #a21f35); /* Degradado para profundidad */
+}
+
+/* LED individual */
+.sea .submarine-wrapper .hat .leds-wrapper .leds {
+  position: absolute; /* Posiciona cada LED dentro del contenedor */
+  margin-top: 4px; /* Ajuste superior */
+  margin-left: 7px; /* Ajuste izquierdo */
+  width: 5px; /* Tamaño del LED */
+  height: 5px; /* Tamaño del LED */
+  border-radius: 50%; /* Forma circular */
+  background-color: white; /* Color blanco para los LEDs */
+  -webkit-animation: leds-off 500ms linear infinite; /* Animación de parpadeo */
+          animation: leds-off 500ms linear infinite; /* Animación de parpadeo */
+}
+
+/* LEDs adicionales alineados horizontalmente */
+.sea .submarine-wrapper .hat .leds-wrapper .leds:after, 
+.sea .submarine-wrapper .hat .leds-wrapper .leds:before {
+  content: ""; /* Elementos vacíos para crear LEDs adicionales */
+  position: absolute; /* Relativo al LED principal */
+  width: 5px; /* Tamaño del LED */
+  height: 5px; /* Tamaño del LED */
+  border-radius: 50%; /* Forma circular */
+  background-color: white; /* Color blanco */
+}
+
+/* Segundo LED */
+.sea .submarine-wrapper .hat .leds-wrapper .leds:after {
+  margin-top: 0px; /* Alineación vertical */
+  margin-left: 17px; /* Separación horizontal desde el primer LED */
+}
+
+/* Tercer LED */
+.sea .submarine-wrapper .hat .leds-wrapper .leds:before {
+  margin-top: 0px; /* Alineación vertical */
+  margin-left: 34px; /* Separación horizontal desde el primer LED */
+}
+
+/* Animación de rotación para las hélices */
 @-webkit-keyframes spin {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rota 360 grados */
   }
 }
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rota 360 grados */
   }
 }
+
+/* Animación de parpadeo para los LEDs */
 @-webkit-keyframes leds-off {
   100% {
-    opacity: 0.3;
+    opacity: 0.3; /* Reduce la opacidad */
   }
 }
+
 @keyframes leds-off {
   100% {
-    opacity: 0.3;
+    opacity: 0.3; /* Reduce la opacidad */
   }
 }
+
+/* Movimiento de la hélice trasera */
 @-webkit-keyframes helix-movement {
   100% {
-    background: linear-gradient(to bottom, #e57a8c 50%, #e57a8c, #D93A54, #D93A54 50%);
-    background-size: 100% 20px;
+    background: linear-gradient(to bottom, #e57a8c 50%, #e57a8c, #D93A54, #D93A54 50%); /* Alterna los colores */
+    background-size: 100% 20px; /* Tamaño del patrón de la hélice */
   }
 }
+
 @keyframes helix-movement {
   100% {
-    background: linear-gradient(to bottom, #e57a8c 50%, #e57a8c, #D93A54, #D93A54 50%);
-    background-size: 100% 20px;
+    background: linear-gradient(to bottom, #e57a8c 50%, #e57a8c, #D93A54, #D93A54 50%); /* Alterna los colores */
+    background-size: 100% 20px; /* Tamaño del patrón de la hélice */
   }
 }
+
+/* Animación de inmersión del submarino */
 @-webkit-keyframes diving {
   0% {
-    margin-top: 5px;
+    margin-top: 5px; /* Posición inicial */
   }
   50% {
-    margin-top: 15px;
+    margin-top: 15px; /* Profundidad máxima */
   }
   100% {
-    margin-top: 5px;
+    margin-top: 5px; /* Retorno a la posición inicial */
   }
 }
+
 @keyframes diving {
   0% {
-    margin-top: 5px;
+    margin-top: 5px; /* Posición inicial */
   }
   50% {
-    margin-top: 15px;
+    margin-top: 15px; /* Profundidad máxima */
   }
   100% {
-    margin-top: 5px;
+    margin-top: 5px; /* Retorno a la posición inicial */
   }
 }
+
+/* Animación de inclinación del submarino */
 @-webkit-keyframes diving-rotate {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Sin rotación */
   }
   50% {
-    transform: rotate(3deg);
+    transform: rotate(3deg); /* Inclinación máxima */
   }
   75% {
-    transform: rotate(-2deg);
+    transform: rotate(-2deg); /* Inclinación opuesta */
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Retorno a la posición inicial */
   }
 }
+
 @keyframes diving-rotate {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Sin rotación */
   }
   50% {
-    transform: rotate(3deg);
+    transform: rotate(3deg); /* Inclinación máxima */
   }
   75% {
-    transform: rotate(-2deg);
+    transform: rotate(-2deg); /* Inclinación opuesta */
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Retorno a la posición inicial */
   }
 }
+/* Animación horizontal de las burbujas (grupo 1) */
 @-webkit-keyframes bubble1-h-movement {
   0% {
-    margin-left: 80%;
+    margin-left: 80%; /* Posición inicial de la burbuja al extremo derecho */
   }
   100% {
-    margin-left: -100%;
+    margin-left: -100%; /* Posición final de la burbuja fuera del contenedor por la izquierda */
   }
 }
 @keyframes bubble1-h-movement {
   0% {
-    margin-left: 80%;
+    margin-left: 80%; /* Posición inicial de la burbuja al extremo derecho */
   }
   100% {
-    margin-left: -100%;
+    margin-left: -100%; /* Posición final de la burbuja fuera del contenedor por la izquierda */
   }
 }
+/* Animación horizontal de las burbujas (grupo 2) */
 @-webkit-keyframes bubble2-h-movement {
   0% {
-    margin-left: 65%;
+    margin-left: 65%; /* Posición inicial más centrada */
   }
   100% {
-    margin-left: -5%;
+    margin-left: -5%; /* Posición final cerca del borde izquierdo */
   }
 }
 @keyframes bubble2-h-movement {
   0% {
-    margin-left: 65%;
+    margin-left: 65%; /* Posición inicial más centrada */
   }
   100% {
-    margin-left: -5%;
+    margin-left: -5%; /* Posición final cerca del borde izquierdo */
   }
 }
+/* Animación vertical de las burbujas (grupo 1) */
 @-webkit-keyframes bubble1-v-movement {
   0% {
-    margin-top: 115px;
+    margin-top: 115px; /* Posición inicial en el eje vertical */
   }
   100% {
-    margin-top: 160px;
+    margin-top: 160px; /* Posición final más abajo */
   }
 }
+
 @keyframes bubble1-v-movement {
   0% {
-    margin-top: 115px;
+    margin-top: 115px; /* Posición inicial en el eje vertical */
   }
   100% {
-    margin-top: 160px;
+    margin-top: 160px; /* Posición final más abajo */
   }
 }
+
+/* Animación vertical de las burbujas (grupo 2) */
 @-webkit-keyframes bubble2-v-movement {
   0% {
-    margin-top: 115px;
+    margin-top: 115px; /* Posición inicial en el eje vertical */
   }
   100% {
-    margin-top: 90px;
+    margin-top: 90px; /* Posición final más arriba */
   }
 }
 @keyframes bubble2-v-movement {
   0% {
-    margin-top: 115px;
+    margin-top: 115px; /* Posición inicial en el eje vertical */
   }
   100% {
-    margin-top: 90px;
+    margin-top: 90px; /* Posición final más arriba */
   }
 }
+/* Animación de escala de las burbujas (tamaño) */
 @-webkit-keyframes bubble-scale-movement {
   0% {
-    transform: scale(1.4);
+    transform: scale(1.4); /* Burbujas más grandes al inicio */
   }
   100% {
-    transform: scale(0.9);
+    transform: scale(0.9); /* Burbujas más pequeñas al final */
   }
 }
 @keyframes bubble-scale-movement {
   0% {
-    transform: scale(1.4);
+    transform: scale(1.4); /* Burbujas más grandes al inicio */
   }
   100% {
-    transform: scale(0.9);
+    transform: scale(0.9); /* Burbujas más pequeñas al final */
   }
 }
+/* Animación del movimiento del haz de luz */
 @-webkit-keyframes light-movement {
   0% {
-    transform: rotate(-40deg);
+    transform: rotate(-40deg); /* Posición inicial inclinada hacia un lado */
   }
   50% {
-    transform: rotate(-70deg);
+    transform: rotate(-70deg); /* Rotación máxima hacia el otro lado */
   }
   100% {
-    transform: rotate(-40deg);
+    transform: rotate(-40deg); /* Retorno a la posición inicial */
   }
 }
+
 @keyframes light-movement {
   0% {
-    transform: rotate(-40deg);
+    transform: rotate(-40deg); /* Posición inicial inclinada hacia un lado */
   }
   50% {
-    transform: rotate(-70deg);
+    transform: rotate(-70deg); /* Rotación máxima hacia el otro lado */
   }
   100% {
-    transform: rotate(-40deg);
+    transform: rotate(-40deg); /* Retorno a la posición inicial */
   }
 }
