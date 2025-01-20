@@ -40,29 +40,22 @@ function accionPlay()
 	}
 }
 
-function retrasa(){
+function saltarVideo(tiempo){
 
-	var nuevoTiempo=medio.currentTime-5;
-	medio.currentTime=nuevoTiempo;
-	redimensionaBarra();
-}
-
-function adelanta(){
-
-	var nuevoTiempo=medio.currentTime+5;
-	medio.currentTime=nuevoTiempo;
-	redimensionaBarra();
-}
-
-function reinicia(){
-
-	var nuevoTiempo=0;
+	var nuevoTiempo=medio.currentTime+tiempo;
 	medio.currentTime=nuevoTiempo;
 	redimensionaBarra();
 }
 
 function silencia(){
-	medio.muted = false;
+	medio.muted = !medio.muted; // esto es super simple si es true lo pone a false, y viceversa
+	medio.muted ? silenciar.value = 'escuchar' : silenciar.value = 'silenciar';
+}
+
+function variarVolumen(variacion){
+	let nuevoVolumen = medio.volume + variacion;
+
+	medio.volume = Math.min(Math.max(nuevoVolumen,0),1);
 }
 
 function iniciar() 
@@ -77,6 +70,8 @@ function iniciar()
 	adelantar=document.getElementById('adelantar');
 	reiniciar=document.getElementById('reiniciar');
 	silenciar=document.getElementById('silenciar');
+	menosVolumen=document.getElementById('menosVolumen');
+	masVolumen=document.getElementById('masVolumen');
     /* obtener los objetos del resto de elementos necesarios */
 	
 	play.addEventListener('click', accionPlay, false);
@@ -85,12 +80,17 @@ function iniciar()
 	barra.addEventListener('click', desplazarMedio, false);
 
 	
-	retrasar.addEventListener('click', retrasa, false);
-	adelantar.addEventListener('click', adelanta, false);
+	retrasar.addEventListener('click', () => saltarVideo(-5), false);
+	adelantar.addEventListener('click', () => saltarVideo(5), false);
 	
-	reiniciar.addEventListener('click', reinicia, false);
+	reiniciar.addEventListener('click', () => saltarVideo(-medio.currentTime), false);
 
 	silenciar.addEventListener('click', silencia, false);
+
+	menosVolumen.addEventListener('click', () => variarVolumen(-0.1), false);
+	masVolumen.addEventListener('click', () => variarVolumen(0.1), false);
+	
+
 }
 
 window.addEventListener('load', iniciar, false);
