@@ -271,13 +271,12 @@ input[type="button"]:hover {
   align-items: center;
 }
 
+#ligthbox #contenedor{
+  box-shadow: none;
+}
+
 #ligthbox section {
-  width: 60%;
-  height: 60vh;
-  border-radius: 2rem;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 25px;
   justify-content: space-evenly;
+  padding: 15px;
 }

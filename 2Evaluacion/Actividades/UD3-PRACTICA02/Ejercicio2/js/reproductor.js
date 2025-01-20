@@ -58,6 +58,19 @@ function variarVolumen(variacion){
 	medio.volume = Math.min(Math.max(nuevoVolumen,0),1);
 }
 
+function cerrarVideo(){
+	medio.pause();
+	play.value='\u25BA';
+	window.clearInterval(bucle);
+
+	medio.currentTime=0;
+	redimensionaBarra();
+
+	medio.muted = false;
+	silenciar.value = 'silenciar';
+	medio.volume = 1;
+}
+
 function iniciar() 
 {
 	maximo=700;
@@ -90,7 +103,7 @@ function iniciar()
 	menosVolumen.addEventListener('click', () => variarVolumen(-0.1), false);
 	masVolumen.addEventListener('click', () => variarVolumen(0.1), false);
 	
-
+	volver.addEventListener('click', cerrarVideo, false);
 }
 
 window.addEventListener('load', iniciar, false);
