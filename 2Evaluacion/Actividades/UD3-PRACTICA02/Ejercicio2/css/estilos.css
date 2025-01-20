@@ -254,6 +254,7 @@ input[type="button"]:hover {
 /*                             ESTILOS LIGHTBOX                          */
 /* ======================================================================== */
 
+/*Clase para ocultar el lightbox*/
 .lb-oculto {
   visibility: hidden;
 }
