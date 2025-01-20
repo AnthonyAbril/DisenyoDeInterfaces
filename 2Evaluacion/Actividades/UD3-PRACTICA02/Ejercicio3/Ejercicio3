@@ -1,0 +1,10 @@
+Hay una diferencia significativa de tamaño entre los cuatro archivos:
+
+    El formato AUP3 es el más grande porque contiene todos los datos del proyecto 
+    y permite seguir editándolo, lo que incluye pistas separadas, efectos y más.
+
+    El formato WAV es grande porque no tiene compresión y conserva toda la calidad del audio.
+
+    Los formatos MP3 y OGG son mucho más pequeños debido a la compresión con pérdida que 
+    eliminan datos del audio para reducir el tamaño, teniendo el formato OGG una compresión
+    más eficiente que conserva mejor la calidad del audio a un tamaño reducido.
