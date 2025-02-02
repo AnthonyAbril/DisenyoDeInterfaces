@@ -1,0 +1,94 @@
+/* Estilos generales */
+body {
+    background-color: #343a40; /* Fondo gris oscuro */
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Contenedor principal */
+.container {
+    background: #212529;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Migas de pan */
+.breadcrumb {
+    background-color: #495057;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #f8f9fa;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+    color: #ffc107;
+}
+
+/* Encabezado */
+h1 {
+    color: #ffc107; /* Amarillo para destacar */
+    font-weight: bold;
+}
+
+/* Párrafos */
+p {
+    color: #f8f9fa;
+    font-size: 16px;
+}
+
+/* Alerts personalizados */
+.alert {
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-light {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+.alert-dark {
+    background-color: #212529;
+    color: white;
+    border: 1px solid #6c757d;
+}
+
+/* Sección de botones */
+section {
+    margin-top: 20px;
+}
+
+/* Botones */
+.btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Grupo de botones */
+.btn-group {
+    margin-top: 20px;
+}
+
+/* Badge */
+.badge {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Carrusel */
+.carousel {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel img {
+    border-radius: 10px;
+}
