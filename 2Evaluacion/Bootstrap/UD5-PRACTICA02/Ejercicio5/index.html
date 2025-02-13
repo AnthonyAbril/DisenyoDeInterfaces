@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIOS CON VALIDACION EN BOOTSTRAP</title>
+
+    <!-- Enlace a Bootstrap 5.2.1 para los estilos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        body{
+            padding: 1vw;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FORMULARIOS CON VALIDACION EN BOOTSTRAP</h1>
+    <!-- Formulario con validación -->
+    <form class="row g-3 needs-validation" novalidate>
+        <!-- Primer campo: Nombre -->
+        <div class="col-md-4">
+            <label for="validacionNombre" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validacionNombre" value="Mark" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <!-- Segundo campo: Apellido -->
+        <div class="col-md-4">
+            <label for="validacionApellido" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validacionApellido" value="Otto" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <!-- Tercer campo: Nombre de usuario -->
+        <div class="col-md-4">
+            <label for="validacionUsuario" class="form-label">Username</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validacionUsuario"
+                    aria-describedby="inputGroupPrepend" placeholder="Username" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+        <!-- Cuarto campo: Ciudad -->
+        <div class="col-md-6">
+            <label for="validacionCiudad" class="form-label">City</label>
+            <input type="text" class="form-control" id="validacionCiudad" placeholder="City" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+        <!-- Quinto campo: Estado -->
+        <div class="col-md-3">
+            <label for="validacionEstado" class="form-label">State</label>
+            <input  type="text" class="form-control" id="validacionEstado" placeholder="State" required>
+            <div class="invalid-feedback">
+                Please select a valid state.
+            </div>
+        </div>
+        <!-- Sexto campo: Código postal -->
+        <div class="col-md-3">
+            <label for="validacionCodigoPostal" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validacionCodigoPostal" placeholder="Zip" required>
+            <div class="invalid-feedback">
+                Please provide a valid zip.
+            </div>
+        </div>
+        <!-- Checkbox para aceptar términos y condiciones -->
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="validacionCheck" required>
+                <label class="form-check-label" for="validacionCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+        <!-- Botón de envío del formulario -->
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
